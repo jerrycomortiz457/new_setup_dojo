@@ -15,8 +15,20 @@ div.row div{
     display: inline-block;
 }
 div.brick{
-    background-color: blue;
+    background-color: goldenrod;
+    border-radius: 2px;
 }
+
+div.redwall{
+    background-color: red;
+    border-radius: 2px;
+}
+div.bluewall{
+    background-color: blue;
+    border-radius: 2px;
+}
+
+
 div.coin{
     background-image: url('../images/coin_ani.gif');
     background-repeat: no-repeat;
@@ -56,5 +68,42 @@ div#score{
     position: absolute;
     top: 10px;
     left: 650px;
+}
+
+div#cyanghost{
+    background-image: url('../images/cyanghost.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;        
+}
+div#redghost{
+    background-image: url('../images/redghost.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;        
+}
+div#pinkghost{
+    background-image: url('../images/pinkghost.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;        
+}
+div#orangeghost{
+    background-image: url('../images/orangeghost.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;        
 }
 
