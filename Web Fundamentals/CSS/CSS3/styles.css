@@ -1,0 +1,21 @@
+p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p:last-child {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+p:nth-child(4) {
+    color: red;
+}
+
+a:nth-of-type(1) {
+    color: green;
+}
+
+div:hover {
+    width: 50px;
+}

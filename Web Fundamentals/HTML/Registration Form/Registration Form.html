@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <form>
+        <h2>My Registration Form</h2>
+        <table>
+            <tr>
+                <td><label for="first_name">First Name:</label></td>
+                <td><input type="text" name="first_name" id="first_name"></td>
+            </tr>
+            <tr>
+                <td><label for="last_name">Last Name:</label></td>
+                <td><input type="text" name="last_name" id="last_name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td><label for="password_confirmation">Password Confirmation:</label></td>
+                <td><input type="password" name="password_confirmation" id="password_confirmation"></td>
+            </tr>
+            <tr>
+                <td><label for="birthday">Birthday:</label></td>
+                <td><input type="date" name="birthday" id="birthday"></td>
+            </tr>
+        </table>
+        <input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other"><label for="other">Other</label>
+
+        <p>A short description about yourself:</p>
+        <textarea name="description" id="description" cols="45" rows="10"></textarea>
+        <table>
+            <tr>
+                <td><label for="fave_language">Favorite Language:</label></td>
+                <td>
+                    <select name="favorite_language" id="fave_language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+                <td></td>
+            </tr>
+        </table>
+
+
+
+
+    </form>
+
+</body>
+
+</html>

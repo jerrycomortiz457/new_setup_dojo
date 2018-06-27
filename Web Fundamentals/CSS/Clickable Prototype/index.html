@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eCommerce</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR  TOP-->
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+        <img id="dojologo" src="https://static1.squarespace.com/static/56935c9069492ec8d74acf0e/t/56935de3841aba578bffcaea/1452498409136/Last+Dojo+Development.png?format=2500w" alt="dojo logo" class="rounded-circle">
+        <a class="navbar-brand font-weight-bold" href="#">Dojo eCommerce</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="true" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+
+        <div class="navbar-collapse collapse" id="navbarTogglerDemo02" style="">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="nav-link text-white" href="#">Shopping Cart <span class="badge-lg font-weight-bold">(5)</span> </a>
+            </form>
+        </div>
+    </nav>
+    <!-- MAIN -->
+    <main role="main" id="main">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." autocomplete="off" data-siteurl="#" data-docs-version="4.1" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0"
+                        dir="auto" style="position: relative; vertical-align: top;">
+                    <hr>
+                    <h5>Categories</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#">T-Shirts</a>
+                            <span class=" badge badge-primary badge-pill ">25</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                            <a href="#">Shoes</a>
+                            <span class="badge badge-primary badge-pill ">35</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                            <a href="#">Cups</a>
+                            <span class="badge badge-primary badge-pill ">5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                            <a href="#">Fruits</a>
+                            <span class="badge badge-primary badge-pill ">105</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center font-italic ">
+                            <a href="#">Show All</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-10 col-md-9 col-sm-3 col-xs-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3">
+                                <h3>Tshirts <span class="badge">(Page 2)</span></h3>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" id="display_items">
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" id="display_items">
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" id="display_items">
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg col-md-4">
+                            <div class="img_div">
+                                <h5 class="tag">$100</h5>
+                            </div>
+                            <div class="caption">
+                                <h5><a href="">Items</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col bottom-pagination">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+    </main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

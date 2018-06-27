@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intermediate Foundation</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Part 1
+        console.log('PART 1')
+            //Sigma
+        console.log('[1] Sigma')
+
+        function sigma(num) {
+            sum = 0;
+            for (var i = 0; i <= num; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+        sigma(3);
+
+        //Factorial
+        console.log('[2] Factorial')
+
+
+        function factorial(num) {
+            product = 1;
+            for (var i = 1; i <= num; i++) {
+                product = product * i;
+            }
+            console.log(product);
+        }
+        factorial(3);
+        factorial(5);
+
+        // Fibonacci
+        console.log('[3] Fibonacci')
+
+        function fibonacci(num) {
+            fib_arr = [0, 1];
+            if (num <= 1) {
+                fib_arr.pop();
+                console.log(fib_arr);
+            }
+            if (num > 1) {
+                for (var i = 0; i < num - 2; i++) {
+                    fib_arr.push(fib_arr[fib_arr.length - 1] + fib_arr[fib_arr.length - 2]);
+                }
+                console.log(fib_arr);
+            }
+        }
+        fibonacci(0);
+        fibonacci(1);
+        fibonacci(4);
+
+
+        //Array: Second-to-Last
+        console.log('[4] Array: Second-to-Last')
+
+        function secondToLast(x) {
+            if (x.length >= 2) {
+                second_last = x[x.length - 2];
+                console.log(second_last);
+            }
+            if (x.length < 2) {
+                console.log(null)
+                return null;
+            }
+        }
+        secondToLast([42, true, 4, "Liam", 7]);
+        secondToLast([1]);
+
+
+        //Array:Nth-to-Last
+        console.log("[5] Nth-to-Last")
+
+        function nthToLast(x, n) {
+            nth = x[x.length - n];
+            console.log(nth);
+        }
+        nthToLast([5, 2, 3, 6, 4, 9, 7], 3)
+
+        //Array: Second-Largest
+        console.log("[6] Second-Largest")
+
+        function secondLargest(x) {
+            function smallesToLargest(a, b) {
+                return a - b;
+            }
+            x.sort(smallesToLargest);
+            console.log("Second to Largest in Array ", x, 'is: ', x[x.length - 2]);
+        }
+
+        secondLargest([42, 1, 4, 3.14, 7]);
+
+        //Double Trouble
+        console.log("[7] Double Trouble")
+
+        function doubleTrouble(x) {
+            doubled_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                doubled_arr.push(x[i], x[i]);
+            }
+            console.log(doubled_arr)
+        }
+        doubleTrouble([4, "Ulysses", 42, false]);
+
+
+        //PART 2
+        console.log('PART 2')
+            //Fibonacci with Recursion
+        console.log('[1] Fibonacci with Recursion')
+
+        function fibR(n) {
+            fibR_arr = [0, 1];
+            if (n <= 1) {
+                fibR_arr.pop();
+                console.log(fibR_arr);
+            }
+            if (n > 1) {
+                for (var i = 0; i < n - 2; i++) {
+                    nacciR();
+                }
+                console.log(fibR_arr);
+            }
+
+            function nacciR() {
+                fibR_arr.push(fibR_arr[fibR_arr.length - 1] + fibR_arr[fibR_arr.length - 2]);
+            }
+
+        }
+        fibR(0);
+        fibR(1);
+        fibR(4);
+        fibR(7);
+    </script>
+</body>
+
+</html>

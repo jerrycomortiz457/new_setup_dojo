@@ -1,0 +1,163 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    /* outline: 1px dotted green; */
+    padding: 0px;
+}
+
+body{
+	#wrapper {
+	    margin: 0px auto;
+	    // width: 865px;
+
+	    .container{
+	    	width: 865px;
+	    	margin: 0px auto;
+	    }
+
+	    #header{
+	    	height: 60px;
+	    	background-color: #F9F9F9;
+	    	// background-color: red;
+
+	    	.name{
+	    		display: inline-block;
+	    		h1{
+
+	    		}
+	    	}
+
+	    	.motto{
+	    		display: inline-block;
+    		    float: right;
+    		    margin-top: 16px;
+	    		h3{
+
+	    		}
+	    	}
+	    }
+	    .contents{
+	    	background: radial-gradient(#6F5964, #6F5964, #1E0E12);
+
+	    	#bio{
+	    		#profile_pic{
+	    			border: 5px solid #C0C0C0;
+	    			height: 236px;
+	    			width: 358px;
+					vertical-align: top;
+					margin-right: 21px;
+	    		}
+				#about{
+					display: inline-block;
+					vertical-align: top;
+					width: 471px;
+
+
+					#about_bar{
+						background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+						height: 32px;
+						padding: 10px 0px 0px 10px;
+					}
+
+					#about_info{
+						background: linear-gradient(to right, #FFFFFF, #DACCD9);
+						padding: 10px 10px 10px 10px;
+						p{
+							margin-bottom: 10px;
+						}
+
+						a{
+							color: black;
+						}
+
+					}
+					
+
+				}
+
+	    	}
+			#info{
+				
+				.infotab{
+					display: inline-block;
+					width: 271.1px;
+					vertical-align: top;
+					margin: 0 21px 0 0;
+					background: linear-gradient(to right, #FFFFFF, #DACCD9);
+					
+					&:first-child{
+						.infos{
+							  height: 168px;
+						}
+					}
+
+					&:nth-child(2){
+						
+							.technologies_list{
+								li{
+									&:nth-child(4){
+										background-color: red;
+									}
+								}
+							}
+												
+					}
+
+					&:last-child{
+						margin-right: 0px;
+							.technologies_list{
+								li{
+									&:last-child{
+										background-color: blue;
+									}
+								}
+							}
+					}
+					h4{
+					   background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+					}
+					img{
+						height: 132px;
+    			     	width: 259px;
+					}
+					.infos{
+					  	padding: 10px;
+						text-align: justify;					
+
+						p{
+						 
+						}
+					}
+					h5{
+						background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+    					height: 26px;
+					    padding: 7px 0px 0px 10px;
+					    color: white;
+					}
+					.technologies_list{
+						list-style-type: none;
+						padding: 10px 10px 10px 10px;
+						li{
+							display: inline-block;
+
+							img{
+								height: 40px;
+							    width: 40px;
+							    margin: 0px 4px 5px 0px;
+							}
+							&:nth-child(5n+5){
+								margin-right: 0px;
+							}
+						}
+					}
+					button{
+						display: block;
+						margin: 0 auto;
+					}
+				}			
+			}
+
+
+	    }
+	}
+}

@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+
+#dojologo {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+#main {
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="process.php" method="post">
+        <p>Please Register</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name">
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <!-- Radio -->
+        <p>Select your gender:</p>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="decline">Prefer not to say</label>
+        <input type="radio" name="gender" id="decline" value="decline">
+
+        <!-- checkboxes -->
+        <p>Select 3 of your favorite colors:</p>
+        <label for="blue">Blue</label>
+        <input type="checkbox" name="color" id="blue" value="blue">
+        <label for="green">Green</label>
+        <input type="checkbox" name="color" id="green" value="green">
+        <label for="red">Red</label>
+        <input type="checkbox" name="color" id="red" value="red">
+        <label for="black">Black</label>
+        <input type="checkbox" name="color" id="black" value="black">
+        <label for="purple">Purple</label>
+        <input type="checkbox" name="color" id="purple" value="purple">
+        <!-- textarea -->
+        <p>Say a few words about yourself:</p>
+        <textarea name="description"></textarea>
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <label for="pw_confirm">Password Confirmation:</label>
+        <input type="password" id="pw_confirm" name="password_confirmation">
+
+        <!-- submit -->
+        <input type="submit" value="Click here to register">
+    </form>
+</body>
+
+</html>

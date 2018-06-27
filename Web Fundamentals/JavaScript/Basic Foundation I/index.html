@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Foundation I</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Get 1 to 255
+        console.log('[1] Get 1 to 255')
+
+        function get1to255() {
+            get1to255_arr = []
+            for (var i = 1; i < 256; i++) {
+                get1to255_arr.push(i);
+            }
+            console.log(get1to255_arr);
+        }
+        get1to255();
+
+
+        //Get even 1000
+        console.log('[2] Get Even 1000')
+
+        function getEven1000() {
+            sum = 0;
+            for (var i = 1; i < 1001; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            console.log(sum)
+        }
+        getEven1000();
+
+        //Sum odd 5000
+
+        console.log('[3] Sum odd 5000')
+
+        function sumOdd5000() {
+            sum = 0;
+            for (var i = 1; i < 5001; i++) {
+                if (i % 2 === 1) {
+                    sum += i;
+                }
+            }
+            console.log(sum)
+        }
+        sumOdd5000();
+
+        //Iterate an array
+        console.log('[4] Iterate an array')
+
+        function sumArray(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            console.log(sum)
+        }
+        sumArray([1, 2, 5]);
+        sumArray([-5, 2, 5, 12]);
+
+        //Find max
+        console.log('[5] Find Max')
+
+        function findMax(x) {
+            max = x[0];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > max) {
+                    max = x[i];
+                }
+            }
+            console.log(max)
+        }
+        findMax([-3, 3, 5, 7]);
+
+        //Find average
+        console.log('[6] Find Average')
+
+        function findAverage(x) {
+            sum = 0;
+            var average;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+                average = sum / x.length;
+            }
+            console.log(average)
+        }
+        findAverage([1, 3, 5, 7, 20]);
+
+
+        //Array Odd
+        console.log('[7] Array Odd')
+
+        function arrayOdd() {
+            odd_arr = [];
+            for (var i = 1; i < 50; i++) {
+                if (i % 2 === 1) {
+                    odd_arr.push(i);
+                }
+            }
+            console.log(odd_arr)
+        }
+        arrayOdd();
+
+        //Greatern than Y
+        console.log('[8] Greater than Y')
+
+        function greaterThanY(x, y) {
+            counter = 0;
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > y) {
+                    counter++;
+                }
+            }
+            console.log(counter)
+        }
+        greaterThanY([1, 3, 5, 7], 3);
+
+        //Squares
+        console.log('[9] Squares')
+
+        function squares(x) {
+            squared_arr = []
+            for (var i = 0; i < x.length; i++) {
+                squared_arr.push(x[i] * x[i]);
+            }
+            console.log(squared_arr)
+        }
+        squares([1, 5, 10, -2]);
+
+        //Negatives
+        console.log('Negatives')
+
+        function negatives(x) {
+            neg_arr = []
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] < 0) {
+                    neg_arr.push(0);
+                } else
+                    neg_arr.push(x[i]);
+            }
+            console.log(neg_arr)
+        }
+        negatives([1, 5, 10, -2]);
+
+        //Max/Min/Avg
+
+        console.log('[11] Max/Min/Avg')
+
+        function maxMinAvg(x) {
+            var max = x[0],
+                min = x[0],
+                sum = 0,
+                maxminavg_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > max) {
+                    max = x[i];
+                }
+                if (x[i] < min) {
+                    min = x[i];
+                }
+                sum += x[i];
+                avg = sum / x.length;
+            }
+            maxminavg_arr.push(max);
+            maxminavg_arr.push(min);
+            maxminavg_arr.push(avg);
+            console.log(maxminavg_arr);
+        }
+        maxMinAvg([1, 5, 10, -2]);
+
+        //Swap Values
+        console.log('[12] Swap Values')
+
+        function swapVal(x) {
+            first = x[0];
+            x.splice(0, 1, x[x.length - 1])
+            x.pop();
+            x.push(first)
+            console.log(x)
+        }
+        swapVal([1, 5, 10, -2]);
+
+        //Number to String
+        console.log('[13] Number to string')
+
+        function numberToString(x) {
+            dojo_arr = []
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] < 0) {
+                    dojo_arr.push('Dojo');
+                } else {
+                    dojo_arr.push(x[i]);
+                }
+            }
+            console.log(dojo_arr)
+        }
+        numberToString([-1, -3, 2]);
+    </script>
+</body>
+
+</html

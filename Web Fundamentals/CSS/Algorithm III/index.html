@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorithm III</title>
+</head>
+
+<body>
+    <script>
+        // PRINT AVERAGE
+        console.log("Print Average")
+
+        function printAverage(x) {
+            sum = 0;
+            average = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            average = sum / x.length;
+            return average;
+        }
+        y = printAverage([1, 2, 3]);
+        console.log(y);
+
+        y = printAverage([2, 5, 8])
+        console.log(y);
+
+        //RETURN ODD ARRAY
+        console.log("Return Odd Array")
+
+        function returnOddArray() {
+            x = []
+            for (var i = 0; i < 256; i++) {
+                if (i % 2 === 1) {
+                    x.push(i);
+                }
+            }
+            return x;
+        }
+        y = returnOddArray();
+        console.log(y);
+
+        //SQUARE VALUE
+        console.log('Square Value')
+
+        function squareValue(x) {
+            for (var i = 0; i < x.length; i++) {
+                x[i] *= x[i];
+            }
+            return x;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y);
+        y = squareValue([2, 5, 8]);
+        console.log(y);
+    </script>
+</body>
+
+</html>

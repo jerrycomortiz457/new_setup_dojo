@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Playing with Objects</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var users = [{ name: "Michael", age: 37 }, { name: "John", age: 30 }, { name: "David", age: 27 }];
+        var john_age = users[1].age;
+        var firstOjectName = users[0].name;
+        console.log("John's age - ", john_age);
+        console.log("First Object's Name - ", firstOjectName);
+        (document.body).innerHTML = "John's age - " + john_age + "<br />" + "First Object's Name - " + firstOjectName;
+
+        for (var i = 0; i < users.length; i++) {
+            console.log(users[i].name + " - " + users[i].age);
+            (document.body).innerHTML += "<p>" + users[i].name + " - " + users[i].age + "</p>";
+        }
+    </script>
+
+</body>
+
+</html>

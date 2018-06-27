@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+
+    <style type="text/css">
+        /* first */
+        
+        .burger {
+            height: 100px;
+        }
+        
+        #chromelogo {
+            height: 50px;
+            padding: 5px 15px 5px 0;
+        }
+        
+        .jumbotron {
+            background-color: antiquewhite;
+            color: goldenrod;
+        }
+        
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .nav-tabs {
+            margin-bottom: 0;
+        }
+        
+        h1 {
+            color: grey;
+        }
+        /* logo */
+        /* .jumbotron {
+            background-color: antiquewhite;
+            color: goldenrod;
+        }
+        
+        body {
+            font-size: 62.5%;
+            font-family: arial, sans-serif;
+        }
+        
+        #nttLogo {
+            height: 100px;
+            width: 100px;
+        }
+        
+        #websiteTitle {
+            font-size: 10em;
+            vertical-align: middle;
+            font-family: 'Pacifico', cursive;
+            padding-left: 15px;
+            color: #191970;
+        }
+        
+        #websiteSlogan {
+            font-size: 5.4em;
+        }
+        
+        .slide1 {
+            background-image: url('https://wallpapersite.com/images/wallpapers/material-design-1600x900-geometric-stock-dark-black-hd-10125.jpg');
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .slide2 {
+            background-image: url('http://23academy.kz/wp-content/uploads/2015/08/cropped-dark-lolipop-material-design-wallpaper.jpg');
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .slide3 {
+            background-image: url('https://i.imgur.com/QYpjYOq.png');
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .carousel-caption h1 {
+            font-size: 5.4em;
+            font-family: 'Pacifico', cursive;
+            padding-bottom: .4em;
+        }
+        
+        .carousel-caption p {
+            font-size: 2em;
+        } */
+        
+        #nttLogo {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="page-header">
+            <h1>Test</h1>
+        </div>
+        <div class="jumbotron">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, repellat quo harum doloremque minima placeat ullam. Consequuntur ea necessitatibus perferendis aspernatur pariatur illo, reprehenderit suscipit ipsam neque delectus minima
+                repellat.
+            </p>
+            <p>
+                <a href="#" class="btn btn-default btn-lg" role="button">More Info</a>
+                <button type="submit" class="btn btn-danger" role="button">Button</button>
+                <input type="button" value="Info" class="btn btn-info">
+                <button type="submit" class="btn-primary btn-sm">Primary</button>
+                <button type="submit" class="btn-success btn-xs">Success</button>
+                <button type="submit" class="btn-warning btn-lg">Warning</button>
+                <button type="submit" class="btn-link btn-lg">Link</button>
+                <button type="submit" class="btn btn-lg btn-primary" disabled="disabled">Primary</button>
+                <a href="#" class="btn btn-default btn-lg disabled" role="button">LINK</a>
+
+                <div class="btn-group btn-group-lg" role="group">
+                    <button type="button" class="btn btn-default">Small</button>
+                    <button type="button" class="btn btn-default">Medium</button>
+                    <button type="button" class="btn btn-default">Large</button>
+                </div>
+
+            </p>
+        </div>
+    </div> -->
+
+    <!-- row and columns -->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Column 1</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, soluta? Molestias incidunt laudantium ex repellendus. Accusamus magnam nesciunt at similique? Vel, quae. Debitis magnam consequatur, earum at rerum blanditiis cumque!
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Column 2</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, soluta? Molestias incidunt laudantium ex repellendus. Accusamus magnam nesciunt at similique? Vel, quae. Debitis magnam consequatur, earum at rerum blanditiis cumque!
+            </div>
+            <div class="clearfix visible"></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Column 3</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, soluta? Molestias incidunt laudantium ex repellendus. Accusamus magnam nesciunt at similique? Vel, quae. Debitis magnam consequatur, earum at rerum blanditiis cumque!
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Column 4</h4>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, soluta? Molestias incidunt laudantium ex repellendus. Accusamus magnam nesciunt at similique? Vel, quae. Debitis magnam consequatur, earum at rerum blanditiis cumque!
+            </div>
+        </div>
+    </div> -->
+
+    <!-- row and column : collapse  -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-sx-12">
+                <h4><a href="#col1Content" data-toggle="collapse">Column 1</a></h4>
+                <div id="col1Content" class="collapse in">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis eos cum maxime sapiente iste vero aliquam, voluptatum praesentium sed voluptate doloremque, pariatur laboriosam. Eos nulla, odio sit voluptas est rerum.</div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+                <h4><a href="#col2Content" data-toggle="collapse">Column 2</a></h4>
+                <div id="col2Content" class="collapse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi aliquid dolor eaque a dicta provident minus incidunt exercitationem ab delectus sunt error necessitatibus aut, illo, ex soluta, tempora iure.</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h4><a href="#col3Content" data-toggle="collapse">Column 3</a></h4>
+                <div id="col3Content" class="collapse">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi aliquid dolor eaque a dicta provident minus incidunt exercitationem ab delectus sunt error necessitatibus aut, illo, ex soluta, tempora iure.</div>
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- hidden -->
+
+    <!-- <div class="container">
+        <div class="well hidden-sm hidden-md hidden-lg">
+            <p>Screen &lt; 768px</p>
+        </div>
+        <div class="well hidden-md hidden-lg">
+            <p>Screen &lt;= 768px and &lt; 992px</p>
+        </div>
+        <div class="well  hidden-lg">
+            <p>Screen &lt;= 992px and &lt; 1200px</p>
+        </div>
+        <div class="well">
+            <p>Screen &lt; 1200px</p>
+        </div>
+    </div> -->
+
+    <!-- tables -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <td colspan="4">Best Baseball Players</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="col-md-2"></th>
+                            <th class="text-center">Average</th>
+                            <th class="text-center">RBIs</th>
+                            <th class="col-md-2">Homeruns</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Hank Aaron</a></td>
+                            <td>.305</td>
+                            <td>2297</td>
+                            <td>755</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Hank Aaron</a></td>
+                            <td>.305</td>
+                            <td>2297</td>
+                            <td>755</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Hank Aaron</a></td>
+                            <td>.305</td>
+                            <td>2297</td>
+                            <td>755</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Hank Aaron</a></td>
+                            <td>.305</td>
+                            <td>2297</td>
+                            <td>755</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+    <!-- Chrome Boost -->
+    <!-- <div class="container">
+        <div class="jumbotron">
+            <img src="https://image.flaticon.com/icons/svg/226/226776.svg" id="nttLogo" alt="Chrome Logo">
+            <span id="websiteTitle">Chrome Boost</span>
+            <p id="websiteSlogan">Don't be evil</p>
+
+        </div>
+    </div> -->
+
+    <!-- The Carousel -->
+    <!-- <div id="theCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#theCarousel" data-slide-to="1"></li>
+            <li data-target="#theCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="slide1"></div>
+                <div class="carousel-caption">
+                    <h1>Amazing Backgrounds</h1>
+                    <p><a href="#" class="btn btn-primary btn-sm">Get them Now!</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide2"></div>
+                <div class="carousel-caption">
+                    <h1>Thousands of Colors</h1>
+                    <p>Every Color you can Imagine</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slide3"></div>
+                <div class="carousel-caption">
+                    <h1>Thousands of Colors</h1>
+                    <p>Every Color you can Imagine</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#theCarousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#theCarousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div> -->
+
+    <!-- Glyphicons -->
+    <!-- <div class="container">
+        <div class="jumbotron">
+            <p>
+                <span class="glyphicon glyphicon-film"></span>
+                <a href="#" class="btn btn-primary btn-lg">Trash <span class="glyphicon glyphicon-trash"></span></a>
+                <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Call Me </button>
+            </p>
+        </div>
+    </div> -->
+
+    <!-- Well -->
+    <!-- <div class="container">
+        <div class="well well-sm">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum rem sapiente, repellat cumque blanditiis dolorum minima laudantium, iste velit nihil dignissimos harum id reiciendis officiis ut ex optio consectetur sit.</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed facilis eaque aliquam aspernatur quasi! Ratione alias labore rem. Velit maxime maiores nobis perspiciatis quidem quae vitae aperiam mollitia ipsum unde.</p>
+    </div> -->
+
+    <!-- RESPONSIVE IMAGE -->
+    <!-- <div class="container">
+        <img src="https://image.flaticon.com/icons/svg/226/226776.svg" id="nttLogo" alt="chrome logo" class="img-responsive img-thumbnail pull-left">
+    </div> -->
+    <!-- TEXT COLORS -->
+    <!-- <div class="container">
+        <span class="text-muted bg-warning">Muted</span>
+        <span class="text-primary bg-muted">Primary</span>
+        <span class="text-success bg-primary">Success</span>
+        <span class="text-info bg-success">Info</span>
+        <span class="text-danger bg-info">Danger</span>
+        <span class="text-warning bg-danger">Warning</span>
+    </div> -->
+
+    <!-- DROPDOWN -->
+    <!-- <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Solar System
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Planets</li>
+                <li>
+                    <a href="#">Mercury</a>
+                </li>
+                <li>
+                    <a href="#">Venus</a>
+                </li>
+                <li>
+                    <a href="#">Earth</a>
+                </li>
+                <li>
+                    <a href="#">Mars</a>
+                </li>
+                <li>
+                    <a href="#">Jupiter</a>
+                </li>
+                <li>
+                    <a href="#">Saturn</a>
+                </li>
+                <li>
+                    <a href="#">Uranus</a>
+                </li>
+                <li>
+                    <a href="#">Neptune</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Moon</li>
+                <li class="disabled"><a href="#">Pluto</a></li>
+                <li><a href="#">Charon</a></li>
+                <li><a href="#">Cuneta</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- INPUT GROUP -->
+
+    <!-- <div class="container">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Your Name</span>
+            <input type="text" placeholder="Full Name" class="form-control">
+        </div><br>
+        <div class="input-group input-group-sm"><input type=" text " class="form-control" placeholder="Full Name"><span class="input-group-btn "><button class="btn btn-default">Enter</button></span></div>
+    </div> -->
+
+    <!--  INPUT BUTTON DROPDOWN -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USER ID <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#">Google+</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" aria-label="...">
+            </div>
+        </div>
+    </div> -->
+
+    <!-- INLINE NAV BUTTONS WITH DROPDOWN-->
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <input type="checkbox">
+                </span>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div> -->
+    <!-- VERTICAL NAV BUTTONS WITH DROPDOWN -->
+    <!-- <div class="container">
+        <ul class="list-inline">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#"></a>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a><span class="caret"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Schedule an Appointment</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="#">About</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacts <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Schedule an Appointment</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- NAV PILLS -->
+    <!-- <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active">
+                <a href="#superman">Superman</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#batman">Batman</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="drpodown-toggle" data-toggle="dropdown">Flash <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a data-toggle="tab" href="#flash">The Flash</a></li>
+                    <li>
+                        <a data-toggle="tab" href="#kidflash">Kid Flash</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="superman" class="tab-pane fade in active">
+                <p>Superman falsflsafjsa</p>
+            </div>
+            <div id="batman" class="tab-pane fade">
+                <p>Bat flash falsflsafjsa</p>
+            </div>
+            <div id="flash" class="tab-pane fade">
+                <p>The Flash falsflsafjsa</p>
+            </div>
+            <div id="kidflash" class="tab-pane fade">
+                <p>Kid flash falsflsafjsa</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- DEFAULT NAVBAR -->
+
+    <!-- <div class="container"> -->
+
+    <!-- .navbar-fixed-top, or .navbar-fixed-bottom can be added to keep the nav bar fixed on the screen -->
+    <!-- <nav class="navbar navbar-default">
+            <div class="container-fluid"> -->
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- <div class="navbar-header"> -->
+
+    <!-- Button that toggles the navbar on and off on small screens -->
+    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+
+    <!-- Hides information from screen readers -->
+    <!-- <span class="sr-only"></span> -->
+
+    <!-- Draws 3 bars in navbar button when in small mode -->
+    <!-- <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button> -->
+
+    <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
+    <!-- <a class="pull-left" href="#"><img id="chromelogo" src="http://pngimg.com/uploads/chrome_logo/chrome_logo_PNG30.png"></a>
+                </div> -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">About</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Phone</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Set Appointment</a></li>
+                            </ul>
+                        </li>
+                    </ul> -->
+    <!-- navbar-left will move the search to the left -->
+    <!-- <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                /.navbar-collapse -->
+    <!-- </div> -->
+    <!-- /.container-fluid -->
+    <!-- </nav>
+    </div>
+    <br> -->
+
+    <!-- PAGINATION -->
+    <!-- <div class="container">
+        <ul class="pagination">
+            <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+        </ul>
+    </div> -->
+
+
+    <!-- THUMBMAILS -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbmail">
+                    <img class="burger" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                    <div class="caption">
+                        <h3>Hamburger</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, corporis. Cumque optio dolorem sed consequatur rerum corrupti reprehenderit fugiat nesciunt incidunt ea? Aliquid, quas fugiat! Vel unde illo minus quisquam!</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbmail">
+                    <img class="burger" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                    <div class="caption">
+                        <h3>Hamburger</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, corporis. Cumque optio dolorem sed consequatur rerum corrupti reprehenderit fugiat nesciunt incidunt ea? Aliquid, quas fugiat! Vel unde illo minus quisquam!</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="thumbmail">
+                    <img class="burger" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                    <div class="caption">
+                        <h3>Hamburger</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, corporis. Cumque optio dolorem sed consequatur rerum corrupti reprehenderit fugiat nesciunt incidunt ea? Aliquid, quas fugiat! Vel unde illo minus quisquam!</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Add to Cart</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- PROGRESS BAR -->
+    <!-- <div class="container">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"><span class="5r-only">90% Complete</span></div>
+        </div>
+    </div> -->
+
+    <!-- MEDIA -->
+    <!-- 
+    <div class="container">
+        <div class="media">
+            <div class="media-left media-top">
+                <a href="#">
+                    <img class="burger media-object" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Hamburger</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolorem necessitatibus suscipit laudantium, minima quia tenetur deserunt accusantium voluptate culpa ex excepturi beatae odio in tempore praesentium atque adipisci aliquid?</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-top">
+                <a href="#">
+                    <img class="burger media-object" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Hamburger</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolorem necessitatibus suscipit laudantium, minima quia tenetur deserunt accusantium voluptate culpa ex excepturi beatae odio in tempore praesentium atque adipisci aliquid?</p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-top">
+                <a href="#">
+                    <img class="burger media-object" src="https://www.goodfood.com.au/content/dam/images/h/0/f/a/q/i/image.related.wideLandscape.940x529.h0fa4n.png/1515456591895.jpg" alt="burger">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Hamburger</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, dolorem necessitatibus suscipit laudantium, minima quia tenetur deserunt accusantium voluptate culpa ex excepturi beatae odio in tempore praesentium atque adipisci aliquid?</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- LIST -->
+
+    <!-- <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item disabled">Verizon Email</li>
+            <li class="list-group-item"><span class="badge">123</span>Gmail</li>
+            <li class="list-group-item list-group-item-warning">Junk</li>
+        </ul>
+        <a href="#" class="list-group-item">Add Account</a>
+        <a href="" class="list-group-item">
+            <h4 class="list-group-item-heading">Delete Account</h4>
+            <p class="list-group-item-text">The account will be permanently deleted</p>
+        </a>
+
+        <button type="button" class="list-group-item">Check for Mail</button>
+
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+</body>
+
+</html>

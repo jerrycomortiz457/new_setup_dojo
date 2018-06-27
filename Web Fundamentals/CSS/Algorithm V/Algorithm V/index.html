@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorithm V</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Resset Negatives
+        console.log('Reset Negatives')
+
+        function resetNegatives(x) {
+            noneg_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] < 0) {
+                    noneg_arr.push(0);
+                } else {
+                    noneg_arr.push(x[i]);
+                }
+            }
+            console.log(noneg_arr);
+        }
+        resetNegatives([1, -2, 3, -1, -2, 3]);
+
+        //Move Forward
+        console.log('Move Forward')
+
+        function moveForward(x) {
+            x.shift();
+            x.push(0);
+            console.log(x);
+        }
+
+        moveForward([1, 2, 3]);
+
+        //Return Reversed
+        console.log('Return Reversed')
+
+        function returnReversed(x) {
+            reversed_arr = []
+            for (var i = 0; i < x.length; i++) {
+                reversed_arr.unshift(x[i]);
+            }
+            console.log(reversed_arr)
+        }
+        returnReversed([1, 2, 3, 4, 5, 6]);
+
+        //Repeat Twice
+        console.log('Repeat Twice')
+
+        function repeatTwice(x) {
+            repeat_arr = []
+            for (var i = 0; i < x.length; i++) {
+                for (var j = 0; j < 2; j++) {
+                    repeat_arr.push(x[i]);
+                }
+            }
+            console.log(repeat_arr)
+        }
+        repeatTwice([1, 2, 'Twice']);
+    </script>
+</body>
+
+</html>

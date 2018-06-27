@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorithm IV</title>
+</head>
+
+<body>
+    <script>
+        //GREATER THAN Y
+        console.log('Greater Than Y')
+
+        function greaterThanY(x, y) {
+            arr = [];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > y) {
+                    arr.push(x[i]);
+                }
+            }
+            console.log(arr);
+        }
+        greaterThanY([1, 3, 4, 5], 2);
+
+
+
+        //Max,Min and Average
+        console.log('Print Max, Min and Average')
+
+        function maxMinAverage(x) {
+            max = x[0];
+            min = x[0];
+            sum = 0;
+            average = 0;
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > max) {
+                    max = x[i];
+                }
+                if (x[i] < min) {
+                    min = x[i];
+                }
+                sum += x[i];
+                average = sum / x.length;
+            }
+            console.log('Max: ', max);
+            console.log('Min: ', min);
+            console.log('Average: ', average);
+        }
+
+        maxMinAverage([10, 3, -2, 6]);
+
+        //Replace Negative Numbers with 'Dojo'
+        console.log("Replace Negative Numbers with 'Dojo'")
+
+        function replaceNegative(x) {
+            dojo_array = [];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > 0) {
+                    dojo_array.push(x[i]);
+                } else if (x[i] < 0) {
+                    dojo_array.push('Dojo');
+                }
+            }
+            console.log(dojo_array);
+        }
+        replaceNegative([1, 3, -2, -2, 1]);
+
+        //Removing Indexe range Value in an array
+        console.log('Remove Value')
+
+        function removeValues(x, y, z) {
+            new_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                if ((x[i] < x[y]) || (x[i] > x[z])) {
+                    new_arr.push(x[i]);
+                }
+            }
+            console.log(new_arr);
+        }
+        removeValues([20, 30, 40, 50, 60, 70], 2, 4);
+    </script>
+</body>
+
+</html>

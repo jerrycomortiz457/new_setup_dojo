@@ -1,0 +1,188 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    /* outline: 1px dotted green; */
+    padding: 0px;
+}
+
+a {
+    color: black;
+}
+
+h4 {
+    background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+    height: 29px;
+    padding: 10px 0px 0px 10px;
+    color: white;
+}
+
+h5 {
+    background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+    height: 26px;
+    padding: 7px 0px 0px 10px;
+    color: white;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 7px;
+    height: 24px;
+    background-color: #407D61;
+    color: white;
+    font-weight: bold;
+    padding: 2px 4px 2px 4px;
+    vertical-align: middle;
+    font-size: 12px;
+    box-shadow: 2px 4px 10px #868887;
+}
+
+#wrapper {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    margin: 0px auto;
+    width: 865px;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60px;
+    background-color: #F9F9F9;
+    padding-left: 23px;
+    padding-right: 30px;
+}
+
+.motto {
+    margin-top: 15px;
+    text-align: right;
+}
+
+
+/* biography tab */
+
+#bio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 10px; */
+    border: 5px solid #C0C0C0;
+    height: 236px;
+    margin: 20px 0px 20px 23px;
+    width: 358px;
+}
+
+#profile_pic {
+}
+
+
+/* about tab */
+
+#about {
+    height: 243px;
+    width: 431px;
+    margin: 20px 20px 0px 0px;
+    background: linear-gradient(to right, #FFFFFF, #DACCD9);
+    line-height: 1em;
+}
+
+.about_bar {
+    background: linear-gradient(#B2B1B5, #878593, #B2B1B5);
+    height: 32px;
+    padding: 10px 0px 0px 10px;
+}
+
+.about_bar h3 {
+    color: white;
+}
+
+.about_info {
+    margin: 5px;
+    height: 145px;
+}
+
+
+/* content - infos */
+
+.contents {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    height: 797px;
+    background: radial-gradient(#6F5964, #6F5964, #1E0E12);
+}
+
+
+/* info tab */
+
+#lamode,
+#familycontacts,
+#fiveeleven {
+    height: 132px;
+    width: 258px;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 0px 10px 0 10px;
+}
+
+.infotab {
+    height: 492px;
+    width: 259px;
+    background: linear-gradient(to right, #FFFFFF, #DACCD9);
+    line-height: 1em;
+}
+
+.infotab p {
+    font-size: 13px;
+}
+
+#infos {
+    padding: 10px;
+    text-align: justify;
+    height: 121px;
+    overflow: hidden;
+}
+
+#logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: left;
+    padding: 10px 15px 10px 15px;
+    grid-gap: 10px;
+}
+
+#logos img {
+    height: 36px;
+    width: 36px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+
+/* footer */
+
+#footer {
+    height: 60px;
+    margin-top: 5px;
+    text-align: center;
+    width: 865px;
+    background-color: #F9F9F9;
+}
+
+#footer img {
+    height: 20px;
+    width: 20px;
+}
+
+#footer p {
+    font-size: 15px;
+}
+
+#footer a {
+    font-style: italic;
+}

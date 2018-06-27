@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algorithm II</title>
+</head>
+
+<body>
+    <script>
+        //Algorithm II: Part 2
+        //Number 1
+
+        function printUpTo(x) {
+            if (x < 0) {
+                return false;
+            } else {
+                for (var i = 1; i <= x; i++) {
+                    console.log(i);
+                }
+            }
+        }
+        printUpTo(100);
+        y = printUpTo(-10);
+        console.log(y);
+
+
+        //Number 2
+        function printSum(x) {
+            var sum = 0;
+            for (var i = 1; i <= x; i++) {
+                sum += i;
+                console.log(i);
+            }
+            return sum;
+        }
+        y = printSum(10);
+        console.log(y);
+
+        //Number 3
+        function printSumArray(x) {
+            var sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            console.log(x);
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3]));
+    </script>
+</body>
+
+</html>

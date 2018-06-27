@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Foundation I</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //Biggie Size
+        console.log('[1] Biggie Size')
+
+        function biggieSize(x) {
+            bigsize_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > -1) {
+                    bigsize_arr.push('big');
+                } else {
+                    bigsize_arr.push(x[i]);
+                }
+            }
+            console.log(bigsize_arr);
+        }
+        biggieSize([-1, 2, 3, -5]);
+
+        //Print Low, Return High
+        console.log('[2] Return Low, Return High')
+
+        function lowHigh(x) {
+            lowest = x[0];
+            highest = x[0];
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > highest) {
+                    highest = x[i];
+                }
+
+                if (x[i] < lowest) {
+                    lowest = x[i];
+                }
+            }
+            console.log('Lowest Value in the Array: ', lowest, '\nHighest Value in the Array: ', highest);
+        }
+
+        lowHigh([2, 3, 4, 1]);
+
+        //Print One, Return Another
+        console.log('[3] Print One, Return Another')
+
+        function oneAnother(x) {
+            second = x[x.length - 2];
+            var first_odd;
+            console.log('Second-to-last value: ', second);
+            for (var i = x.length; i >= 0; i--) {
+                if (x[i] % 2 === 1) {
+                    first_odd = x[i];
+                }
+            }
+            console.log('First Odd value in the Array: ', first_odd)
+        }
+        oneAnother([1, -2, 3, 4, 7]);
+
+        //Double Vision
+        console.log('[4] Double Vision')
+
+        function doubleVision(x) {
+            doubled_arr = [];
+            for (var i = 0; i < x.length; i++) {
+                doubled_arr.push(x[i] + x[i]);
+            }
+            console.log(doubled_arr);
+        }
+        doubleVision([1, 2, 3]);
+
+        //Count Positives
+        console.log('[5] Count Positives')
+
+        function countPositives(x) {
+            count_positives = 0;
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > -1) {
+                    count_positives++;
+                }
+            }
+            x.pop();
+            x.push(count_positives);
+            console.log(x)
+        }
+        countPositives([-1, 1, 1, 1]);
+
+        //Even and Odds
+        console.log('Even and Odds')
+
+        function evenOddds(x) {
+            odd_count = 0;
+            even_count = 0;
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] % 2 === 1) {
+                    odd_count++;
+                    even_count = 0;
+                    if (odd_count === 3) {
+                        console.log("That's odd!");
+                    }
+                } else if (x[i] % 2 === 0) {
+                    odd_count = 0;
+                    even_count++;
+
+                    if (even_count === 3) {
+                        console.log("Even more so!")
+                    }
+                }
+            }
+        }
+        evenOddds([1, 1, 2, 2, 1, 2, 1, 1, 1, 2, 2, 2]);
+
+        //Increment the Seconds
+        console.log('[7] Increment the Seconds')
+
+        function incrementTheSeconds(x) {
+            for (var i = 0; i < x.length; i++) {
+                if (i % 2 === 1) {
+                    x[i] += 1;
+                    console.log(x[i]);
+                }
+            }
+            console.log(x)
+            return x;
+        }
+        incrementTheSeconds([1, 2, 3, 4, 5, 6]);
+
+        //Previous Lengths
+        console.log('[8] Previous Lengths')
+        console.log(("HELLO").length);
+
+        function previousLengths(x) {
+            prevlength_arr = []
+            prevlength_arr.push(x[0]);
+            for (var i = 0; i < x.length - 1; i++) {
+                x[i] = x[i].length;
+                prevlength_arr.push(x[i]);
+            }
+            console.log(prevlength_arr)
+        }
+        previousLengths(["hello", "dojo", "awesome"]);
+
+        //Add Seven to Most
+        console.log('[9] Add Seven to Most')
+
+        function addSevenToMost(x) {
+            plusseven_arr = []
+            for (var i = 0; i < x.length; i++) {
+                plusseven_arr.push(x[i] + 7);
+
+            }
+            console.log(plusseven_arr)
+        }
+        addSevenToMost([1, 2, 3, 4, 5]);
+
+        //Reverse Array
+        console.log('[10] Reverse Array')
+
+        function reverseArray(x) {
+            for (var i = x.length; i >= 0; i--) {
+                x.push(x[i]);
+            }
+            for (var i = 0; i < x.length + 1; i++) {
+                x.shift();
+            }
+            console.log(x)
+        }
+        reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+        //Outlook: Negative
+        console.log('[11] Outlook: Negative')
+
+        function outlookNegative(x) {
+            allneg_arr = []
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > -1) {
+                    // x[i] *= -1; //not simply multilied by 1
+                    x[i] = x[i] - (x[i] + x[i]);
+                }
+                allneg_arr.push(x[i])
+            }
+            console.log(allneg_arr)
+        }
+        outlookNegative([1, -3, 5])
+
+        //Always Hungry
+        console.log('[12] Always Hungry')
+
+        function alwaysHungry(x) {
+            food_count = 0;
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] === "food") {
+                    food_count++;
+                    console.log("yummy")
+                }
+            }
+            if (food_count === 0) {
+                console.log("I'm hungry");
+            }
+        }
+
+        alwaysHungry([1, 'food', 3, 'food'])
+        alwaysHungry([1, 2, 3])
+
+        //Swap Toward the Center
+        console.log('[13] Swap Toward the Center')
+
+        function swapCenter(x) {
+            first = x[0];
+            third = x[2];
+            x.splice(0, 1, x[x.length - 1]);
+            x.pop();
+            x.push(first)
+            x.splice(2, 1, x[x.length - 3]);
+            x.splice(x.length - 3, 1, third)
+
+            console.log(x)
+        }
+        swapCenter([true, 42, "Ada", 2, "pizza"])
+        swapCenter([1, 2, 3, 4, 5, 6])
+        swapCenter([1, 2, 3, 4, 5, 6, 7, 8])
+
+        //Scale the Array
+        console.log('[14] Scale the Array')
+
+        function scaleArray(x, num) {
+            scaled_arr = []
+            for (var i = 0; i < x.length; i++) {
+                scaled_arr.push(x[i] * num)
+            }
+            console.log(scaled_arr)
+        }
+        scaleArray([1, 2, 3], 3)
+    </script>
+</body>
+
+</html
