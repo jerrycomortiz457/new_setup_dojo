@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet"> 
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery Function</h1>
+        <hr>
+
+        <div class="function_box">
+            <button id="add_class" class="btn btn-outline-success">addClass</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.addClass()</h5></div>
+               
+                <div  class="display">
+                    <p id="addClassEffect">Click the button to add class 'red' and other css properties to this paragrap.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="function_box">
+            <button id="slideToggle" class="btn btn-outline-success">slideToggle</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.slideToggle()</h5></div>
+               
+                <div  class="display">
+                    <p id="slideToggleEffect">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="function_box">
+            <button id="append" class="btn btn-outline-success">append</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.append()</h5></div>
+               
+                <div  class="display appendcontent">
+                    <p>Click the button to append new paragraph.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="function_box">
+                <button id="click" class="btn btn-outline-success">click</button>
+                <div class="display_area">
+                    <div class="title bg-danger"><h5>.click()</h5></div>                   
+                    <div  class="display">
+                        <p>Click the button to see an alert mesage.</p>
+                    </div>
+                </div>
+        </div>
+       
+        <div class="function_box">
+                <button id="hide" class="btn btn-outline-success">hide</button>
+                <div class="display_area">
+                    <div class="title bg-danger"><h5>.hide()</h5></div>                   
+                    <div  class="display">
+                        <p id="hideEffect">Click the button to hide this paragraph.</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="function_box">
+            <button id="show" class="btn btn-outline-success">show</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.show()</h5></div>               
+                <div  class="display">
+                    <p>Click the button to show the paragraph that was hidden on top.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="function_box">
+            <button id="toggle" class="btn btn-outline-success">toggle</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.toggle()</h5></div>               
+                <div  class="display">
+                    <p id="toggleEffect">Click the button to see toggle effect to this paragraph.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="slideDown" class="btn btn-outline-success">slideDown</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.slideDown()</h5></div>               
+                <div  class="display">
+                    <p id="effect">Click the button to see slideDown effect on hidden boxes.</p>                        
+                    <div class="slideDownHidden"></div>                          
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="slideUp" class="btn btn-outline-success">slideUp</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.slideUp()</h5></div>               
+                <div  class="display">
+                    <p id="effect">Click the button to see slide-up effect on the boxes on top.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="fadeIn" class="btn btn-outline-success">fadeIn</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.fadeIn()</h5></div>               
+                <div  class="display">
+                    <p id="fadeInBox">Click the button to see fade-in effect on diplaying boxes.</p>
+                    <div class="fadeInBox"></div>                
+                </div>
+            </div>
+        </div>    
+        <div class="function_box">
+            <button id="fadeOut" class="btn btn-outline-success">fadeOut</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.fadeOut()</h5></div>               
+                <div  class="display">
+                    <p id="effect">Click the button to see fade-out effect on the boxes on top.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="before" class="btn btn-outline-success">before</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.before()</h5></div>               
+                <div  class="display">
+                    <p id="after">Click the button to insert a paragraph before this paragraph.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="insertAfter" class="btn btn-outline-success">after</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.after()</h5></div>               
+                <div  class="display">
+                    <p id="afterthis">Click the button to insert a paragraph after this paragraph.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="htmlButton" class="btn btn-outline-success">html</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.html()</h5></div>               
+                <div  class="display">
+                    <p id="htmlEffects">Click the button to view the content of the html tag "title". Display through alert.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+            <button id="attr" class="btn btn-outline-success">attr</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.attr()</h5></div>               
+                <div  class="display">              
+                    <input id="check1" type="checkbox" checked="checked">
+                    <label for="check1">Check me</label>
+                    <p id="displayHere">.attr( 'checked' ): <b>checked</b><br>.prop( 'checked' ): <b>true</b><br>.is( ':checked' ): <b>true</b></p>
+                    <p>Click the checking by attr.</p>
+                </div>
+            </div>
+        </div>       
+        <div class="function_box">
+            <button id="val" class="btn btn-outline-success">val</button>
+            <div class="display_area">
+                <div class="title bg-danger"><h5>.val()</h5></div>               
+                <div  class="display">
+                    <p id="displayVal"><b> Single: </b>Single2 <b> Multiple: </b>Multiple2</p>
+                    <select id="single">
+                            <option>Single</option>
+                            <option>Single2</option>
+                            <option>Single3</option>
+                    </select>
+                    <select id="multiple" multiple="multiple">
+                            <option selected="selected">Multiple</option>
+                            <option>Multiple2</option>
+                            <option selected="selected">Multiple3</option>
+                      </select>
+                      <p>Displays select options and logs the selection on top.</p>
+                </div>
+            </div>
+        </div>
+        <div class="function_box">
+                <button id="text" class="btn btn-outline-success">text</button>
+                <div class="display_area">
+                    <div class="title bg-danger"><h5>.text()</h5></div>               
+                    <div  class="display">
+                        <p id="textDisplay">Click the button to apply .text() and see what happens to this paragaph.</p>
+                    </div>
+                </div>
+            </div>      
+        
+            <hr>
+
+            <p>#jQueryFunctionAssignment</p>
+       
+    </div>                 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

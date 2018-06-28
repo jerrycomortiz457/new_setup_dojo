@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Functions</title>
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">	
+	</head>
+	<body>
+		<div id="top">
+			<h1 id="title">jQuery Functions</h1>
+		</div>		
+		<div id="middle">
+			<div class="left"><button id="add_class">Add Class</button></div>
+			<div class="right"><h2>.addClass()</h2></div>
+			<div class="content"><p id="addClassEffect">Click the button to add class 'red' to this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="slideToggle">Slide Toggle</button></div>
+			<div class="right"><h2>.slideToggle()</h2></div>
+			<div class="content"><p id="slideToggleEffect">Click the button to see slideToggle to this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="append">Append</button></div>
+			<div class="right"><h2>.append()</h2></div>
+			<div class="appendcontent"><p id="appendEffect">Click the button to append new paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="click">Click</button></div>
+			<div class="right"><h2>.click</h2></div>
+			<div class="content"><p id="clickEffect">Click the button to see the alert mesage.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="hide">Hide</button></div>
+			<div class="right"><h2>.hide()</h2></div>
+			<div class="content"><p id="hideEffect">Click the button to hide this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="show">Show</button></div>
+			<div class="right"><h2>.show()</h2></div>
+			<div class="content"><p id="showEffect">Click the button to show the paragraph that was hidden on top.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="toggle">Toggle</button></div>
+			<div class="right"><h2>.toggle()</h2></div>
+			<div class="content"><p id="toggleEffect">Click the button to see toggle effect to this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="slideDown">Slide Down</button></div>
+			<div class="right"><h2>.slideDown()</h2></div>
+			<div class="content">
+				<p id="slideDownEffect">Click the button to see slideDown effect on hidden boxes.</p>
+				<div class="slideDownHidden"></div>
+				<div class="slideDownHidden"></div>
+				<div class="slideDownHidden"></div>						
+			</div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="slideUp">Slide Up</button></div>
+			<div class="right"><h2>.slideUp()</h2></div>
+			<div class="content">
+				<p>Click the button to see slide-up effect on the boxes on top.</p>				
+			</div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="fadeIn">Fade In</button></div>
+			<div class="right"><h2>.fadeIn()</h2></div>
+			<div class="content">
+				<p>Click the button to see fade-in effect on diplaying boxes.</p>
+				<div class="fadeInBox"></div>
+				<div class="fadeInBox"></div>
+				<div class="fadeInBox"></div>						
+			</div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="fadeOut">Fade Out</button></div>
+			<div class="right"><h2>.fadeOut()</h2></div>
+			<div class="content">
+				<p>Click the button to see fade-out effect on the boxes on top.</p>		
+			</div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="before">Before</button></div>
+			<div class="right"><h2>.before()</h2></div>
+			<div class="content"><p id="after">Click the button to insert a paragraph before this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="insertAfter">After</button></div>
+			<div class="right"><h2>.after()</h2></div>
+			<div class="content"><p id="afterthis">Click the button to insert a paragraph after this paragraph.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="htmlButton">Html</button></div>
+			<div class="right"><h2>.html()</h2></div>
+			<div class="content"><p id="htmlEffects">Click the button to view the content of the html tag "title". Display through alert.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="attr">Attr</button></div>
+			<div class="right"><h2>.attr()</h2></div>
+			<div class="content">
+				<input id="check1" type="checkbox" checked="checked">
+				<label for="check1">Check me</label>
+				<p id="displayHere"></p>
+				<p>Click the checking by attr.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="slideToggle">Val</button></div>
+			<div class="right"><h2>.val()</h2></div>
+			<div class="content">
+				<p id="displayVal"></p>
+ 
+				<center>
+				<select id="single">
+					<option>Single</option>
+				    <option>Single2</option>
+				    <option>Single3</option>
+				</select>
+				 
+				<select id="multiple" multiple="multiple">
+					  <option selected="selected">Multiple</option>
+					  <option>Multiple2</option>
+					  <option selected="selected">Multiple3</option>
+				</select>
+				</center>
+				<p>Displays select options and logs the selection on top.</p></div>
+		</div>
+		<div id="middle">
+			<div class="left"><button id="text">Text</button></div>
+			<div class="right"><h2>.text()</h2></div>
+
+			<div class="content"><p id="textDisplay">Click the button to apply .text() and see what happens to this paragaph.</p></div>
+		</div>
+	</body>
+</html>

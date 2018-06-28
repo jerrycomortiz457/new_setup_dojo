@@ -1,0 +1,85 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  .classAdded {
+    color: red;
+    font-style: italic;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px grey;
+  }
+  .slideDownHidden {
+    background: #de9a44;
+    border: 2px solid black;
+    display: none;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+  .fadeInBox {
+    background: #de9a44;
+    border: 2px solid black;
+    display: none;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+  #single {
+    vertical-align: top;
+  }
+  body {
+    background-color: antiquewhite;
+  }
+  body .container {
+    background-color: antiquewhite;
+  }
+  body .container h1 {
+    color: green;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 1px 2px 1px black;
+  }
+  body .container hr {
+    box-shadow: 1px 2px 1px black;
+  }
+  body .container .function_box {
+    border-radius: 5px;
+    border: 2px solid bisque;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  body .container .function_box button {
+    box-shadow: 1px 2px 1px black;
+    display: inline-block;
+    font-weight: 700;
+    height: 50px;
+    margin: 20px 0px 0px 20px;
+    width: 200px;
+  }
+  body .container .function_box .display_area {
+    background-color: bisque;
+    border-radius: 5px;
+    box-shadow: 1px 2px 1px black;
+    margin-left: 15px;
+  }
+  body .container .function_box .display_area .title {
+    border-radius: 5px 5px 0 0;
+    color: white;
+    display: block;
+    padding: 1px;
+    text-align: center;
+  }
+  body .container .function_box .display_area .title h5 {
+    text-shadow: 1px 2px 1px black;
+  }
+  body .container .function_box .display_area .display {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+  }
+  

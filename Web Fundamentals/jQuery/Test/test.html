@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('button').click(function(){
+            $('div').append('<h3>I am a new content!</h3>');
+        });
+
+        $('div.b').on('hover','h3', function(){
+            alert('hello Dojo!');
+        });
+
+        // $(document).ready(function(){
+            // alert('hello');
+            // $('#form1').submit(function(){
+            //     console.log($(this).serialize())
+            //     return false;
+            // });
+            // $('.btn').click(function(){
+            //     $('#form1').submit();
+            // })
+            // $('#myDiv').children('h3').css('background-color', 'green').css('color', 'white');
+        //     $('h3,p').click(function(){
+        //         // $(this).parent().append('<h2>CODING DOJO!</h2>');
+        //         $(this).siblings('p').hide();
+        //     })
+
+        //     $('button').click(function(){
+        //         $(this).siblings().children().children().text('here!');
+        //     })
+        });
+        
+    
+    </script>
+
+</head>
+<body>
+   <button>Click Me for new content!</button>
+   <div class="a">
+       <h3>I am old content</h3>
+   </div>
+   <div class="b">
+       <h3>I am old content</h3>
+   </div> 
+    
+
+     <!-- <form id="form1" action="process.php" method="post" >
+         First Name<input type="text" name="first_name">
+         Last Name<input type="text" name="last_name">
+         Email<input type="text" name="email">
+         <input type="submit" value="submit!">
+     </form>
+
+     <button class="btn">Click me to use .submit differently</button> -->
+
+<!-- 
+     <div id="myDiv">
+         <p>Here is a paragraph. It is a beautiful paragraph</p>
+         <h3>Michael Choi</h3>
+         <h3>John Supsupin</h3>
+         <h3>Trey Villafane</h3>
+     </div>   -->
+
+    <!-- <div>
+        <button>Click me for crazy things</button>
+        <ul>
+            <li><h3>Tiger Woods</h3></li>
+            <li><h3>Phil Nickelson</h3></li>
+            <li><h3>Ben Hogan</h3></li>
+            <li><h3>Jack Nicklaus</h3></li>
+            <li><h3>Gary Player</h3> </li>
+            <li><h3>Rory Mcilroy</h3></li>
+        </ul>
+    </div> -->
+</body>
+</html>

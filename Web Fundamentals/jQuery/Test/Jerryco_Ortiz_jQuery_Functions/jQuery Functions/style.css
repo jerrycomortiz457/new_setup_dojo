@@ -1,0 +1,204 @@
+body {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #60B4B4;
+	background-color: #333;
+	position: absolute;
+	height: 100%;
+	width: 940px;
+	}
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color:  #60B4B4;
+	outline: none;
+	}
+a:visited {
+	color:  #60B4B4;
+	}
+a:active {
+	color:  #60B4B4;
+	}
+a:hover {
+	color: #60B4B4;
+	text-decoration: underline;
+	}
+.ahem {
+	display: none;
+	}
+strong, b {
+	font-weight: bold;
+	}
+p {
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: white;
+	text-align: center; 
+	}
+
+p {
+	font-size: 12px;
+	line-height: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: white;
+	text-align: center; 
+	}
+
+/* weird ie5win bug: all line-height to font-size ratios must agree or box gets pushed around. UPDATE: this has turned out to be very rare. my current recommendation is IGNORE this warning. at the moment i'm leaving it in only in case the issue turns up again. possibly the original bug in march 2001 was caused by an unusual combination of factors, although this solved it at the time.*/
+
+h1 {
+	font-size: 24px;
+	line-height: 44px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	color:#D86062;
+	}
+h2 {
+	font-size: 18px;
+	line-height: 40px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	color:#D86062;
+	}
+h3 {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h4 {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h5 {
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+h6 {
+	font-size: 10px;
+	line-height: 18px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+img {
+	border: 0;
+	}
+.nowrap {
+	white-space: nowrap;
+	font-size: 10px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+/* must be combined with nobr in html for ie5win */
+	}
+.tiny {
+	font-size: 9px;
+	line-height: 16px;
+	margin-top: 15px;
+	margin-bottom: 5px; 
+	}	
+#top {
+	margin: 20px 20px 0px 20px;
+	padding: 10px;
+	border: 5px solid #60B4B4;
+	background: #666;
+	height: 100px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height: 70px;
+	}
+html>body #top {
+	height: 70px; /* ie5win fudge ends */
+	}
+
+#middle {
+	margin: 15px 190px 15px 20px;
+	padding: 10px;
+	border: 5px solid #60B4B4;
+	background: #666;
+	width: 870px;
+	}
+.left{
+	/*background-color: green;*/
+	width: 200px;
+	display: inline-table;
+	padding-left: 70px;
+	float: left;
+	padding-top: 50px;
+	position: absolute;
+}
+.right{
+	/*background-color: black;*/
+	width: 500px;
+	height: 30px;
+	display: inline-table;
+	text-align: center;
+	margin-left: 270px;
+}
+.content{
+	background-color: grey;
+	width: 500px;
+	height: 50px;
+	display: inline-table;
+	margin-left: 270px;
+}
+.classAdded{
+	color: red;
+}
+
+.appendcontent{
+	background-color: grey;
+	width: 500px;
+	height: 50px;
+	display: inline-table;
+	margin-left: 270px;
+}
+
+.slideDownHidden{
+	border: 2px solid black;
+	background: #de9a44;
+    margin-left: 70px;
+    margin-bottom: 20px;  
+    width: 80px;
+    height: 80px;
+    display: none;
+    float: left;
+}
+
+.slideUpBox{
+	border: 2px solid black;
+	background: #de9a44;
+    margin-left: 70px;
+    margin-bottom: 20px;  
+    width: 80px;
+    height: 80px;
+    display: inline-table;
+    float: left;
+}
+
+.fadeInBox{
+	border: 2px solid black;
+	background: #de9a44;
+    margin-left: 70px;
+    margin-bottom: 20px;  
+    width: 80px;
+    height: 80px;
+    display: none;
+    float: left;
+}
