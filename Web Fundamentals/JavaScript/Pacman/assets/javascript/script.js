@@ -1,19 +1,15 @@
-// List of features to MSBlobBuilder
-// 1) Have JS display the world of brick/coin/etc
-// 2) Have the pacman move up and down
-
 var world = [
     [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
-    [4,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4],
+    [4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4],
     [4,1,1,5,5,1,1,2,2,1,1,5,5,5,1,1,2,1,5,5,1,1,1,2,2,1,1,1,1,1,4],
     [4,1,5,1,1,1,1,1,1,2,1,5,1,1,5,1,1,1,5,1,5,1,2,1,1,1,1,1,1,1,4],
-    [4,1,5,1,1,1,2,1,1,2,1,1,1,1,5,1,2,1,5,1,5,1,2,1,2,2,1,1,1,1,4],
+    [4,1,5,1,1,1,2,1,1,2,1,1,6,6,5,1,2,1,5,1,5,1,2,1,2,2,1,1,1,1,4],
     [4,1,5,1,1,1,2,1,1,2,1,5,1,1,5,1,2,1,5,1,5,1,2,1,1,2,1,1,1,1,4],
     [4,1,1,5,5,1,1,2,2,1,1,5,5,5,1,1,2,1,5,1,5,1,1,2,2,1,1,1,1,1,4],
     [4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4],
     [4,1,2,2,2,1,1,1,5,5,1,1,1,1,1,2,1,1,5,5,1,1,1,2,1,1,2,2,1,1,4],
     [4,1,2,1,1,2,1,1,1,1,5,1,1,1,1,2,1,1,1,1,5,1,2,1,1,2,1,1,2,1,4],
-    [4,1,1,1,1,2,1,5,1,1,5,1,2,1,1,2,1,5,1,1,5,1,1,2,1,1,1,2,1,1,4],
+    [4,1,1,6,6,2,1,5,1,1,5,1,2,1,1,2,1,5,1,1,5,1,1,2,1,1,1,2,1,1,4],
     [4,1,2,1,1,2,1,5,1,1,5,1,2,1,1,2,1,5,1,1,5,1,1,1,2,1,2,1,1,1,4],
     [4,1,2,2,2,1,1,1,5,5,1,1,1,2,2,1,1,1,5,5,1,1,1,1,1,2,1,1,1,1,4],
     [4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4],   
@@ -25,11 +21,11 @@ var world = [
 var score = 0;
 var num = 300;
 var pacman = {
-    x: 1,
-    y: 1
+    x: 15,
+    y: 7
 };
 
-var cyanghost = { x: 13,y: 4 }, redghost = { x: 4,y: 10 }, pinkghost = { x: 3,y: 10 }, orangeghost = { x: 12,y: 4 } ;
+var cyanghost = { x: 13,y: 4 }, redghost = { x: 4,y: 10 }, pinkghost = { x: 3,y: 10 }, orangeghost = { x: 12,y: 4 };
 
 var cherry = {
     x:15,
@@ -53,10 +49,12 @@ function displayWorld() {
                 output += "<div class='brick'></div>";
             if (world[i][j] == 5)
                 output += "<div class='bluewall'></div>";
+            if (world[i][j] == 6)
+                output += "<div id='orangeghost'></div>";           
         }
         output += "</div>";
     }
-    // console.log(output);
+  
     document.getElementById('world').innerHTML = output;
 }
 
@@ -72,27 +70,24 @@ function displayCherry(){
     world[cherry.y][cherry.x] = 3; 
 }
 
-function summonGhost(){
-    document.getElementById('cyanghost').style.top = cyanghost.y*20+"px";
-    document.getElementById('cyanghost').style.left = cyanghost.x*20+"px";
-    document.getElementById('redghost').style.top = redghost.y*20+"px";
-    document.getElementById('redghost').style.left = redghost.x*20+"px";
-    document.getElementById('pinkghost').style.top = pinkghost.y*20+"px";
-    document.getElementById('pinkghost').style.left = pinkghost.x*20+"px";
-    document.getElementById('orangeghost').style.top = orangeghost.y*20+"px";
-    document.getElementById('orangeghost').style.left = orangeghost.x*20+"px";
+function resuPacman(){   
+    pacman = { x: 15, y: 7 };
+    document.getElementById("pacman").style.backgroundImage = "url('pacman.gif')";
+    document.getElementById('pacman').style.display = "block";    
+    displayPacman();  
 }
 
 displayWorld();
 displayPacman();
-summonGhost();
 
-document.onkeydown = function(e){
+
+document.onkeydown = function(e){ 
+
     if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2 && world[pacman.y][pacman.x-1] != 5 && world[pacman.y][pacman.x-1] != 4){
-       pacman.x--;
-       document.getElementById("pacman").style.transform = "rotate(180deg)";
+      pacman.x--;   
+      document.getElementById("pacman").style.transform = "rotate(180deg)";
     }
-   
+    
     else if (e.keyCode == 39 && world[pacman.y][pacman.x+1] != 2 && world[pacman.y][pacman.x+1] != 5 && world[pacman.y][pacman.x+1] != 4){
         pacman.x++;
         document.getElementById("pacman").style.transform = "rotate(0deg)";
@@ -111,6 +106,15 @@ document.onkeydown = function(e){
         displayWorld();
         displayScore();
     }
+   
+    if(world[pacman.y][pacman.x] == 6){   
+        console.log('Dead!');
+        document.getElementById("pacman").style.backgroundImage = "none";
+        document.getElementById("pacman").style.backgroundImage = "url('deadpacman.gif')";        
+        setTimeout(resuPacman, 2000);
+        return true;         
+    }
+    
     if (world[pacman.y][pacman.x] == 3){
         world[pacman.y][pacman.x] = 0;
         score+=50;
@@ -121,6 +125,5 @@ document.onkeydown = function(e){
         num = num + 300;       
         displayCherry();        
     }
-       // console.log(e.keyCode);
     displayPacman();   
 }

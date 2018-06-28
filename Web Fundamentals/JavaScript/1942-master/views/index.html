@@ -1,0 +1,214 @@
+<html>
+<head>
+	<title>1942 Game</title>
+
+<style type="text/css">
+	body{
+		background-color:black;
+	}
+	#container{
+		background-image: url('background.jpg');
+		width:900px;
+		height:550px;
+	}
+	#hero{
+		background: url('1942.gif');
+		background-position: -85px -180px;
+		width:28px;
+		height:28px;
+		position:absolute;
+	}
+	#enemy1{
+		background: url('1942.gif');
+		background-position: -30px -10px;
+		width:28px;
+		height:28px;
+		position:absolute;
+	}
+	.enemy2{
+		background: url('1942.gif');
+		background-position: -50px -70px;
+		width:28px;
+		height:20px;
+		position:absolute;
+	}
+	
+	.explode{
+		background: url('1942.gif');
+		background-position: -70px -70px;
+		width:28px;
+		height:20px;
+		position:absolute;
+	}
+
+	.bullet{
+		background: url('1942.gif');
+		background-position: -185px -400px;
+		width:18px;
+		height:18px;
+		position:absolute;
+	}
+	#score{
+		position:absolute;
+		border:10px solid red;
+		top:20px;
+		left:800px;
+		background-color:white;
+		padding:10px;
+		font-size:30px;
+		font-family: Arial;	
+	}
+</style>
+</head>
+<body>
+	<div id='container'>
+		<div id='hero' style='top:300px; left:300px;'></div>
+		<div id='enemies'>
+			<div id='enemy1' style='top:100px; left:100px;'></div>
+			<div id='enemy1' style='top:100px; left:200px;'></div>
+			<div id='enemy1' style='top:100px; left:300px;'></div>
+			<div id='enemy1' style='top:100px; left:400px;'></div>
+		</div>
+		<div id='bullets'>
+			<div class='bullet' style='top:150px; left:200px;'></div>
+			<div class='bullet' style='top:250px; left:200px;'></div>
+			<div class='bullet' style='top:350px; left:200px;'></div>
+			<div class='bullet' style='top:450px; left:200px;'></div>
+		</div>	
+	</div>
+
+	<div id='score'>0</div>
+	//Display the hero - DONE
+	//Move the hero move - DONE
+	//Display all the enemies - DONE
+	//Make enemies move - DONE
+	//When spacebar is pressed, have the hero shoot a bullet-DONE
+
+	Challenges
+
+1(Easy) Change the background of the game - DONE
+2(Easy) Get the hero to move up and down - DONE
+3(Easy) Get 7 enemies to show up instead of 4 at a time - DONE
+4(Intermediate) Get another type of enemy airplane to show up - DONE 
+5(Advanced) Collision Detection for the airplanes – when the hero collides with the enemy, have your score go down by 500. - DONE
+6(Advanced) Collision Detection for the bullet – Have the score go up by 10 when an enemy is struck down. - DONE
+7(Advanced) Get the enemy to explode when it is hit -
+8(Advanced) When the bullet hits, make a sound.
+
+
+<!-- <script>
+	var hero = {
+		x: 300,
+		y: 400
+	}
+    var score = 0;
+	var enemies = [
+		{x: 50, y: 50}, 
+		{x: 250, y: 60},
+		{x: 450, y: 40}, 
+		{x: 550, y: 80}, 
+		{x: 650, y: 90},
+		{x: 750, y: 30},
+		{x: 850, y: 50}
+	];
+
+	var bullets = [];
+
+	function displayHero(){
+		document.getElementById('hero').style['top'] = hero.y + "px";
+		document.getElementById('hero').style['left'] = hero.x + "px";
+	}
+
+	function displayEnemies(){
+		var output = '';
+		for (var i=0; i < enemies.length; i++){
+			output += "<div class='enemy1' style='top:"+enemies[i].y+"px; left:"+enemies[i].x+"px;'></div>";	
+		}
+		document.getElementById('enemies').innerHTML = output;
+	}
+	function displayBullets(){
+		var output = '';
+		for (var i=0; i < bullets.length; i++){
+			output += "<div class='bullet' style='top:"+bullets[i].y+"px; left:"+bullets[i].x+"px;'></div>";	
+		}				
+		
+		document.getElementById('bullets').innerHTML = output;
+	}
+
+	function moveEnemies(){
+		for (var i = 0; i < enemies.length;i++){
+			enemies[i].y += 5;
+			if (enemies[i].y > 540){				
+			// console.log('enemy', i, 'out');
+				enemies[i].y = 0;
+				enemies[i].x = Math.floor(Math.random()*500);
+			}
+		}		
+	}
+	function movingBullet(){
+		for (var i = 0; i < bullets.length;i++){
+			bullets[i].y -= 5;
+			if (bullets[i].y < 0){
+				bullets.shift();
+				// console.log(bullets)
+			}				
+		}	
+	}
+
+	function gameLoop(){			
+		displayHero();
+		moveEnemies();
+		displayEnemies();
+		movingBullet();
+		displayBullets();
+		detectCollision();		
+	}
+
+	function displayScore(){
+		document.getElementById('score').innerHTML = score;
+	}
+
+	function detectCollision(){
+		for (var i = 0; i< bullets.length; i++){
+			for (var j = 0; j < enemies.length; j++){
+				if (Math.abs(bullets[i].x - enemies[i].x) < 20 && Math.abs(bullets[i].y - enemies[i].y) < 20  ){
+					bullets.shift();
+					score+=10;
+					displayScore();
+					console.log("collision");					
+				}
+			}
+		}
+	}
+
+	setInterval(gameLoop, 20);
+
+	document.onkeydown = function(e){
+		if(e.keyCode == 37){
+			hero.x -= 10;
+		} 
+		else if(e.keyCode == 39){
+			hero.x += 10;  
+		}
+		else if(e.keyCode == 38){
+			hero.y -= 10;
+		} 
+		else if(e.keyCode == 40){
+			hero.y += 10;  
+		}
+		else if (e.keyCode == 32){
+			bullets.push({x: hero.x+5,y: hero.y-13});
+			// console.log(bullets)
+			displayBullets();
+		
+		}
+		displayHero();		
+	}
+	
+	displayHero();
+	displayEnemies();	
+
+</script> -->
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

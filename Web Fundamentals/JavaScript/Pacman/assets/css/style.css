@@ -7,6 +7,10 @@
 
 body{
     background-color: black;
+    width: 900px;
+    resize: none;
+    overflow: hidden; 
+  
 }
 
 div.row div{   
@@ -54,6 +58,17 @@ div#pacman{
     height: 20px;
     position: absolute;    
 }
+/* div#deadpacman{
+    background-image: url('../images/deadpacman.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;    
+} */
+
+
 div.empty{
 
 }
@@ -101,9 +116,6 @@ div#orangeghost{
     background-image: url('../images/orangeghost.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    position: absolute;        
+    background-size: cover; 
 }
 
