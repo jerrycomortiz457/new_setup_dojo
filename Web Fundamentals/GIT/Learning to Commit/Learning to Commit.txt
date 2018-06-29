@@ -1,0 +1,17 @@
+Commands used step by step:
+1. "Open Git Bash"
+2. mkdir gittest
+3. cd gittest > git init
+4. touch index.html > touch styles.css > touch aboutMe.txt > git add . > git commit -m "added aboutMe.txt index.html styles.css"
+5. vim aboutMe.txt > Name: Jerryco Ortiz > :wq > git add aboutMe.txt > git commit -m "updated aboutMe.txt"
+		     Project Goal: Master Git
+		     Favorite Quote: Faith precedes Miracles"
+6. vim aboutMe.txt > Name: Jerryco Ortiz > :wq > git add aboutMe.txt > git commit -m "added Favorite Movie to aboutMe.txt"
+		     Project Goal: Master Git
+		     Favorite Quote: Faith precedes Miracles"
+		     Favorite Movie: "The Restoration"
+7. git log
+8. git revert -n <commit hash(first 7 characters)> > vim aboutMe.txt > 	Name: Jerryco Ortiz > :wq > git add aboutMe.txt > git commit -m "reverted <commit hash> and added Favorite Book in aboutMe.txt"
+									Project Goal: Master Git
+									Favorite Quote: Faith precedes Miracles"
+									Favorite Book: Book of Mormon
