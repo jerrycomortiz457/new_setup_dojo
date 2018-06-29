@@ -3,7 +3,7 @@ node_modules/secret/lib/secret.js
 node_modules/secret/index.js
 node_modules/*.txt
 node_modules
-.gitignore
+../
 
 
 
