@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://code.jquery.com/jquery-2.1.3.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js'></script>
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var count = _.range(1, 152);
+            $(count).each(function(idx) {
+                $('.poke_display').append('<img class="pokethis" id="' + count[idx] + '"src="http://pokeapi.co/media/img/' + count[idx] + '.png">')
+                    // $('.poke_display').append('<img class="pokethis" id="' + count[idx] + '"src="https://cdn.onlinewebfonts.com/svg/img_518074.png">');
+            })
+
+            $(document).on("click", ".pokethis", function() {
+                var idcode = $(this).attr('id');
+                var currentsrc = 'http://pokeapi.co/media/img/' + idcode + '.png';
+                var currentsrcname = 'https://pokeapi.co/api/v2/pokemon/' + idcode + '/';
+                $('#pokemon').attr("src", currentsrc);
+                $.get(currentsrcname, function(res) {
+                    $('#name').text((res.name).toUpperCase());
+
+                    var poketypes = res.types;
+                    $(poketypes).each(function(idx) {
+                        var appendsrc = '<p>-' + res.types[idx].type.name + '</p>';
+                        $('#poketype').html(appendsrc);
+                    })
+                    $('#height').text((res.height) / 10 + ' m');
+                    $('#weight').text((res.weight) / 10 + ' kg');
+                    console.log(res)
+
+                }, "json");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="poke_display"></div>
+        <div class="pokedex">
+            <div class="selected_pokemon">
+                <h2 id="name">&nbsp;</h2>
+                <img id="pokemon" src="https://cdn.onlinewebfonts.com/svg/img_518074.png" alt="1">
+
+                <div id="info">
+                    <h4>Type</h4>
+                    <p id="poketype">&nbsp;</p>
+                    <h4>Height</h4>
+                    <p id="height">&nbsp;</p>
+                    <h4>Weight</h4>
+                    <p id="weight">&nbsp;</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

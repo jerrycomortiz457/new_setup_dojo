@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    // outline: 1px dotted green;
+}
+.pokethisdiv{
+    display: inline-block;
+    float: left;       
+}
+
+
+
+body{
+    background-color: bisque; 
+    #wrapper{
+                     
+        #header{
+            width: 100%;
+            text-align: center;           
+            background-color: aliceblue;
+            border-top: 4px solid red;
+            border-bottom: 4px solid red;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            h1{
+                text-shadow: 3px 1px 3px red;
+                letter-spacing: 30px;
+                color: gold;
+                font-size: 60px;              
+            }
+        }
+        #container{
+           .wrap{
+                display: table;
+                margin: 0 auto;
+              
+                #pokedisplay{                   
+                    display: inline-block;                                 
+                    width: 429px;
+                    height: 392px;                           
+                    border: 5px dashed red;                   
+                    margin: 0 20px 0 0;
+                    overflow: scroll; 
+                    background-color: cornsilk;                
+                }
+                #pokedex{              
+                    display: inline-block;
+                    margin: 0 auto;                                          
+                    width: 500px;
+                    height: 406px;
+                    vertical-align: top;
+                 
+
+                    img{                   
+                        height: 100%;
+                        width: 100%;                        
+                                    
+                    }
+                    .dex_screen{
+                        height: 129.69px;
+                        width: 173.7px;
+                        position: relative;
+                        top: -299px;
+                        left: 35.3px;
+                        border-radius: 6px;
+                        text-align: center;
+                        background-color: #30FB05;
+                        border: 2px solid black;
+
+                        h2{
+                         font-size: 15px;
+                         text-shadow: 1px 1px 1px grey;
+                        }
+                        img{                   
+                            width: auto;
+                            height: auto;
+                            position: relative;
+                            top: -7px;  
+                        }
+                    }
+
+                    #poketype{
+                        height: 38px;
+                        width: 157px;
+                        position: relative;
+                        top: -415px;
+                        left: 303px;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        text-align: center;
+                        color: rgb(3, 60, 3);
+                        font-weight: 900;
+                        text-shadow: 1px 1px 1px grey;
+                        // overflow: scroll;
+                    }
+                    #height{
+                        
+                        height: 28px;
+                        width: 54px;
+                        position: relative;
+                        top: -402px;
+                        left: 325px;
+                        border-radius: 5px;
+                        font-size: 17px;
+                        color: rgb(3, 60, 3);
+                        font-weight: 900;
+                        text-shadow: 1px 1px 1px grey;
+                    }
+
+                    #weight{
+                        height: 28px;
+                        width: 61px;
+                        position: relative;
+                        top: -430px;
+                        left: 391px;
+                        border-radius: 5px;
+                        font-size: 17px;
+                        vertical-align: top;
+                        color: rgb(3, 60, 3);
+                        font-weight: 900;
+                        text-shadow: 1px 1px 1px grey;
+                    }
+                }
+            }                 
+        }
+        #footer{
+            color: green;
+        }
+    }
+}
+
+@media only screen and (max-width: 959px){
+    body{
+        background-color: bisque; 
+        #wrapper{
+                         
+            #header{
+                width: auto;
+                text-align: center;           
+                background-color: bisque;
+                border-top: none;
+                border-bottom: none;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                h1{
+                    text-shadow: 3px 1px 3px red;
+                    letter-spacing: 0px;
+                    color: gold;
+                    font-size: 60px;              
+                }
+            }
+            #container{
+               .wrap{
+                    display: table;
+                    margin: 0 auto;
+                  
+                    #pokedisplay{                   
+                        display: inline-block;                                 
+                        width: 429px;
+                        height: 392px;                           
+                        border: 5px dashed red;                   
+                        margin: 0 20px 0 0;
+                        overflow: scroll; 
+                        background-color: cornsilk;
+                        display: block;
+                        margin: 0 auto;
+                        overflow: scroll;
+                        margin-bottom: 10px;
+
+                    }
+                    #pokedex{              
+                        display: inline-block;
+                        margin: 0 auto;                                          
+                        width: 500px;
+                        height: 406px;
+                        vertical-align: top;
+                     
+    
+                        img{                   
+                            height: 100%;
+                            width: 100%;                        
+                                        
+                        }
+                        .dex_screen{
+                            height: 129.69px;
+                            width: 173.7px;
+                            position: relative;
+                            top: -299px;
+                            left: 35.3px;
+                            border-radius: 6px;
+                            text-align: center;
+                            background-color: #30FB05;
+                            border: 2px solid black;
+    
+                            h2{
+                             font-size: 15px;
+                             text-shadow: 1px 1px 1px grey;
+                            }
+                            img{                   
+                                width: auto;
+                                height: auto;
+                                position: relative;
+                                top: -7px;  
+                            }
+                        }
+    
+                        #poketype{
+                            height: 38px;
+                            width: 157px;
+                            position: relative;
+                            top: -415px;
+                            left: 303px;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            text-align: center;
+                            color: rgb(3, 60, 3);
+                            font-weight: 900;
+                            text-shadow: 1px 1px 1px grey;
+                            // overflow: scroll;
+                        }
+                        #height{
+                            
+                            height: 28px;
+                            width: 54px;
+                            position: relative;
+                            top: -402px;
+                            left: 325px;
+                            border-radius: 5px;
+                            font-size: 17px;
+                            color: rgb(3, 60, 3);
+                            font-weight: 900;
+                            text-shadow: 1px 1px 1px grey;
+                        }
+    
+                        #weight{
+                            height: 28px;
+                            width: 61px;
+                            position: relative;
+                            top: -430px;
+                            left: 391px;
+                            border-radius: 5px;
+                            font-size: 17px;
+                            vertical-align: top;
+                            color: rgb(3, 60, 3);
+                            font-weight: 900;
+                            text-shadow: 1px 1px 1px grey;
+                        }
+                    }
+                }                 
+            }
+            #footer{
+                color: green;
+            }
+        }
+    }
+
+}
+
