@@ -1,0 +1,385 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+#footer #contact_details {
+  padding-bottom: 0px;
+}
+#footer #contact_details a {
+  color: black;
+  text-decoration: none;
+}
+body #wrapper {
+  background-color: #F9F9F9;
+  margin: 0px auto;
+}
+body #wrapper #header {
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+  width: 866px;
+}
+body #wrapper #header .container {
+  margin: 0px auto;
+  width: 100%;
+}
+body #wrapper #header .container #name {
+  display: inline-block;
+  margin-top: 5px;
+}
+body #wrapper #header .container #motto {
+  display: inline-block;
+  float: right;
+  margin-top: 16px;
+  text-align: center;
+}
+body #wrapper .contents {
+  background: -webkit-radial-gradient(#6f5964, #6f5964, #1e0e12);
+  margin: 0px auto;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+body #wrapper .contents #bio #profile_pic {
+  border: 5px solid #C0C0C0;
+  height: 241px;
+  margin-right: 21px;
+  vertical-align: top;
+  width: 358px;
+}
+body #wrapper .contents #bio #about {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 471px;
+}
+body #wrapper .contents #bio #about #about_bar {
+  background: -webkit-linear-gradient(#b2b1b5, #878593, #b2b1b5);
+  height: 32px;
+  padding: 10px 0px 0px 10px;
+}
+body #wrapper .contents #bio #about #about_bar h3 {
+  color: white;
+}
+body #wrapper .contents #bio #about #about_info {
+  background: -webkit-linear-gradient(left, #ffffff, #daccd9);
+  padding: 10px 10px 10px 10px;
+}
+body #wrapper .contents #bio #about #about_info p {
+  margin-bottom: 10px;
+}
+body #wrapper .contents #bio #about #about_info a {
+  color: black;
+}
+body #wrapper .contents #info {
+  margin-top: 20px;
+}
+body #wrapper .contents #info .infotab {
+  background: -webkit-linear-gradient(left, #ffffff, #daccd9);
+  display: inline-block;
+  margin: 0 21px 0 0;
+  text-align: left;
+  vertical-align: top;
+  width: 271.1px;
+}
+body #wrapper .contents #info .infotab:first-child {
+  margin-left: 21.5px;
+}
+body #wrapper .contents #info .infotab h4 {
+  background: -webkit-linear-gradient(#b2b1b5, #878593, #b2b1b5);
+  color: white;
+  height: 26px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+body #wrapper .contents #info .infotab img {
+  height: 132px;
+  width: 271px;
+}
+body #wrapper .contents #info .infotab .infos {
+  height: 200px;
+  padding: 10px;
+  text-align: justify;
+}
+body #wrapper .contents #info .infotab h5 {
+  background: -webkit-linear-gradient(#b2b1b5, #878593, #b2b1b5);
+  color: white;
+  height: 26px;
+  padding: 7px 0px 0px 10px;
+}
+body #wrapper .contents #info .infotab .technologies_list {
+  list-style-type: none;
+  padding: 10px 10px 10px 21px;
+}
+body #wrapper .contents #info .infotab .technologies_list li {
+  display: inline-block;
+}
+body #wrapper .contents #info .infotab .technologies_list li img {
+  height: 40px;
+  margin: 0px 4px 5px 0px;
+  width: 40px;
+}
+body #wrapper .contents #info .infotab .buttons {
+  text-align: center;
+}
+body #wrapper .contents #info .infotab .buttons button {
+  background-color: #407D61;
+  border-radius: 7px;
+  border: 1px solid black;
+  box-shadow: 2px 4px 10px #868887;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 24px;
+  margin: 0 auto;
+  padding: 2px 4px 2px 4px;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+body #wrapper #footer {
+  background-color: #F9F9F9;
+  height: 60px;
+  margin-top: 5px;
+  text-align: center;
+}
+body #wrapper #footer #contact_details {
+  padding-bottom: 10px;
+}
+body #wrapper #footer #contact_details a {
+  text-decoration: none:
+                    color:black;
+}
+body #wrapper #footer .connect a {
+  color: black;
+  font-style: italic;
+  vertical-align: top;
+}
+body #wrapper #footer .connect img {
+  height: 20px;
+  margin-right: 2px;
+  vertical-align: middle;
+  width: 20px;
+}
+@media only screen and (max-width: 924px) {
+  body #wrapper {
+    margin: 0px auto;
+    background-color: #F9F9F9;
+  }
+  body #wrapper #header {
+    height: 49px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    width: 80%;
+  }
+  body #wrapper #header .container {
+    margin: 0px auto;
+  }
+  body #wrapper #header .container #name {
+    color: black;
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    margin-top: 7px;
+  }
+  body #wrapper #header .container #motto {
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  body #wrapper .contents #bio #profile_pic {
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    margin: 0px auto;
+    width: 80%;
+  }
+  body #wrapper .contents #bio #about {
+    display: block;   
+    margin: 0px auto;
+    width: 81.3%;
+    margin-top: 20px;
+  }
+  body #wrapper .contents #bio #about_bar {
+    border-radius: 5px 5px 0 0;
+  }
+  body #wrapper .contents #bio #about_info {
+    border-radius: 0px 0px 5px 5px;
+  }
+  body #wrapper .contents #info .infotab {
+    background: -webkit-linear-gradient(left, #ffffff, #daccd9);
+    border-radius: 5px;
+    display: block;
+    margin: 0px auto 10px auto;
+    padding-bottom: 5px;
+    vertical-align: top;
+    width: 81.3%;
+  }
+  body #wrapper .contents #info .infotab:nth-child(3) {
+    margin: auto;
+  }
+  body #wrapper .contents #info .infotab:first-child {
+    margin: 0 auto 10px auto;
+  }
+  body #wrapper .contents #info .infotab:first-child .infos {
+    height: 12.45em;
+  }
+  body #wrapper .contents #info .infotab h4 {
+    border-radius: 5px 5px 0 0;
+  }
+  body #wrapper .contents #info .infotab img {
+    display: inline-block;
+    height: auto;
+    margin-bottom: 0px;
+    width: 48%;
+  }
+  body #wrapper .contents #info .infotab .infos {
+    display: inline-block;
+    height: 250px;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    vertical-align: top;
+    width: 45%;
+  }
+  body #wrapper .contents #info .infotab:nth-child(2) h5 {
+    margin-top: -75px;
+  }
+  body #wrapper .contents #info .infotab:nth-child(3) h5 {
+    margin-top: -74px;
+  }
+  body #wrapper .contents #info .infotab h5 {
+    margin-top: -24px;
+  }
+  body #wrapper .contents #info .infotab ul {
+    text-align: center;
+  }
+  body #wrapper .contents #info .infotab ul li {
+    display: inline-block;
+    width: 10%;
+    padding-top: 20px;
+  }
+  body #wrapper .contents #info .infotab .buttons {
+    margin-top: 8px;
+  }
+  body #wrapper .contents #info .infotab .buttons button {
+    font-size: 18px;
+    height: 35px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  body #wrapper #header {
+    height: 60px;
+    padding-top: 5px;
+    text-align: center;
+  }
+  body #wrapper #header .container #name {
+    display: block;
+    float: none;
+    text-align: center;
+  }
+  body #wrapper #header .container #motto {
+    display: block;
+    float: none;
+    font-size: 85%;
+    margin: 0px auto;
+  }
+  body #wrapper .contents #bio #profile_pic {
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    margin: 0px auto;
+    width: 80%;
+  }
+  body #wrapper .contents #bio #about {
+    display: block;
+    margin-top: 20px;
+    margin: 0px auto;
+    width: 81.3%;
+  }
+  body #wrapper .contents #bio #about_bar {
+    border-radius: 5px 5px 0 0;
+  }
+  body #wrapper .contents #bio #about_info {
+    border-radius: 0px 0px 5px 5px;
+  }
+  body #wrapper .contents #info .infotab {
+    background: -webkit-linear-gradient(left, #ffffff, #daccd9);
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    vertical-align: top;
+    width: 81.3%;
+  }
+  body #wrapper .contents #info .infotab:nth-child(3) {
+    margin: auto;
+  }
+  body #wrapper .contents #info .infotab:nth-child(2) .infos {
+    height: 14.45em;
+  }
+  body #wrapper .contents #info .infotab:nth-child(3) .infos {
+    height: 14.45em;
+  }
+  body #wrapper .contents #info .infotab h4 {
+    border-radius: 5px 5px 0 0;
+  }
+  body #wrapper .contents #info .infotab img {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  body #wrapper .contents #info .infotab .infos {
+    padding: 5px 20px 10px 20px;
+    text-align: justify;
+    vertical-align: top;
+    width: 90%;
+  }
+  body #wrapper .contents #info .infotab:nth-child(2) h5 {
+    margin-top: -50px;
+  }
+  body #wrapper .contents #info .infotab:nth-child(3) h5 {
+    margin-top: -26px;
+  }
+  body #wrapper .contents #info .infotab h5 {
+    margin-top: -17%;
+  }
+  body #wrapper .contents #info .infotab ul {
+    text-align: center;
+  }
+  body #wrapper .contents #info .infotab ul li {
+    display: inline-block;
+    width: 20%;
+  }
+  body #wrapper .contents #info .infotab button {
+    font-size: 20px;
+    height: 42px;
+    width: 80%;
+  }
+  body #wrapper #footer {
+    background-color: #F9F9F9;
+    height: auto;
+    margin-top: 5px;
+    text-align: center;
+  }
+  body #wrapper #footer #contact_details {
+    padding-bottom: 0px;
+  }
+  body #wrapper #footer #contact_details a {
+    color: black;
+    text-decoration: none;
+  }
+  body #wrapper #footer .connect a {
+    color: black;
+    display: block;
+    font-style: italic;
+    text-align: center;
+  }
+  body #wrapper #footer .connect img {
+    height: 20px;
+    margin-right: 5px;
+    width: 20px;
+  }
+}

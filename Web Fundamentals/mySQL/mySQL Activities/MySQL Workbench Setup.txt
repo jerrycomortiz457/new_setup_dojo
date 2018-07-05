@@ -1,0 +1,30 @@
+USE twitter;
+
+SELECT *
+FROM users;
+
+
+INSERT INTO users(first_name, last_name, handle, created_at, updated_at)
+VALUE ('Jerryco', 'Ortiz', '457', NOW(),NOW());
+
+
+SELECT *
+FROM users;
+
+
+UPDATE users
+
+SET id = '7'
+WHERE id = 9;
+
+
+SELECT *
+FROM users;
+
+
+DELETE FROM users
+WHERE id = 7;
+
+
+SELECT *
+FROM users;

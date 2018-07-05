@@ -1,0 +1,31 @@
+-- MySQL Functions
+
+-- CONCAT
+SELECT CONCAT(first_name ,' ',last_name) AS full_name
+FROM users;
+
+-- CONCAT WS
+SELECT CONCAT_WS(' ', first_name, last_name, 'cool') AS full_name
+FROM users;
+
+-- LENGTH
+SELECT LENGTH(last_name) AS last_len FROM users;
+
+-- LOWER
+SELECT LOWER(first_name) AS lowercase FROM users;
+
+-- DATE
+-- HOUR
+SELECT HOUR(created_at) AS date_hour, id, created_at FROM users;
+
+-- DAYNAME
+SELECT DAYNAME(created_at) AS date_day, id, created_at FROM users;
+
+-- MONTH
+SELECT MONTHNAME(created_at) AS date_month, id, created_at FROM users;
+
+-- NOW
+SELECT NOW();
+
+-- FORMAT
+SELECT DATE_FORMAT(created_at, '%W %M %e, %Y') FROM users;

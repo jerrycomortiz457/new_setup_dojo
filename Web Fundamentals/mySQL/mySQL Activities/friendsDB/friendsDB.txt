@@ -1,0 +1,85 @@
+0.
+SELECT users.id, users.first_name, users.last_name, user2.id, user2.first_name AS friend_first_name, user2.last_name AS friend_last_name 
+
+FROM users
+
+LEFT JOIN friendships ON users.id = friendships.friend_1_id
+
+LEFT JOIN users AS user2 ON friendships.friend_2_id = user2.id;
+
+1.
+SELECT CONCAT(users.first_name,' ', users.last_name) AS kermit_friends
+FROM users
+WHERE users.id IN (SELECT REPLACE(CONCAT(users.id, user2.id), '4', '')
+FROM users
+
+LEFT JOIN friendships ON users.id = friendships.friend_1_id
+
+LEFT JOIN users AS user2 ON friendships.friend_2_id = user2.id
+
+WHERE friendships.friend_2_id = 4
+
+OR friendships.friend_1_id = 4);
+
+2.
+SELECT COUNT(*) AS total_friendships
+
+FROM users
+
+LEFT JOIN friendships ON users.id = friendships.friend_1_id
+
+LEFT JOIN users AS user2 ON friendships.friend_2_id = user2.id
+
+WHERE friendships.friend_1_id IS NOT NULL
+
+OR friendships.friend_2_id IS NOT NULL;
+
+3.
+SELECT who_has_the_most_friends, MAX(total_friends) AS friends_count
+
+FROM (SELECT CONCAT(users.first_name,' ',user2.last_name) AS who_has_the_most_friends, COUNT(*) AS total_friends
+
+FROM users
+
+LEFT JOIN friendships ON users.id = friendships.friend_1_id
+
+LEFT JOIN users AS user2 ON friendships.friend_2_id = user2.id
+
+GROUP BY users.id) AS max_friends
+
+4.
+INSERT INTO users(first_name,last_name,created_at)
+VALUE ('Cookie', 'Monster', NOW())
+INSERT INTO friendships(friend_1_id, friend_2_id, created_at)
+VALUE (6,2, NOW()), (6,4,NOW()), (6,5,NOW());
+
+5.
+SELECT CONCAT(users.first_name,' ', users.last_name) AS kermit_friends
+FROM users
+WHERE users.id IN (SELECT REPLACE(CONCAT(users.id, user2.id), '2', '')
+FROM users
+
+LEFT JOIN friendships ON users.id = friendships.friend_1_id
+
+LEFT JOIN users AS user2 ON friendships.friend_2_id = user2.id
+
+WHERE friendships.friend_2_id = 2
+
+OR friendships.friend_1_id = 2);
+
+6.
+DELETE FROM friendships
+
+WHERE friend_1_id = 2 
+AND friend_2_id = 5;
+
+7.
+SELECT users.first_name, users.last_name
+FROM friendships
+LEFT JOIN users ON users.id = friendships.friend_1_id
+JOIN friendships AS friendships2
+WHERE friendships.friend_1_id = friendships2.friend_2_id
+AND friendships.friend_2_id = friendships2.friend_1_id;
+ 
+
+
