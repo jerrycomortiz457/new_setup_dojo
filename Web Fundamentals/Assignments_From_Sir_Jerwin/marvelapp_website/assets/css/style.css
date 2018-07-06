@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body div.container-fluid {
+  -webkit-box-shadow: 0 4px 6px -6px #000000;
+  -moz-box-shadow: 0 4px 6px -6px #000000;
+  box-shadow: 0 4px 6px -6px #000000;
+}
+body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item {
+  font-weight: 700;
+  font-size: 15px;
+  text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
+  padding: 0 2.5px;
+}
+body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item .sign_up {
+  background-color: #1FB6FF;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 21px;
+}
+body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
+  font-size: 13px;
+}
+body div.container-fluid div.wrap_main {
+  margin-top: 176px;
+  margin-bottom: 130px;
+  max-width: 71.5%;
+}
+body div.container-fluid div.wrap_main div.first_part ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+body div.container-fluid div.wrap_main div.first_part ul li {
+  flex: auto;
+}
+body div.container-fluid div.wrap_main div.first_part ul li img {
+  width: 100%;
+  height: auto;
+}
+body div.container-fluid div.wrap_main div.first_part ul li div {
+  max-width: 487px;
+}
+body div.container-fluid div.wrap_main div.first_part ul li div h1 {
+  font-size: 50px;
+  overflow-wrap: break-word;
+}
+body div.container-fluid div.wrap_main div.first_part ul li div p {
+  font-size: 18px;
+  overflow-wrap: break-word;
+}
+body div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
+  border: none;
+  border-bottom: 1px solid #AAB5C5;
+  width: 323px;
+  height: 52px;
+  margin-bottom: 24px;
+}
+body div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
+  background-color: #1FB6FF;
+  color: white;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 11px 86px;
+  margin-top: 16px;
+}
+body div.container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-right: 66px;
+}
+body div.container ul li {
+  margin-left: 60px;
+}
+body div.about-your-design {
+  padding-top: 118px;
+  text-align: center;
+}
+body div.about-your-design h2 {
+  font-size: 36px;
+}
+body div.about-your-design div.you_design {
+  width: 545px;
+}
+body div.about-your-design div.you_design span {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+body div.about-your-design button.sign_up_2 {
+  background-color: #1FB6FF;
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 36px;
+  margin-top: 44px;
+}
+body div.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: left;
+  max-width: 71.5%;
+  margin-top: 99px;
+  padding-bottom: 80px;
+}
+body div.container div.pagination_here > * {
+  height: 128px;
+}
+body div.container div.pagination_here > * div {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+body div.container div.pagination_here > div {
+  border-bottom: 1px solid lightgrey;
+  padding: 20px;
+  width: 292px;
+}
+body div.container div.pagination_here p {
+  margin-top: 7px;
+  width: 187px;
+  font-size: 16px;
+  font-weight: normal;
+}
+body div.container div.display-photos img {
+  width: 100%;
+  height: auto;
+  margin-left: 62px;
+}
