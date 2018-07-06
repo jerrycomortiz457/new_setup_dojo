@@ -212,17 +212,16 @@ body{
        
         div.pagination_here {
           
-            & > *{
+            & > *{           
             height: 128px;
                 div{
                     font-size: 18px;
-                    font-weight: 600;
-                    color: black;  
+                    font-weight: 600;                    
                 }
             }
             & > div{
                 border-bottom: 1px solid lightgrey;
-                padding:20px;
+                padding:0 0 0 20px;
                 width: 292px;               
             }            
             
@@ -231,12 +230,22 @@ body{
                 width: 187px;
                 font-size: 16px;
                 font-weight: normal; 
-            }  
+            } 
+            
+           
                        
-            div.flex1 { 
+            div{ 
+                svg{                    
+                    position: relative;
+                    top: 20px;
+                    left:-10px; 
+                    fill:none;                   
+                }
+              
                
                 div { 
-    
+                    margin-top: -4px;
+                    
                 }
     
                 p { 
@@ -244,7 +253,7 @@ body{
                 }
             }
     
-            div.flex2 { 
+            div { 
     
                 div { 
     
@@ -255,7 +264,7 @@ body{
                 }
             }
     
-            div.flex3 { 
+            div { 
     
                 div { 
     
@@ -266,7 +275,7 @@ body{
                 }
             }
     
-            div.flex4 { 
+            div { 
     
                 div { 
     
@@ -278,9 +287,9 @@ body{
             }
         }
     
-        div.display-photos { 
+        div#displayhere_div{ 
          
-            img { 
+            #displayhere { 
                 width: 100%;
                 height: auto;
                 margin-left:62px; 
@@ -289,4 +298,3 @@ body{
     }
     
 }
-

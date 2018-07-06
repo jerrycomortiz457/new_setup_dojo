@@ -122,11 +122,10 @@ body div.container div.pagination_here > * {
 body div.container div.pagination_here > * div {
   font-size: 18px;
   font-weight: 600;
-  color: black;
 }
 body div.container div.pagination_here > div {
   border-bottom: 1px solid lightgrey;
-  padding: 20px;
+  padding: 0 0 0 20px;
   width: 292px;
 }
 body div.container div.pagination_here p {
@@ -135,7 +134,16 @@ body div.container div.pagination_here p {
   font-size: 16px;
   font-weight: normal;
 }
-body div.container div.display-photos img {
+body div.container div.pagination_here div svg {
+  position: relative;
+  top: 20px;
+  left: -10px;
+  fill: none;
+}
+body div.container div.pagination_here div div {
+  margin-top: -4px;
+}
+body div.container div#displayhere_div #displayhere {
   width: 100%;
   height: auto;
   margin-left: 62px;
