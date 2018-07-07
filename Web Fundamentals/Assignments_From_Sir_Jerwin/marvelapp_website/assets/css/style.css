@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body div.container-fluid {
+body .navi {
   -webkit-box-shadow: 0 4px 6px -6px #000000;
   -moz-box-shadow: 0 4px 6px -6px #000000;
   box-shadow: 0 4px 6px -6px #000000;
@@ -17,9 +18,9 @@ body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.n
   background-color: #1FB6FF;
   color: white;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  padding: 10px 21px;
+  padding: 9px 18.5px;
 }
 body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
   font-size: 13px;
@@ -41,15 +42,18 @@ body div.container-fluid div.wrap_main div.first_part ul li {
   flex: auto;
 }
 body div.container-fluid div.wrap_main div.first_part ul li img {
-  width: 100%;
   height: auto;
+  max-width: 48em;
+  width: 94.36%;
+  margin-left: 65px;
 }
 body div.container-fluid div.wrap_main div.first_part ul li div {
   max-width: 487px;
 }
 body div.container-fluid div.wrap_main div.first_part ul li div h1 {
-  font-size: 50px;
+  font-size: 46px;
   overflow-wrap: break-word;
+  letter-spacing: 1px;
 }
 body div.container-fluid div.wrap_main div.first_part ul li div p {
   font-size: 18px;
@@ -97,7 +101,7 @@ body div.about-your-design div.you_design span {
   font-size: 18px;
   line-height: 1.5em;
 }
-body div.about-your-design button.sign_up_2 {
+body div.about-your-design button {
   background-color: #1FB6FF;
   color: white;
   border-radius: 30px;
@@ -144,7 +148,165 @@ body div.container div.pagination_here div div {
   margin-top: -4px;
 }
 body div.container div#displayhere_div #displayhere {
-  width: 100%;
   height: auto;
-  margin-left: 62px;
+  margin-left: 95px;
+  width: 94%;
+  max-width: 59em;
+}
+body div.wrap {
+  margin-top: 278px;
+}
+body div.wrap div.buzzfeedpart {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -314px;
+}
+body div.wrap div.buzzfeedpart div.leftimage img {
+  height: auto;
+  width: 100%;
+  max-width: 82em;
+}
+body div.wrap div.buzzfeedpart ul {
+  list-style-type: none;
+  margin-left: 87px;
+}
+body div.wrap div.buzzfeedpart ul li h1 {
+  max-width: 319px;
+  overflow-wrap: break-word;
+  font-size: 25px;
+}
+body div.wrap div.buzzfeedpart ul li div.p-div {
+  max-width: 319px;
+}
+body div.wrap div.buzzfeedpart ul li div.p-div p {
+  font-size: 17px;
+  overflow-wrap: break-word;
+}
+body div.wrap div.buzzfeedpart ul li button.btn {
+  border: 1px solid #D5DCE3;
+  border-radius: 30px;
+  background-color: white;
+  color: #3E4854;
+  padding: 13.5px 35px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+body div.wrap div.buzzfeedpart ul li button.btn:hover {
+  opacity: 1;
+  background-color: #1FB6FF;
+  color: white;
+  -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+  -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+  box-shadow: 0 5px 6px -6px #20a2e1;
+}
+body .purple {
+  position: relative;
+  top: -218px;
+}
+body div.container-fluid div.container {
+  position: absolute;
+  left: 14%;
+  align-content: center;
+  justify-content: center;
+}
+body div.container-fluid div.container div.explore_integrations {
+  position: absolute;
+  left: 24px;
+  top: 219px;
+  max-width: 472px;
+}
+body div.container-fluid div.container div.explore_integrations ul {
+  list-style-type: none;
+  margin-left: -10px;
+  display: block;
+}
+body div.container-fluid div.container div.explore_integrations ul li {
+  margin-left: 0px;
+}
+body div.container-fluid div.container div.explore_integrations ul li:nth-child(2) {
+  margin-top: 35px;
+}
+body div.container-fluid div.container div.explore_integrations ul li h2 {
+  font-size: 27px;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  color: #FFFFFF;
+  max-width: 453px;
+  letter-spacing: -1px;
+}
+body div.container-fluid div.container div.explore_integrations ul li button.btn {
+  border: 1px solid #D5DCE3;
+  border-radius: 30px;
+  background-color: #AD6EDD;
+  color: white;
+  padding: 12.5px 23px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-weight: 600;
+  opacity: 1;
+  transition: 0.3s;
+}
+body div.container-fluid div.container div.explore_integrations ul li button.btn:hover {
+  opacity: 1;
+  background-color: #FFFFFF;
+  color: black;
+  -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+  -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+  box-shadow: 0 5px 6px -6px #20a2e1;
+}
+body div.container-fluid div.container div.orange_girl img {
+  width: 100%;
+  max-width: 35em;
+  position: relative;
+  left: 336px;
+}
+body div.container-fluid div.purple {
+  background-color: #AD6EDD;
+  width: 102%;
+  height: 323px;
+  position: relative;
+  top: 559px;
+  left: -15px;
+}
+body .footer {
+  margin-top: 341px;
+  padding-top: 133px;
+  padding-bottom: 93px;
+  background-color: #000000;
+}
+body div.container-fluid div.footer_menu {
+  width: 72%;
+  margin: 0 auto;
+}
+body div.container-fluid div.footer_menu ul {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style-type: none;
+}
+body div.container-fluid div.footer_menu ul li {
+  display: flex;
+  flex-direction: column;
+  margin-right: 120px;
+}
+body div.container-fluid div.footer_menu ul li h3 {
+  color: white;
+  font-size: 19px;
+}
+body div.container-fluid div.footer_menu ul li span {
+  color: #848588;
+  width: 101px;
+  line-height: 37px;
+}
+body div.container-fluid div.footer_menu ul li span:hover {
+  color: white;
 }

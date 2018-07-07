@@ -4,8 +4,9 @@ function reset(e) {
 }
 function cssupdate(e) {
     $(e).children('div').css('color', '#1FB6FF');
-    $(e).children('svg').css('fill', '1FB6FF');
+    $(e).children('svg').css('fill', '#1FB6FF');
 }
+
 $(document).ready(function () {
     $(document).on("click", ".displaythis", function () {
         var idcode = $(this).attr('id');
@@ -14,6 +15,9 @@ $(document).ready(function () {
         console.log("clicked", + idcode)
         cssupdate(this);
         reset(this);
-
     });
+
+    $('#readbutton').hover(function () { $(this).toggleClass('.button_hover'); });
+
+
 });
