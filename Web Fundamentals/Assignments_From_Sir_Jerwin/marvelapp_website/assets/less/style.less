@@ -62,13 +62,21 @@ body{
                                     }
                                 }
                             }
-    
-                            div.dropdown-menu { 
-    
+
+                            // a:hover{                                
+                            //     color:gold;
+                            // }                         
+                                                    
+                         
+                            div.dropdown-menu {                                 
+                                
                                 a.dropdown-item { 
                                     font-size: 13px;
+                                    color:#8792A1;
                                 }
-    
+                                a:hover{
+                                    color: black;
+                                }
                                 div.dropdown-divider { 
     
                                 }
@@ -109,9 +117,10 @@ body{
                         div { 
                             max-width: 487px;
                             h1 { 
-                                font-size: 46px;
+                                font-size: 47px;
+                                font-weight: 600;
                                 overflow-wrap: break-word;
-                                letter-spacing: 1px;
+                                letter-spacing: -1px;
                             }
     
                             p { 
@@ -234,7 +243,8 @@ body{
             & > div{
                 border-bottom: 1px solid lightgrey;
                 padding:0 0 0 20px;
-                width: 292px;               
+                width: 292px; 
+                cursor: pointer;              
             }            
             
             p{
@@ -526,7 +536,7 @@ body{
                         line-height: 37px;
                     }
                     span:hover{
-                        
+                        cursor: pointer;
                         color:white;
                     }
                 }

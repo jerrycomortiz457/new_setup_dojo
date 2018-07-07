@@ -24,6 +24,10 @@ body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.n
 }
 body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
   font-size: 13px;
+  color: #8792A1;
+}
+body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
+  color: black;
 }
 body div.container-fluid div.wrap_main {
   margin-top: 176px;
@@ -51,9 +55,10 @@ body div.container-fluid div.wrap_main div.first_part ul li div {
   max-width: 487px;
 }
 body div.container-fluid div.wrap_main div.first_part ul li div h1 {
-  font-size: 46px;
+  font-size: 47px;
+  font-weight: 600;
   overflow-wrap: break-word;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
 }
 body div.container-fluid div.wrap_main div.first_part ul li div p {
   font-size: 18px;
@@ -131,6 +136,7 @@ body div.container div.pagination_here > div {
   border-bottom: 1px solid lightgrey;
   padding: 0 0 0 20px;
   width: 292px;
+  cursor: pointer;
 }
 body div.container div.pagination_here p {
   margin-top: 7px;
@@ -308,5 +314,6 @@ body div.container-fluid div.footer_menu ul li span {
   line-height: 37px;
 }
 body div.container-fluid div.footer_menu ul li span:hover {
+  cursor: pointer;
   color: white;
 }
