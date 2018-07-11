@@ -1,20 +1,32 @@
 * {
   margin: 0;
   padding: 0;
+  outline: 1px dashed greenyellow;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body .navi {
+body #wrapper .navi {
   -webkit-box-shadow: 0 4px 6px -6px #000000;
   -moz-box-shadow: 0 4px 6px -6px #000000;
   box-shadow: 0 4px 6px -6px #000000;
 }
-body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item {
+body #wrapper div.navi {
+  height: 60px;
+}
+body #wrapper div.navi div.wrap_nav {
+  width: 1354px;
+  max-width: 93%;
+}
+body #wrapper div.navi div.wrap_nav nav.navbar div.collapse div.spacer {
+  margin: 0 auto;
+  background-color: green;
+}
+body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item {
   font-weight: 700;
   font-size: 15px;
   text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
   padding: 0 2.5px;
 }
-body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item .sign_up {
+body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item .sign_up {
   background-color: #1FB6FF;
   color: white;
   border-radius: 20px;
@@ -22,19 +34,20 @@ body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.n
   font-weight: 600;
   padding: 9px 18.5px;
 }
-body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
+body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
   font-size: 13px;
   color: #8792A1;
 }
-body div.container-fluid div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
+body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
   color: black;
 }
-body div.container-fluid div.wrap_main {
-  margin-top: 176px;
+body #wrapper div.firstpart div.wrap_main {
+  margin-top: 104px;
   margin-bottom: 130px;
-  max-width: 71.5%;
+  width: 1354px;
+  max-width: 93%;
 }
-body div.container-fluid div.wrap_main div.first_part ul {
+body #wrapper div.firstpart div.wrap_main div.first_part ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -42,36 +55,36 @@ body div.container-fluid div.wrap_main div.first_part ul {
   align-items: center;
   justify-content: center;
 }
-body div.container-fluid div.wrap_main div.first_part ul li {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li {
   flex: auto;
 }
-body div.container-fluid div.wrap_main div.first_part ul li img {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li img {
   height: auto;
   max-width: 48em;
   width: 94.36%;
   margin-left: 65px;
 }
-body div.container-fluid div.wrap_main div.first_part ul li div {
-  max-width: 487px;
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div {
+  max-width: 473px;
 }
-body div.container-fluid div.wrap_main div.first_part ul li div h1 {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div h1 {
   font-size: 47px;
   font-weight: 600;
   overflow-wrap: break-word;
   letter-spacing: -1px;
 }
-body div.container-fluid div.wrap_main div.first_part ul li div p {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div p {
   font-size: 18px;
   overflow-wrap: break-word;
 }
-body div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
   border: none;
   border-bottom: 1px solid #AAB5C5;
   width: 323px;
   height: 52px;
   margin-bottom: 24px;
 }
-body div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
   background-color: #1FB6FF;
   color: white;
   border-radius: 30px;
@@ -80,33 +93,38 @@ body div.container-fluid div.wrap_main div.first_part ul li div#create_account f
   padding: 11px 86px;
   margin-top: 16px;
 }
-body div.container ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
+body #wrapper div.logos {
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  margin-right: 66px;
+  text-align: center;
+  margin-top: 99px;
+  padding-bottom: 80px;
 }
-body div.container ul li {
-  margin-left: 60px;
+body #wrapper div.logos ul {
+  list-style-type: none;
 }
-body div.about-your-design {
+body #wrapper div.logos ul li {
+  display: inline;
+  margin: 0 60px 0 0;
+}
+body #wrapper div.logos ul li svg {
+  margin-bottom: 36px;
+}
+body #wrapper div.about-your-design {
   padding-top: 118px;
   text-align: center;
 }
-body div.about-your-design h2 {
+body #wrapper div.about-your-design h2 {
   font-size: 36px;
 }
-body div.about-your-design div.you_design {
+body #wrapper div.about-your-design div.you_design {
+  margin-top: 18px;
   width: 545px;
 }
-body div.about-your-design div.you_design span {
+body #wrapper div.about-your-design div.you_design span {
   font-size: 18px;
   line-height: 1.5em;
 }
-body div.about-your-design button {
+body #wrapper div.about-your-design button {
   background-color: #1FB6FF;
   color: white;
   border-radius: 30px;
@@ -115,97 +133,121 @@ body div.about-your-design button {
   padding: 14px 36px;
   margin-top: 44px;
 }
-body div.container {
+body #wrapper div.container {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  align-items: center;
   justify-content: left;
-  max-width: 71.5%;
   margin-top: 99px;
   padding-bottom: 80px;
+  max-width: 1352px;
 }
-body div.container div.pagination_here > * {
+body #wrapper div.container div.pagination_here {
+  width: 47%;
+  max-width: 371px;
+}
+body #wrapper div.container div.pagination_here h5 {
+  display: none;
+}
+body #wrapper div.container div.pagination_here img {
+  display: none;
+}
+body #wrapper div.container div.pagination_here > * {
   height: 128px;
 }
-body div.container div.pagination_here > * div {
+body #wrapper div.container div.pagination_here > * div {
   font-size: 18px;
   font-weight: 600;
+  max-width: 183px;
 }
-body div.container div.pagination_here > div {
+body #wrapper div.container div.pagination_here > div {
+  height: auto;
   border-bottom: 1px solid lightgrey;
-  padding: 0 0 0 20px;
-  width: 292px;
+  padding-left: 20px;
+  max-width: 259px;
   cursor: pointer;
 }
-body div.container div.pagination_here p {
+body #wrapper div.container div.pagination_here p {
   margin-top: 7px;
-  width: 187px;
   font-size: 16px;
   font-weight: normal;
+  color: #3E4854;
 }
-body div.container div.pagination_here div svg {
+body #wrapper div.container div.pagination_here div svg {
   position: relative;
   top: 20px;
   left: -10px;
   fill: none;
 }
-body div.container div.pagination_here div div {
+body #wrapper div.container div.pagination_here div div {
   margin-top: -4px;
 }
-body div.container div#displayhere_div #displayhere {
-  height: auto;
-  margin-left: 95px;
-  width: 94%;
-  max-width: 59em;
+body #wrapper div.container div#displayhere_div #displayhere {
+  max-width: 100%;
+  transition: opacity 0.5s;
+  opacity: 1;
 }
-body div.wrap {
+body #wrapper div.wrap {
   margin-top: 278px;
+  margin-left: -18%;
 }
-body div.wrap div.buzzfeedpart {
+body #wrapper div.wrap div.buzzfeedpart {
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  left: -314px;
 }
-body div.wrap div.buzzfeedpart div.leftimage img {
-  height: auto;
-  width: 100%;
-  max-width: 82em;
+body #wrapper div.wrap div.buzzfeedpart img {
+  height: 100%;
+  width: 1283px;
+  max-width: 76%;
 }
-body div.wrap div.buzzfeedpart ul {
+body #wrapper div.wrap div.buzzfeedpart ul {
   list-style-type: none;
-  margin-left: 87px;
+  margin-left: 4.7%;
+  margin-right: 10.5%;
 }
-body div.wrap div.buzzfeedpart ul li h1 {
+body #wrapper div.wrap div.buzzfeedpart ul li h1 {
   max-width: 319px;
-  overflow-wrap: break-word;
+  min-width: 319px;
+  overflow-wrap: normal;
   font-size: 25px;
+  font-weight: 600;
 }
-body div.wrap div.buzzfeedpart ul li div.p-div {
-  max-width: 319px;
+@media only screen and (max-width: 1077px) {
+  body #wrapper div.wrap div.buzzfeedpart ul li h1 {
+    min-width: 318px;
+  }
 }
-body div.wrap div.buzzfeedpart ul li div.p-div p {
+@media only screen and (max-width: 1007px) {
+  body #wrapper div.wrap div.buzzfeedpart ul li h1 {
+    min-width: 289px;
+  }
+}
+body #wrapper div.wrap div.buzzfeedpart ul li div.p-div {
+  max-width: 375px;
+}
+body #wrapper div.wrap div.buzzfeedpart ul li div.p-div p {
   font-size: 17px;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
 }
-body div.wrap div.buzzfeedpart ul li button.btn {
+body #wrapper div.wrap div.buzzfeedpart ul li button.btn {
   border: 1px solid #D5DCE3;
   border-radius: 30px;
   background-color: white;
   color: #3E4854;
   padding: 13.5px 35px;
-  text-align: center;
   font-size: 16px;
   margin: 4px 2px;
   font-weight: 600;
   opacity: 0.6;
   transition: 0.3s;
+  position: relative;
+  left: 0%;
+  z-index: 99;
 }
-body div.wrap div.buzzfeedpart ul li button.btn:hover {
+body #wrapper div.wrap div.buzzfeedpart ul li button.btn:hover {
   opacity: 1;
   background-color: #1FB6FF;
   color: white;
@@ -213,34 +255,50 @@ body div.wrap div.buzzfeedpart ul li button.btn:hover {
   -moz-box-shadow: 0 4px 6px -6px #20a2e1;
   box-shadow: 0 5px 6px -6px #20a2e1;
 }
-body .purple {
-  position: relative;
-  top: -218px;
+body #wrapper div.logos_bottom {
+  display: none;
+  max-width: 319px;
+  min-width: 319px;
+  margin: 0 auto;
+  margin-top: 56px;
+  padding-bottom: 80px;
 }
-body div.container-fluid div.container {
-  position: absolute;
-  left: 14%;
-  align-content: center;
-  justify-content: center;
-}
-body div.container-fluid div.container div.explore_integrations {
-  position: absolute;
-  left: 24px;
-  top: 219px;
-  max-width: 472px;
-}
-body div.container-fluid div.container div.explore_integrations ul {
+body #wrapper div.logos_bottom ul {
   list-style-type: none;
-  margin-left: -10px;
-  display: block;
 }
-body div.container-fluid div.container div.explore_integrations ul li {
+body #wrapper div.logos_bottom ul li {
+  display: inline;
+  margin: 0 12px;
+}
+body #wrapper div.logos_bottom ul li svg {
+  margin-bottom: 36px;
+}
+body #wrapper .purple {
+  position: absolute;
+  z-index: 1;
+}
+body #wrapper div.purple1 {
+  margin-top: -216px;
+}
+body #wrapper div.purple1 div.div_absolute {
+  position: absolute;
+  z-index: 2;
+  left: -0.1%;
+  position: relative;
+  top: 219px;
+}
+body #wrapper div.purple1 div.div_absolute ul {
+  list-style-type: none;
+  display: block;
+  max-width: 48%;
+}
+body #wrapper div.purple1 div.div_absolute ul li {
   margin-left: 0px;
 }
-body div.container-fluid div.container div.explore_integrations ul li:nth-child(2) {
+body #wrapper div.purple1 div.div_absolute ul li:nth-child(2) {
   margin-top: 35px;
 }
-body div.container-fluid div.container div.explore_integrations ul li h2 {
+body #wrapper div.purple1 div.div_absolute ul li h2 {
   font-size: 27px;
   font-weight: 600;
   overflow-wrap: break-word;
@@ -248,7 +306,7 @@ body div.container-fluid div.container div.explore_integrations ul li h2 {
   max-width: 453px;
   letter-spacing: -1px;
 }
-body div.container-fluid div.container div.explore_integrations ul li button.btn {
+body #wrapper div.purple1 div.div_absolute ul li button.btn {
   border: 1px solid #D5DCE3;
   border-radius: 30px;
   background-color: #AD6EDD;
@@ -261,7 +319,7 @@ body div.container-fluid div.container div.explore_integrations ul li button.btn
   opacity: 1;
   transition: 0.3s;
 }
-body div.container-fluid div.container div.explore_integrations ul li button.btn:hover {
+body #wrapper div.purple1 div.div_absolute ul li button.btn:hover {
   opacity: 1;
   background-color: #FFFFFF;
   color: black;
@@ -269,51 +327,1080 @@ body div.container-fluid div.container div.explore_integrations ul li button.btn
   -moz-box-shadow: 0 4px 6px -6px #20a2e1;
   box-shadow: 0 5px 6px -6px #20a2e1;
 }
-body div.container-fluid div.container div.orange_girl img {
+body #wrapper div.purple1 div.div_absolute img {
+  position: absolute;
+  top: -218px;
+  left: 54.6%;
+  transition: opacity 0.5s;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
   width: 100%;
-  max-width: 35em;
-  position: relative;
-  left: 336px;
+  height: auto;
+  max-width: 40.3%;
 }
-body div.container-fluid div.purple {
+body #wrapper div.purple1 div.rwd769 {
+  display: none;
+}
+body #wrapper div.purple1 div.purple {
   background-color: #AD6EDD;
-  width: 102%;
+  width: 200%;
   height: 323px;
   position: relative;
   top: 559px;
   left: -15px;
 }
-body .footer {
-  margin-top: 341px;
+body #wrapper div.orange {
+  display: none;
+}
+body #wrapper .footer {
   padding-top: 133px;
   padding-bottom: 93px;
   background-color: #000000;
 }
-body div.container-fluid div.footer_menu {
-  width: 72%;
+body #wrapper div.container-fluid {
+  margin-top: 175px;
+}
+body #wrapper div.container-fluid div.footer_menu {
+  width: 100%;
   margin: 0 auto;
 }
-body div.container-fluid div.footer_menu ul {
-  display: flex;
-  flex-direction: row;
+body #wrapper div.container-fluid div.footer_menu #bottom_logo {
+  display: none;
+}
+body #wrapper div.container-fluid div.footer_menu ul {
+  margin: 0 auto;
+  /* margin-left: 14%; */
+  max-width: 1323px;
+  min-width: 960px;
   text-decoration: none;
   list-style-type: none;
 }
-body div.container-fluid div.footer_menu ul li {
-  display: flex;
-  flex-direction: column;
-  margin-right: 120px;
+body #wrapper div.container-fluid div.footer_menu ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6.2%;
 }
-body div.container-fluid div.footer_menu ul li h3 {
+@media only screen and (max-width: 947px) {
+  body #wrapper div.container-fluid div.footer_menu ul li {
+    margin-right: 4.2%;
+  }
+}
+@media only screen and (max-width: 870px) {
+  body #wrapper div.container-fluid div.footer_menu ul li {
+    margin-right: 3.9%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  body #wrapper div.container-fluid div.footer_menu ul li {
+    margin-right: 2.9%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body #wrapper div.container-fluid div.footer_menu ul li {
+    margin-right: 1.9%;
+  }
+}
+body #wrapper div.container-fluid div.footer_menu ul li h3 {
   color: white;
   font-size: 19px;
 }
-body div.container-fluid div.footer_menu ul li span {
+body #wrapper div.container-fluid div.footer_menu ul li span {
+  display: block;
   color: #848588;
   width: 101px;
   line-height: 37px;
 }
-body div.container-fluid div.footer_menu ul li span:hover {
+body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   cursor: pointer;
   color: white;
+}
+@media only screen and (max-width: 769px) {
+  body #wrapper .navi {
+    -webkit-box-shadow: 0 4px 6px -6px #000000;
+    -moz-box-shadow: 0 4px 6px -6px #000000;
+    box-shadow: 0 4px 6px -6px #000000;
+  }
+  body #wrapper div.navi {
+    height: 60px;
+  }
+  body #wrapper div.navi div.wrap_nav {
+    width: 1354px;
+    max-width: 93%;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse div.spacer {
+    margin: 0 auto;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item {
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
+    padding: 0 2.5px;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item .sign_up {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 18.5px;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
+    font-size: 13px;
+    color: #8792A1;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
+    color: black;
+  }
+  body #wrapper div.firstpart {
+    margin-top: 96px;
+  }
+  body #wrapper div.firstpart div.wrap_main {
+    margin-bottom: 130px;
+    width: 1354px;
+    max-width: 93%;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part {
+    flex: none;
+    text-align: center;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul {
+    list-style-type: none;
+    display: block;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li {
+    flex: none;
+    text-align: center;
+    margin: 0 12%;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li img {
+    height: auto;
+    max-width: 48em;
+    width: 134%;
+    margin-left: -15%;
+    margin-top: 60px;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div {
+    max-width: 473px;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div h1 {
+    font-size: 37px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    letter-spacing: -1px;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div p {
+    font-size: 16px;
+    overflow-wrap: break-word;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
+    border: none;
+    border-bottom: 1px solid #AAB5C5;
+    width: 323px;
+    height: 52px;
+    margin-bottom: 24px;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input#email {
+    text-align: center;
+    max-width: 100%;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input#password {
+    text-align: center;
+    max-width: 100%;
+  }
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: auto;
+    margin-top: 16px;
+    max-width: 100%;
+    width: 320px;
+    height: 51px;
+  }
+  body #wrapper div.logos {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 99px;
+    padding-bottom: 65px;
+  }
+  body #wrapper div.logos ul {
+    list-style-type: none;
+  }
+  body #wrapper div.logos ul li {
+    display: inline;
+    margin: 0 60px 0 0;
+  }
+  body #wrapper div.logos ul li svg {
+    margin-bottom: 36px;
+  }
+  body #wrapper div.about-your-design {
+    text-align: center;
+    padding-top: 0px;
+  }
+  body #wrapper div.about-your-design h2 {
+    font-size: 24px;
+  }
+  body #wrapper div.about-your-design div.you_design {
+    width: 545px;
+  }
+  body #wrapper div.about-your-design div.you_design span {
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+  body #wrapper div.about-your-design button {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 36px;
+    margin-top: 44px;
+  }
+  body #wrapper div.container {
+    padding: 0px 0 0 0px;
+    margin: 0 auto;
+    margin-top: 99px;
+  }
+  body #wrapper div.container div.pagination_here {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  body #wrapper div.container div.pagination_here img {
+    display: block;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+  }
+  body #wrapper div.container div.pagination_here .displaythis {
+    cursor: auto;
+  }
+  body #wrapper div.container div.pagination_here > * {
+    height: 128px;
+    height: 427px;
+    margin-bottom: 84px;
+  }
+  body #wrapper div.container div.pagination_here > * div {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  body #wrapper div.container div.pagination_here > * h5 {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  body #wrapper div.container div.pagination_here > div {
+    border-bottom: none;
+    padding: 0 0 0 20px;
+    cursor: normal;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+  body #wrapper div.container div.pagination_here p {
+    font-size: 13.75px;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+  body #wrapper div.container div.pagination_here div svg {
+    display: none;
+    position: relative;
+    top: 20px;
+    left: -10px;
+    fill: none;
+  }
+  body #wrapper div.container div.pagination_here div div {
+    margin-top: -4px;
+  }
+  body #wrapper div.container div#displayhere_div #displayhere {
+    display: none;
+    height: auto;
+    margin-left: 95px;
+    width: 94%;
+    max-width: 59em;
+  }
+  body #wrapper div.wrap {
+    margin-top: 278px;
+    margin-left: 0%;
+  }
+  body #wrapper div.wrap div.buzzfeedpart {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  body #wrapper div.wrap div.buzzfeedpart img {
+    height: auto;
+    width: 100%;
+    max-width: 82em;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul {
+    list-style-type: none;
+    margin-left: 12%;
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li {
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li:last-child {
+    margin-top: 32px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li h1 {
+    overflow-wrap: break-word;
+    font-size: 19px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    margin-top: 41px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li div.p-div {
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li div.p-div p {
+    font-size: 15px;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    margin-bottom: 28px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li button.btn {
+    border: 1px solid #D5DCE3;
+    margin-top: 32px;
+    border-radius: 30px;
+    background-color: white;
+    color: #3E4854;
+    padding: 13.5px 35px;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 600;
+    opacity: 0.6;
+    transition: 0.3s;
+    position: none;
+    left: 0%;
+    z-index: 99;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li button.btn:hover {
+    opacity: 1;
+    background-color: #1FB6FF;
+    color: white;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.logos_bottom {
+    display: block;
+    max-width: 319px;
+    min-width: 319px;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-bottom: 80px;
+  }
+  body #wrapper div.logos_bottom ul {
+    list-style-type: none;
+  }
+  body #wrapper div.logos_bottom ul li {
+    display: inline;
+    margin: 0 12px;
+  }
+  body #wrapper div.logos_bottom ul li svg {
+    margin-bottom: 36px;
+  }
+  body #wrapper .purple {
+    position: absolute;
+    z-index: 1;
+  }
+  body #wrapper div.purple1 {
+    background-color: #AD6EDD;
+    margin-top: -216px;
+  }
+  body #wrapper div.purple1 div.div_absolute {
+    display: none;
+    z-index: 2;
+    position: relative;
+    left: 8%;
+    top: -180px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul {
+    list-style-type: none;
+    display: block;
+    max-width: 96%;
+    text-align: center;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li {
+    margin-left: 0px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li:nth-child(2) {
+    margin-top: 35px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li h2 {
+    font-size: 20px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    max-width: 414px;
+    letter-spacing: -0.3px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li button.btn {
+    border: 1px solid #D5DCE3;
+    border-radius: 30px;
+    background-color: #AD6EDD;
+    color: white;
+    padding: 12.5px 23px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li button.btn:hover {
+    opacity: 1;
+    background-color: #FFFFFF;
+    color: black;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.purple1 div.div_absolute img {
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    max-width: 84.7%;
+  }
+  body #wrapper div.purple1 div.rwd769 {
+    height: 680px;
+    display: block;
+    margin-top: 181px;
+    text-align: center;
+    padding-top: 37px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul {
+    margin: 0 auto;
+    list-style-type: none;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li {
+    margin-bottom: 38px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li h2 {
+    font-size: 20px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+    margin: 0 auto;
+    max-width: 414px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li button.btn {
+    border: 1px solid #D5DCE3;
+    border-radius: 30px;
+    background-color: #AD6EDD;
+    color: white;
+    padding: 12.5px 23px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+    margin-bottom: 3px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li button.btn:hover {
+    opacity: 1;
+    background-color: #FFFFFF;
+    color: black;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.purple1 div.rwd769 img {
+    display: none;
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 550px;
+    height: auto;
+    max-width: 92%;
+  }
+  body #wrapper div.purple1 div.purple {
+    display: none;
+    background-color: #AD6EDD;
+    width: 200%;
+    height: 678px;
+    position: relative;
+    top: 559px;
+    left: -15px;
+  }
+  body #wrapper div.orange {
+    display: block;
+    text-align: center;
+  }
+  body #wrapper div.orange img {
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 550px;
+    height: auto;
+    max-width: 92%;
+    position: relative;
+    bottom: 463px;
+  }
+  body #wrapper .footer {
+    padding-top: 133px;
+    padding-bottom: 93px;
+    background-color: #000000;
+  }
+  body #wrapper div.footer {
+    margin-top: -463px;
+  }
+  body #wrapper div.footer div.footer_menu {
+    width: 100%;
+  }
+  body #wrapper div.footer div.footer_menu #bottom_logo {
+    display: block;
+    position: relative;
+    left: 41px;
+  }
+  body #wrapper div.footer div.footer_menu ul {
+    max-width: 718px;
+    min-width: 639px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 40px;
+    margin-top: 53px;
+  }
+  body #wrapper div.footer div.footer_menu ul .logo_bottom {
+    display: none;
+  }
+  body #wrapper div.footer div.footer_menu ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 33%;
+    margin-bottom: 44px;
+  }
+  body #wrapper div.footer div.footer_menu ul li h3 {
+    color: white;
+    font-size: 19px;
+  }
+  body #wrapper div.footer div.footer_menu ul li span {
+    display: block;
+    color: #848588;
+    width: 101px;
+    line-height: 37px;
+  }
+  body #wrapper div.footer div.footer_menu ul li span:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+@media only screen and (max-width: 769px) and only screen and (max-width: 630px) {
+  body #wrapper div.footer div.footer_menu ul li {
+    margin-right: 16%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body #wrapper .navi {
+    -webkit-box-shadow: 0 4px 6px -6px #000000;
+    -moz-box-shadow: 0 4px 6px -6px #000000;
+    box-shadow: 0 4px 6px -6px #000000;
+  }
+  body #wrapper div.navi {
+    height: 60px;
+  }
+  body #wrapper div.navi div.wrap_nav {
+    width: 1354px;
+    max-width: 93%;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse div.spacer {
+    margin: 0 auto;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item {
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 0 1px rgba(51, 51, 51, 0.2);
+    padding: 0 2.5px;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item .sign_up {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 18.5px;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
+    font-size: 13px;
+    color: #8792A1;
+  }
+  body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
+    color: black;
+  }
+  body #wrapper div.container-fluid div.wrap_main {
+    margin-bottom: 130px;
+    width: 1354px;
+    max-width: 93%;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part {
+    flex: none;
+    text-align: center;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul {
+    list-style-type: none;
+    display: block;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li {
+    flex: none;
+    text-align: center;
+    margin: 0 12%;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li img {
+    height: auto;
+    max-width: 48em;
+    width: 134%;
+    margin-left: -15%;
+    margin-top: 60px;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div {
+    max-width: 473px;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div h1 {
+    font-size: 37px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    letter-spacing: -1px;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div p {
+    font-size: 16px;
+    overflow-wrap: break-word;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
+    border: none;
+    border-bottom: 1px solid #AAB5C5;
+    width: 323px;
+    height: 52px;
+    margin-bottom: 24px;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input#email {
+    text-align: center;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input#password {
+    text-align: center;
+  }
+  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 11px 86px;
+    margin-top: 16px;
+  }
+  body #wrapper div.logos {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 99px;
+    padding-bottom: 65px;
+  }
+  body #wrapper div.logos ul {
+    list-style-type: none;
+  }
+  body #wrapper div.logos ul li {
+    display: inline;
+    margin: 0 60px 0 0;
+  }
+  body #wrapper div.logos ul li svg {
+    margin-bottom: 36px;
+  }
+  body #wrapper div.about-your-design {
+    text-align: center;
+    padding-top: 0px;
+  }
+  body #wrapper div.about-your-design h2 {
+    font-size: 24px;
+  }
+  body #wrapper div.about-your-design div.you_design {
+    width: 545px;
+  }
+  body #wrapper div.about-your-design div.you_design span {
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+  body #wrapper div.about-your-design button {
+    background-color: #1FB6FF;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 36px;
+    margin-top: 44px;
+  }
+  body #wrapper div.container {
+    padding: 0px 0 0 0px;
+    margin: 0 auto;
+    margin-top: 99px;
+  }
+  body #wrapper div.container div.pagination_here {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  body #wrapper div.container div.pagination_here img {
+    display: block;
+  }
+  body #wrapper div.container div.pagination_here .displaythis {
+    cursor: auto;
+  }
+  body #wrapper div.container div.pagination_here > * {
+    height: 128px;
+    height: 427px;
+    margin-bottom: 84px;
+  }
+  body #wrapper div.container div.pagination_here > * div {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  body #wrapper div.container div.pagination_here > * h5 {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+  }
+  body #wrapper div.container div.pagination_here > div {
+    border-bottom: none;
+    padding: 0 0 0 20px;
+    cursor: normal;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+  body #wrapper div.container div.pagination_here p {
+    font-size: 13.75px;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+  body #wrapper div.container div.pagination_here div svg {
+    display: none;
+    position: relative;
+    top: 20px;
+    left: -10px;
+    fill: none;
+  }
+  body #wrapper div.container div.pagination_here div div {
+    margin-top: -4px;
+  }
+  body #wrapper div.container div#displayhere_div #displayhere {
+    display: none;
+    height: auto;
+    margin-left: 95px;
+    width: 94%;
+    max-width: 59em;
+  }
+  body #wrapper div.wrap {
+    margin-top: 278px;
+    margin-left: 0%;
+  }
+  body #wrapper div.wrap div.buzzfeedpart {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  body #wrapper div.wrap div.buzzfeedpart img {
+    height: auto;
+    width: 100%;
+    max-width: 82em;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul {
+    list-style-type: none;
+    margin-left: 12%;
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li {
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li:last-child {
+    margin-top: 32px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li h1 {
+    max-width: 319px;
+    overflow-wrap: break-word;
+    font-size: 19px;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    margin-top: 41px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li div.p-div {
+    max-width: 319px;
+    margin: 0 auto;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li div.p-div p {
+    font-size: 15px;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    margin-bottom: 28px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li button.btn {
+    border: 1px solid #D5DCE3;
+    margin-top: 32px;
+    border-radius: 30px;
+    background-color: white;
+    color: #3E4854;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.6;
+    transition: 0.3s;
+    position: none;
+    left: 0%;
+    z-index: 99;
+    max-width: 100%;
+    width: 237px;
+    height: 49px;
+  }
+  body #wrapper div.wrap div.buzzfeedpart ul li button.btn:hover {
+    opacity: 1;
+    background-color: #1FB6FF;
+    color: white;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.logos_bottom {
+    display: block;
+    max-width: 307px;
+    min-width: 6%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-bottom: 80px;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+  body #wrapper div.logos_bottom ul {
+    list-style-type: none;
+  }
+  body #wrapper div.logos_bottom ul li {
+    display: inline;
+    margin: 0 12px;
+  }
+  body #wrapper div.logos_bottom ul li svg {
+    margin-bottom: 36px;
+  }
+  body #wrapper .purple {
+    position: absolute;
+    z-index: 1;
+  }
+  body #wrapper div.purple1 {
+    background-color: #AD6EDD;
+    margin-top: -216px;
+  }
+  body #wrapper div.purple1 div.div_absolute {
+    display: none;
+    z-index: 2;
+    position: relative;
+    left: 8%;
+    top: -180px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul {
+    list-style-type: none;
+    display: block;
+    max-width: 96%;
+    text-align: center;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li {
+    margin-left: 0px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li:nth-child(2) {
+    margin-top: 35px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li h2 {
+    font-size: 20px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    max-width: 414px;
+    letter-spacing: -0.3px;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li button.btn {
+    border: 1px solid #D5DCE3;
+    border-radius: 30px;
+    background-color: #AD6EDD;
+    color: white;
+    padding: 12.5px 23px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  body #wrapper div.purple1 div.div_absolute ul li button.btn:hover {
+    opacity: 1;
+    background-color: #FFFFFF;
+    color: black;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.purple1 div.div_absolute img {
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    max-width: 84.7%;
+  }
+  body #wrapper div.purple1 div.rwd769 {
+    height: 704px;
+    display: block;
+    margin-top: 181px;
+    text-align: center;
+    padding-top: 37px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul {
+    margin: 0 auto;
+    list-style-type: none;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li {
+    margin-bottom: 38px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li h2 {
+    font-size: 20px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+    margin: 0 auto;
+    max-width: 414px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li button.btn {
+    border: 1px solid #D5DCE3;
+    border-radius: 30px;
+    background-color: #AD6EDD;
+    color: white;
+    padding: 12.5px 23px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+    margin-bottom: 3px;
+  }
+  body #wrapper div.purple1 div.rwd769 ul li button.btn:hover {
+    opacity: 1;
+    background-color: #FFFFFF;
+    color: black;
+    -webkit-box-shadow: 0 4px 6px -6px #20a2e1;
+    -moz-box-shadow: 0 4px 6px -6px #20a2e1;
+    box-shadow: 0 5px 6px -6px #20a2e1;
+  }
+  body #wrapper div.purple1 div.rwd769 img {
+    display: none;
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 550px;
+    height: auto;
+    max-width: 92%;
+  }
+  body #wrapper div.purple1 div.purple {
+    display: none;
+    background-color: #AD6EDD;
+    width: 200%;
+    height: 678px;
+    position: relative;
+    top: 559px;
+    left: -15px;
+  }
+  body #wrapper div.orange {
+    display: block;
+    text-align: center;
+  }
+  body #wrapper div.orange img {
+    transition: opacity 0.5s;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    width: 550px;
+    height: auto;
+    max-width: 92%;
+    position: relative;
+    bottom: 463px;
+  }
+  body #wrapper .footer {
+    padding-top: 133px;
+    padding-bottom: 93px;
+    background-color: #000000;
+  }
+  body #wrapper div.footer {
+    margin-top: -463px;
+  }
+  body #wrapper div.footer div.footer_menu {
+    width: 100%;
+  }
+  body #wrapper div.footer div.footer_menu #bottom_logo {
+    display: block;
+    position: relative;
+    left: 41px;
+  }
+  body #wrapper div.footer div.footer_menu ul {
+    max-width: 718px;
+    min-width: 639px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 40px;
+    margin-top: 53px;
+  }
+  body #wrapper div.footer div.footer_menu ul .logo_bottom {
+    display: none;
+  }
+  body #wrapper div.footer div.footer_menu ul li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 33%;
+    margin-bottom: 44px;
+  }
+  body #wrapper div.footer div.footer_menu ul li h3 {
+    color: white;
+    font-size: 19px;
+  }
+  body #wrapper div.footer div.footer_menu ul li span {
+    display: block;
+    color: #848588;
+    width: 101px;
+    line-height: 37px;
+  }
+  body #wrapper div.footer div.footer_menu ul li span:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+@media only screen and (max-width: 480px) and only screen and (max-width: 630px) {
+  body #wrapper div.footer div.footer_menu ul li {
+    margin-right: 16%;
+  }
 }
