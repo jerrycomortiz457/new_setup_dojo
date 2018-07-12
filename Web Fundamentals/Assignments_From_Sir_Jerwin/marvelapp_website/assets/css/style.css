@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px dashed greenyellow;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body #wrapper .navi {
@@ -458,7 +457,7 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.firstpart div.wrap_main {
     margin-bottom: 130px;
     width: 1354px;
-    max-width: 93%;
+    max-width: 107%;
   }
   body #wrapper div.firstpart div.wrap_main div.first_part {
     flex: none;
@@ -876,8 +875,8 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
     left: 41px;
   }
   body #wrapper div.footer div.footer_menu ul {
-    max-width: 718px;
-    min-width: 639px;
+    max-width: 554px;
+    min-width: 468px;
     text-decoration: none;
     list-style-type: none;
     margin-left: 40px;
@@ -889,7 +888,7 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.footer div.footer_menu ul li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 33%;
+    margin-right: 24%;
     margin-bottom: 44px;
   }
   body #wrapper div.footer div.footer_menu ul li h3 {
@@ -949,65 +948,65 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a:hover {
     color: black;
   }
-  body #wrapper div.container-fluid div.wrap_main {
+  body #wrapper div.firstpart div.wrap_main {
     margin-bottom: 130px;
     width: 1354px;
-    max-width: 93%;
+    max-width: 107%;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part {
+  body #wrapper div.firstpart div.wrap_main div.first_part {
     flex: none;
     text-align: center;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul {
     list-style-type: none;
     display: block;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li {
     flex: none;
     text-align: center;
     margin: 0 12%;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li img {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li img {
     height: auto;
     max-width: 48em;
     width: 134%;
     margin-left: -15%;
     margin-top: 60px;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div {
-    max-width: 473px;
-  }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div h1 {
-    font-size: 37px;
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div h1 {
+    font-size: 26px;
     font-weight: 600;
     overflow-wrap: break-word;
     letter-spacing: -1px;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div p {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div p {
     font-size: 16px;
     overflow-wrap: break-word;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
     border: none;
     border-bottom: 1px solid #AAB5C5;
     width: 323px;
     height: 52px;
     margin-bottom: 24px;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input#email {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input#email {
     text-align: center;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form input#password {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input#password {
     text-align: center;
   }
-  body #wrapper div.container-fluid div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
+  body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
     background-color: #1FB6FF;
     color: white;
     border-radius: 30px;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
-    padding: 11px 86px;
+    padding: 0 0;
     margin-top: 16px;
+    max-width: 100%;
+    width: 320px;
+    height: 51px;
   }
   body #wrapper div.logos {
     margin: 0 auto;
@@ -1360,19 +1359,19 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
     margin-top: -463px;
   }
   body #wrapper div.footer div.footer_menu {
-    width: 100%;
+    margin-left: -3%;
   }
   body #wrapper div.footer div.footer_menu #bottom_logo {
     display: block;
     position: relative;
-    left: 41px;
+    left: 6%;
   }
   body #wrapper div.footer div.footer_menu ul {
-    max-width: 718px;
-    min-width: 639px;
+    max-width: 554px;
+    min-width: 325px;
     text-decoration: none;
     list-style-type: none;
-    margin-left: 40px;
+    margin-left: 6%;
     margin-top: 53px;
   }
   body #wrapper div.footer div.footer_menu ul .logo_bottom {
@@ -1381,15 +1380,15 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.footer div.footer_menu ul li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 33%;
+    margin-right: 8%;
     margin-bottom: 44px;
   }
   body #wrapper div.footer div.footer_menu ul li h3 {
-    color: white;
-    font-size: 19px;
+    font-size: 15px;
   }
   body #wrapper div.footer div.footer_menu ul li span {
     display: block;
+    font-size: 14px;
     color: #848588;
     width: 101px;
     line-height: 37px;
@@ -1397,10 +1396,5 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.footer div.footer_menu ul li span:hover {
     cursor: pointer;
     color: white;
-  }
-}
-@media only screen and (max-width: 480px) and only screen and (max-width: 630px) {
-  body #wrapper div.footer div.footer_menu ul li {
-    margin-right: 16%;
   }
 }
