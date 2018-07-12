@@ -83,6 +83,11 @@ body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_accoun
   height: 52px;
   margin-bottom: 24px;
 }
+body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input::placeholder {
+  color: red;
+  font-size: 13px;
+  vertical-align: top;
+}
 body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form button.btn {
   background-color: #1FB6FF;
   color: white;
@@ -466,6 +471,8 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   body #wrapper div.firstpart div.wrap_main div.first_part ul {
     list-style-type: none;
     display: block;
+    max-width: 89%;
+    margin: 0 auto;
   }
   body #wrapper div.firstpart div.wrap_main div.first_part ul li {
     flex: none;
@@ -473,10 +480,10 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
     margin: 0 12%;
   }
   body #wrapper div.firstpart div.wrap_main div.first_part ul li img {
+    display: block;
+    width: 95%;
     height: auto;
-    max-width: 48em;
-    width: 134%;
-    margin-left: -15%;
+    margin: 0 auto;
     margin-top: 60px;
   }
   body #wrapper div.firstpart div.wrap_main div.first_part ul li div {
@@ -1016,6 +1023,9 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
   }
   body #wrapper div.logos ul {
     list-style-type: none;
+    margin: 0 auto;
+    max-width: 84%;
+    text-align: center;
   }
   body #wrapper div.logos ul li {
     display: inline;
