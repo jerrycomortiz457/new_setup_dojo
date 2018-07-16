@@ -1,7 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  outline: 1px dashed greenyellow;
+  font-family: Graphik;
+}
+p {
+  font-size: 17px;
+}
+@font-face {
+  font-family: Graphik;
+  src: url(../fonts/Graphik-Regular-Web.ttf);
 }
 body #wrapper .navi {
   -webkit-box-shadow: 0 4px 6px -6px #000000;
@@ -31,7 +39,8 @@ body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
-  padding: 9px 18.5px;
+  width: 116px;
+  height: 41px;
 }
 body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav-item div.dropdown-menu a.dropdown-item {
   font-size: 13px;
@@ -42,8 +51,8 @@ body #wrapper div.navi div.wrap_nav nav.navbar div.collapse ul.navbar-nav li.nav
 }
 body #wrapper div.firstpart div.wrap_main {
   margin-top: 104px;
-  margin-bottom: 130px;
-  width: 1354px;
+  margin-bottom: 125px;
+  width: 1324px;
   max-width: 93%;
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul {
@@ -59,21 +68,20 @@ body #wrapper div.firstpart div.wrap_main div.first_part ul li {
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul li img {
   height: auto;
-  max-width: 48em;
-  width: 94.36%;
-  margin-left: 65px;
+  max-width: 93%;
+  width: 47.5em;
+  margin-left: 6.3%;
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul li div {
   max-width: 473px;
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul li div h1 {
-  font-size: 47px;
+  font-size: 43px;
   font-weight: 600;
   overflow-wrap: break-word;
-  letter-spacing: -1px;
+  letter-spacing: 0.67px;
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul li div p {
-  font-size: 18px;
   overflow-wrap: break-word;
 }
 body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_account form#create_account_form input {
@@ -92,9 +100,10 @@ body #wrapper div.firstpart div.wrap_main div.first_part ul li div#create_accoun
   background-color: #1FB6FF;
   color: white;
   border-radius: 30px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
-  padding: 11px 86px;
+  width: 319px;
+  height: 52px;
   margin-top: 16px;
 }
 body #wrapper div.logos {
@@ -119,13 +128,15 @@ body #wrapper div.about-your-design {
 }
 body #wrapper div.about-your-design h2 {
   font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 body #wrapper div.about-your-design div.you_design {
   margin-top: 18px;
   width: 545px;
 }
 body #wrapper div.about-your-design div.you_design span {
-  font-size: 18px;
+  font-size: 16.6px;
   line-height: 1.5em;
 }
 body #wrapper div.about-your-design button {
@@ -134,8 +145,10 @@ body #wrapper div.about-your-design button {
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
-  padding: 14px 36px;
-  margin-top: 44px;
+  letter-spacing: 0.6px;
+  margin-top: 36px;
+  width: 150px;
+  height: 50px;
 }
 body #wrapper div.container {
   display: flex;
@@ -144,7 +157,7 @@ body #wrapper div.container {
   justify-content: left;
   margin-top: 99px;
   padding-bottom: 80px;
-  max-width: 1352px;
+  max-width: 1370px;
 }
 body #wrapper div.container div.pagination_here {
   width: 47%;
@@ -160,22 +173,23 @@ body #wrapper div.container div.pagination_here > * {
   height: 128px;
 }
 body #wrapper div.container div.pagination_here > * div {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  max-width: 183px;
+  max-width: 62%;
 }
 body #wrapper div.container div.pagination_here > div {
   height: auto;
   border-bottom: 1px solid lightgrey;
   padding-left: 20px;
-  max-width: 259px;
+  max-width: 293px;
   cursor: pointer;
 }
 body #wrapper div.container div.pagination_here p {
   margin-top: 7px;
-  font-size: 16px;
   font-weight: normal;
   color: #3E4854;
+  letter-spacing: -0.2px;
+  max-width: 62%;
 }
 body #wrapper div.container div.pagination_here div svg {
   position: relative;
@@ -348,11 +362,11 @@ body #wrapper div.purple1 div.rwd769 {
 }
 body #wrapper div.purple1 div.purple {
   background-color: #AD6EDD;
-  width: 200%;
+  width: 100%;
   height: 323px;
   position: relative;
   top: 559px;
-  left: -15px;
+  left: 0px;
 }
 body #wrapper div.orange {
   display: none;
@@ -611,7 +625,6 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
     padding: 0px 0px 0px 0px;
   }
   body #wrapper div.container div.pagination_here p {
-    font-size: 13.75px;
     font-weight: normal;
     margin-top: 18px;
     margin-bottom: 22px;
@@ -1100,7 +1113,6 @@ body #wrapper div.container-fluid div.footer_menu ul li span:hover {
     padding: 0px 0px 0px 0px;
   }
   body #wrapper div.container div.pagination_here p {
-    font-size: 13.75px;
     font-weight: normal;
     margin-top: 18px;
     margin-bottom: 22px;
