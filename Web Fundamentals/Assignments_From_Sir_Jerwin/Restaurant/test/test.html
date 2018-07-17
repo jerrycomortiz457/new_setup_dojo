@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test html to json</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        form * {
+            display: block;
+            margin: 10px;
+        }
+
+        #dataArea {
+            display: none;
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            var restaurant_name = $('#restaurant_name').val();
+            console.log(restaurant_name);
+        });
+        function register(filename, text) {
+            var obj = document.createElement('a');
+            obj.setAttribute('href', 'data:application/json;charset=utf-8,' + encodeURIComponent(text));
+            obj.setAttribute('download', filename);
+
+            obj.style.display = 'none';
+            document.body.appendChild(obj);
+
+            obj.click();
+            document.body.removeChild(obj);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form onsubmit="register(this['name'].value, this['text'].value)">
+            <input type="text" name="name" value="registration.json">
+
+            <label for="restaurant_name">Restaurant's Name:</label>
+            <input type="text" name="restaurant_name" id="restaurant_name">
+            <h1 id="displayName"></h1>
+
+            <textarea name="text" id="dataArea">
+                {"registrationData": "default"
+                "information" : [
+                "restaurant_name": "default"
+                "cuisine": "default",
+                "location": "default",
+                "ownerName": "default",
+                "avgRating": "default"]}
+            </textarea>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+
+</html>

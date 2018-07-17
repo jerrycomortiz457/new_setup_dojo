@@ -3,3 +3,16 @@
   margin: 0px;
   outline: 1px dashed lawngreen;
 }
+body div#wrapper {
+  background-color: antiquewhite;
+}
+body div#wrapper div#header {
+  display: none;
+}
+body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul {
+  list-style-type: none;
+}
+body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul li {
+  display: grid;
+  grid-template-columns: 2;
+}
