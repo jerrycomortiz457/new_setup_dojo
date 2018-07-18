@@ -1,11 +1,11 @@
 *{
     padding: 0px;
     margin: 0px;
-    outline: 1px dashed lawngreen;
+    // outline: 1px dashed lawngreen;
 }
 body{
 	div#wrapper { 
-		background-color: antiquewhite;
+		background-color: green;
 		div#header { 
 			display: none;
 			span { 
@@ -14,9 +14,16 @@ body{
 		}
 	
 		div#nav { 
+			input.search { 
+				float: right;
+				margin: 5px;
+				width: 200px;
+
+			}
 			
 			button.btn { 
-				
+				float: right;
+				margin:5px;
 			}
 	
 			div.modal { 
@@ -73,9 +80,7 @@ body{
 				}
 			}
 	
-			input#search { 
-			
-			}
+		
 		}
 	
 		div#main { 
@@ -98,12 +103,26 @@ body{
 	
 						tr { 
 	
-							th { 
+							td { 
 	
 							}
 	
 							td { 
-	
+								text-overflow: none;
+							}
+							div.options { 
+								// display: none;
+								position: relative;
+								// top: 83px;
+								// right: 254px;
+								right: -8px;
+								float: right;
+										
+									span.glyphicon { 
+										margin: 0 2px;	
+										cursor: pointer;
+									}
+								
 							}
 						}
 					}

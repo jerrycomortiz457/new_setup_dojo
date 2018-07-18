@@ -1,13 +1,21 @@
 * {
   padding: 0px;
   margin: 0px;
-  outline: 1px dashed lawngreen;
 }
 body div#wrapper {
-  background-color: antiquewhite;
+  background-color: green;
 }
 body div#wrapper div#header {
   display: none;
+}
+body div#wrapper div#nav input.search {
+  float: right;
+  margin: 5px;
+  width: 200px;
+}
+body div#wrapper div#nav button.btn {
+  float: right;
+  margin: 5px;
 }
 body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul {
   list-style-type: none;
@@ -15,4 +23,16 @@ body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-
 body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul li {
   display: grid;
   grid-template-columns: 2;
+}
+body div#wrapper div#main div.container table.table tbody tr td {
+  text-overflow: none;
+}
+body div#wrapper div#main div.container table.table tbody tr div.options {
+  position: relative;
+  right: -8px;
+  float: right;
+}
+body div#wrapper div#main div.container table.table tbody tr div.options span.glyphicon {
+  margin: 0 2px;
+  cursor: pointer;
 }

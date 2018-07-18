@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurant</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Resto</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="registered.json"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js'></script>
     <script src="../assets/js/script.js"></script>
+    <!-- <script type="application/json" src="../assets/js/registered.json"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <body>
         <div id="wrapper">
@@ -19,6 +21,8 @@
                 <span>Let's Eat</span>
             </div>
             <div id="nav">
+                <button>Update</button>
+                <input class="form-control search" id="myInput" type="text" placeholder="Search..">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                     New Restaurant
@@ -28,6 +32,8 @@
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
+
+
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Register a restaurant</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -55,7 +61,10 @@
                                         </li>
 
                                     </ul>
-                                    <textarea id="jsonsave" name="jsonmaker" id="" cols="30" rows="10">JSONUPDATE</textarea>
+
+                                    <textarea id="jsondata" name="jsonsave" id="" cols="30" rows="10">
+                                       
+                                    </textarea>
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -65,11 +74,11 @@
                         </div>
                     </div>
                 </div>
-                <input type="text" name="searchbar" id="search" placeholder="Search...">
+
             </div>
             <div id="main">
                 <div class="container">
-                    <table class="table hover showregistered">
+                    <table class="table table-hover tablesorter" id="restotable">
                         <thead>
                             <tr>
                                 <th scope="col">Restaurant</th>
@@ -79,28 +88,44 @@
                                 <th scope="col">Average Rating</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <!-- <th scope="row">Cuisina</th>
-                                <td>1</td>
+                        <tbody id="myTable">
+                            <tr id="1">
+                                <td scope="row">Cuisina</td>
+                                <td>1
+                                </td>
                                 <td>2</td>
                                 <td>3</td>
-                                <td>4/10</td> -->
+                                <td>4/10
+                                    <div class="options">
+                                        <!-- <button type="button" class="btn btn-default" aria-label="Left Align"> -->
+                                        <span class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span>
+                                        <!-- </button> -->
+                                        <!-- <button type="button" class="btn btn-default" aria-label="Left Align"> -->
+                                        <span class="glyphicon glyphicon-pencil edit" aria-hidden="true"></span>
+                                        <!-- </button> -->
+                                        <!-- <button type="button" class="btn btn-default" aria-label="Left Align"> -->
+                                        <span class="glyphicon glyphicon glyphicon-remove delete" aria-hidden="true"></span>
+                                        <!-- </button> -->
+
+                                    </div>
+
+                                </td>
                             </tr>
+
                         </tbody>
                     </table>
                 </div>
 
+
+
             </div>
             <div id="footer"></div>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-            crossorigin="anonymous"></script>
+
     </body>
 
 </html>
