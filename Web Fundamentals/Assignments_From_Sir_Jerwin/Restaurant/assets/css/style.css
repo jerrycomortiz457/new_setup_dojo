@@ -1,38 +1,88 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
-body div#wrapper {
-  background-color: green;
-}
-body div#wrapper div#header {
-  display: none;
-}
-body div#wrapper div#nav input.search {
-  float: right;
-  margin: 5px;
-  width: 200px;
-}
-body div#wrapper div#nav button.btn {
-  float: right;
-  margin: 5px;
-}
-body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul {
+ul {
   list-style-type: none;
 }
-body div#wrapper div#nav div.modal div.modal-dialog div.modal-content div.modal-body form#registration ul li {
-  display: grid;
-  grid-template-columns: 2;
+body div#wrapper div#header {
+  margin-bottom: 20px;
+  text-align: center;
 }
-body div#wrapper div#main div.container table.table tbody tr td {
-  text-overflow: none;
+body div#wrapper div#header span {
+  text-shadow: 1px 1px 1px gold;
+  font-weight: bold;
+  font-size: 25px;
 }
-body div#wrapper div#main div.container table.table tbody tr div.options {
+body div#wrapper div#nav {
+  margin-bottom: 20px;
+}
+body div#wrapper div#nav button.newresto {
   position: relative;
-  right: -8px;
-  float: right;
+  left: 60%;
+  display: inline;
 }
-body div#wrapper div#main div.container table.table tbody tr div.options span.glyphicon {
-  margin: 0 2px;
+body div#wrapper div#nav input.search {
+  position: relative;
+  left: 60%;
+  display: inline;
+  width: 250px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:last-child {
+  display: none;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+body div#wrapper div#main div.container table.table thead tr th {
+  background-color: limegreen;
+  color: white;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr {
+  background: black;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:nth-child(even) {
+  background: #b5edb5;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:nth-child(odd) {
+  background: #ddf7dd;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:hover {
+  background-color: #b3e2f4;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr td:first-child {
+  font-weight: bold;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options {
+  height: 0px;
+  width: 66px;
+  position: relative;
+  right: -60%;
+  top: -19px;
+  text-align: center;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options span {
+  height: 14px;
+  width: 22px;
+  margin: 0 0px;
+  text-align: center;
   cursor: pointer;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.edit form#updateentry ul li:last-child {
+  display: none;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.edit form#updateentry ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
 }

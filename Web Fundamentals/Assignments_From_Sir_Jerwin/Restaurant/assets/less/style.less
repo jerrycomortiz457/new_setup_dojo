@@ -1,137 +1,231 @@
 *{
-    padding: 0px;
-    margin: 0px;
-    // outline: 1px dashed lawngreen;
+	margin: 0;
+	padding: 0;
+	// outline: 1px dashed lawngreen;
 }
+
+ul{
+	list-style-type: none;
+}
+
+
 body{
 	div#wrapper { 
-		background-color: green;
-		div#header { 
-			display: none;
-			span { 
-				
-			}
-		}
-	
-		div#nav { 
-			input.search { 
-				float: right;
-				margin: 5px;
-				width: 200px;
 
-			}
-			
-			button.btn { 
-				float: right;
-				margin:5px;
-			}
-	
-			div.modal { 
-	
-				div.modal-dialog { 
-	
-					div.modal-content { 
-	
-						div.modal-header { 
-	
-							h5.modal-title { 
-	
-							}
-	
-							button.close { 
-	
-								span { 
-	
-								}
-							}
-						}
-	
-						div.modal-body { 
-	
-							form#registration { 
-	
-								ul { 
-									list-style-type: none;
-									li { 
-										display: grid;
-										grid-template-columns: 2;
-										label { 
-											
-										}
-							
-										input { 
-											
-										}
-									}
-								}
-								textarea{
-									// display:none;	
-								}
-							}
-						}
-	
-						div.modal-footer { 
-	
-							button.btn { 
-	
-							}
-						}
-					}
-				}
-			}
-	
-		
-		}
-	
-		div#main { 
-	
-			div.container { 
-	
-				table.table { 
-	
-					thead { 
-	
-						tr { 
-	
-							th { 
-	
-							}
-						}
-					}
-	
-					tbody { 
-	
-						tr { 
-	
-							td { 
-	
-							}
-	
-							td { 
-								text-overflow: none;
-							}
-							div.options { 
-								// display: none;
-								position: relative;
-								// top: 83px;
-								// right: 254px;
-								right: -8px;
-								float: right;
-										
-									span.glyphicon { 
-										margin: 0 2px;	
-										cursor: pointer;
-									}
-								
-							}
-						}
-					}
-				}
-			}
-		}
-	
-		div#footer { 
-	
+	div#header { 
+		margin-bottom: 20px;
+		text-align: center;
+		span { 
+			text-shadow: 1px 1px 1px gold;
+			font-weight: bold;
+			font-size: 25px;
 		}
 	}
+
+	div#nav { 
+		margin-bottom: 20px;
+		button.newresto { 
+			position: relative;
+			left: 60%;
+			display: inline; 
+			// float: right;
+		}
+		
+		input.search{
+			position: relative;
+			left: 60%;
+			display: inline; 		
+			width: 250px;
+			// float: right;
+		}
+
+
+		div#registrationModal { 
+
+			div.modal-dialog { 
+
+				div.modal-content { 
+
+					div.modal-header { 
+
+						h5.modal-title { 
+							font-weight: bold;
+							font-size: 20px;
+						}
+
+						button.close { 
+
+							span { 
+
+							}
+						}
+					}
+
+					div.modal-body { 
+
+						form#registration { 
+
+							ul { 
+
+								li:last-child{
+									display: none;
+								}
+								
+								li { 
+									display: grid;
+									grid-template-columns: 1fr 2fr;									
+									margin-bottom: 5px;
+									label { 
+									
+									}
+
+									input#restoname { 
+										
+									}
+								}
+							}
+
+						
+						}
+					}
+
+					div.modal-footer { 
+
+						button.btn { 
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div#main { 
+
+		div.container { 
+
+			table.table { 
+
+				thead { 
+
+					tr { 
+						
+						th { 
+							background-color: limegreen;
+							color:white;
+						}
+					}
+				}
+			
+				tbody#myTable { 
+		
+					tr{
+						&:nth-child(even){
+							background:rgb(181, 237, 181);	
+						}
+						&:nth-child(odd){
+							background:rgb(221, 247, 221);		
+						}
+						background: black;
+						&:hover{
+							background-color: rgb(179, 226, 244);
+							
+						}		
+						td:first-child{
+							font-weight: bold;
+						}
+						// &:nth-child(even){
+						// 	background:rgb(181, 237, 181);							
+						// }
+						// &:nth-child(odd){
+						// 	background:rgb(221, 247, 221);							
+						// }
+
+						td{
+
+						}
+						div.options{
+							
+							height: 0px;
+							width: 66px;
+							position: relative;
+							right: -60%;
+							top: -19px;
+							text-align: center;
+							span{
+								height: 14px;
+								width: 22px;
+								// background-color: red;
+								margin: 0 0px;
+								text-align: center;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		div#editModal { 
+
+			div.modal-dialog { 
+
+				div.modal-content { 
+
+					div.modal-header { 
+
+						h5.modal-title { 
+							font-weight: bold;
+							font-size: 20px;
+						}
+
+						button.close { 
+
+							span { 
+
+							}
+						}
+					}
+
+					div.edit { 
+
+						form#updateentry { 
+
+							ul { 
+								li:last-child{
+									display: none;
+								}
+								li { 
+									display: grid;
+									grid-template-columns: 1fr 2fr;									
+									margin-bottom: 5px;
+									label { 
+
+									}
+
+									input#restoname { 
+
+									}
+								}
+							}
+
+						
+						}
+					}
+
+					div.modal-footer { 
+
+						button.btn { 
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div#footer { 
+
+	}
+  }	
 }

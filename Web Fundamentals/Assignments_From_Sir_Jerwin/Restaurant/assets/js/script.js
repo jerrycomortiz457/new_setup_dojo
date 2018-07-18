@@ -6,155 +6,192 @@ $(document).ready(function () {
         });
     });
 
-
-    var counter = 0;
-    var arr = [];
-    // var jsondata = $('#jsondata').val();
-    // var jsonlist = JSON.parse("[" + jsondata + "]");
-    var jsondataupdated;
-    var restoname, cuisine, loc, owner;
-    var entry = {
+    var restolist = [];
+    var restoname, cuisine, loc, owner, avgrating;
+    var resto = {
         restoname: restoname,
         cuisine: cuisine,
         loc: loc,
-        owner: owner
-    };
-
-
-    // function register() {
-    //     restoname = $('#restoname').val();
-    //     cuisine = $('#cuisine').val();
-    //     loc = $('#loc').val();
-    //     owner = $('#owner').val();
-
-    // }
-
-
-
-    var xmlhttp, text;
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET', '../assets/js/data.txt', false);
-    xmlhttp.send();
-    text = xmlhttp.responseText;
-    console.log(text)
-    var jsonlist = JSON.parse("[" + text + "]");
-    var option_buttons = '<div class="options"><span class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span><span class="glyphicon glyphicon-pencil edit" aria-hidden="true"></span><span class="glyphicon glyphicon glyphicon-remove delete " aria-hidden="true"></span></div>'
-
-    function loadPreviousData() {
-        // console.log(jsondata)
-        console.log(jsonlist)
-        for (var i = 0; i < jsonlist.length; i++) {
-            var appender = "<tr><td>" + jsonlist[i].restoname + "</td><td>" + jsonlist[i].cuisine + "</td><td>" + jsonlist[i].loc + "</td><td>" + jsonlist[i].owner + "</td><td>" + "4/10" + option_buttons + "</td></tr>";
-            $('tbody').append(appender);
-            $('#jsondata').text(text);
-            hoverOptions();
-        }
+        owner: owner,
+        avgrating: avgrating
     }
-    loadPreviousData();
-    $('.options').hide()
-    function registerData() {
+
+    var restoid = $(this).attr('id');
+    var restolist = [
+        {
+            restoname: "Thunderbird",
+            cuisine: "Asian Cuisines",
+            loc: "San Fernando, 2500 La Union",
+            owner: "Jose Rizal",
+            avgrating: "8/10"
+        },
+        {
+            restoname: "Sebay",
+            cuisine: "Asian Cuisines",
+            loc: "San Juan, 2500 La Union",
+            owner: "Raisa Yabes",
+            avgrating: "8/10"
+        },
+        {
+            restoname: "1",
+            cuisine: "Asian Cuisines",
+            loc: "San Juan, 2500 La Union",
+            owner: "Raisa Yabes",
+            avgrating: "8/10"
+        },
+        {
+            restoname: "2",
+            cuisine: "Asian Cuisines",
+            loc: "San Juan, 2500 La Union",
+            owner: "Raisa Yabes",
+            avgrating: "8/10"
+        },
+        {
+            restoname: "Plaza De Castiel",
+            cuisine: "Asian Cuisines",
+            loc: "San Juan, 2500 La Union",
+            owner: "Ms. Che",
+            avgrating: "8/10"
+        }
+    ];
+
+    //REGISTRATION AREA
+    function registerResto() {
         restoname = $('#restoname').val();
         cuisine = $('#cuisine').val();
         loc = $('#loc').val();
         owner = $('#owner').val();
-        var tableupdate = "<tr><td>" + restoname + "</td><td>" + cuisine + "</td><td>" + loc + "</td><td>" + owner + "</td><td>" + "4/10" + option_buttons + "</td></tr>";
-        $('tbody').append(tableupdate);
-        $('#jsondata').append(',{"restoname":"' + restoname + '","cuisine":"' + cuisine + '","loc":"' + loc + '","owner":"' + owner + '"}');
-        $('.options').hide()
-        hoverOptions();
+        resto = {
+            restoname: restoname,
+            cuisine: cuisine,
+            loc: loc,
+            owner: owner,
+            avgrating: avgrating
+        }
+
+        restolist.push(resto);
+        updateTable();
+        console.log(restoname, cuisine, loc, owner)
     }
-    function updateJsonData() {
-        jsondataupdated = $('#jsondata').val();
-        console.log(jsondataupdated);
-        jsonlist = JSON.parse("[" + jsondataupdated + "]");
-        console.log(jsonlist)
+    //LOAD DATA AREA
+    function loadTable() {
+        console.log(restolist)
+        avgrating = '0/10'
+        for (var i = 0; i < restolist.length; i++) {
+            var option_buttons = '<div class="options"><span id="' + i + '" class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span><span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span><span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span></div>';
+            var appender = '<tr id="' + i + '"><td>' + restolist[i].restoname + '</td><td>' + restolist[i].cuisine + '</td><td>' + restolist[i].loc + '</td><td>' + restolist[i].owner + '</td><td>' + restolist[i].avgrating + option_buttons + '</td></tr>';
+
+            $('#myTable').append(appender);
+        }
+
+        $('.options').hide();
     }
 
-    $('#register').click(function () {
-        registerData();
-        updateJsonData();
-        hoverOptions();
+    function removeNullValue(array) {
+        var index = array.indexOf(null);
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+    }
+    function removeUndefinedValue(array) {
+        var index = array.indexOf(undefined);
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+    }
+
+    $(document).on('click', '#register', function () {
+        registerResto();
+        $('#restoname').val('')
+        $('#cuisine').val('')
+        $('#loc').val('')
+        $('#owner').val('')
     })
 
+    //DELETE AREA
+    function confirmDelete(array, element) {
+        array[element] = null;
+        removeNullValue(array);
+        updateTable();
 
-    function hoverOptions() {
-        $('td').hover(function () {
-            console.log('td hovering');
-            $(this).siblings().children('div').toggle(600);
-            // var options = $(".options").toggle("slide", 'slow');
-        })
-        $('td').hover(function () {
-            console.log('td hovering');
-            $(this).children('div').toggle(600);
-            // var options = $(".options").toggle("slide", 'slow');
-        })
     }
-    hoverOptions();
+    $(document).on('click', '.delete', function () {
+        restoid = $(this).attr('id');
+        $('.delete-mb').text('Are you sure you want to delete "' + restolist[restoid].restoname + '" ? ');
+    })
+    $(document).on('click', '.deleter', function () {
+        confirmDelete(restolist, restoid);
+    })
 
-    // $(document).on('click', '.delete', function () {
+    //EDIT AREA
 
-    //     // $(this).parent().parent().parent().siblings('t').remove();
-    //     $('#1'
+    $(document).on('click', '.edit', function () {
+        restoid = $(this).attr('id');
 
-    // })
+        $('#erestoname').val(restolist[restoid].restoname);
+        $('#ecuisine').val(restolist[restoid].cuisine);
+        $('#eloc').val(restolist[restoid].loc);
+        $('#eowner').val(restolist[restoid].owner);
+        $('#eowner').val(restolist[restoid].owner);
+        $('#eavgrating').val(restolist[restoid].avgrating);
+        // console.log(restolist[restoid].avgrating)
 
+    })
 
+    $(document).on('click', '#updater', function () {
+        restoname = $('#erestoname').val();
+        cuisine = $('#ecuisine').val();
+        loc = $('#eloc').val();
+        owner = $('#eowner').val();
+        avgrating = $('#eavgrating').val();
+        // console.log(avgrating)
 
-    // $('#register').click(function () {
-    //     register();
-    //     
+        resto = {
+            restoname: restoname,
+            cuisine: cuisine,
+            loc: loc,
+            owner: owner,
+            avgrating: avgrating
+        }
 
-    //     entry = {
-    //         restoname: restoname,
-    //         cuisine: cuisine,
-    //         loc: loc,
-    //         owner: owner
-    //     };
-    //     var stringer = JSON.stringify(entry)
-    //     arr.push(stringer);
-    //     console.log(arr);
-    //     console.log(stringer);
-    //     var arr_object = "[" + arr + "]";
-    //     localStorage.setItem('oldregistered', arr_object);
-    //     // localStorage.setItem('updateregistered', arr);
+        if (restolist[restoid] < 1) {
+            confirmDelete(restolist, restoid);
+            restolist.unshift(resto);
+        }
+        else {
+            restolist[restoid] = resto;
+        }
+        // confirmDelete(restolist, restoid);
 
-    // });
-    // console.log(arr);
+        // console.log(restolist)
+        updateTable();
+    })
 
-    // // var last = 'oldregistered' + max;
-    // // var temp = localStorage.getItem('oldregistered');
-    // // var array = JSON.parse(temp);
-    // // console.log(array);
-    // var jsonlist = $('#jsondata').val();
-    // console.log(jsonlist)
-    // var jsonparsed = JSON.parse(jsonlist);
-    // console.log(jsonparsed)
+    //RATE AREA
+    $(document).on('click', '.rate', function () {
 
+    })
 
-    // function displayPrevious() {
-    //     for (var i = 0; i < jsonparsed.length; i++) {
-    //         $('tbody').append("<tr><th>" + jsonparsed[i].restoname + "</th><td>" + jsonparsed[i].cuisine + "</td><td>" + jsonparsed[i].loc + "</td><td>" + jsonparsed[i].owner + "</td><td>" + "4/10" + "</td></tr>");
-    //     }
+    //OPTION HOVER
+    $(document).on('mouseover', 'td', function () {
+        $(this).children().show();
+    })
+    $(document).on('mouseover', 'td', function () {
+        $(this).siblings().children().show('drop', 1000);
+    })
+    $(document).on('mouseout', 'td', function () {
+        $(this).siblings().children().hide();
+    })
+    $(document).on('mouseout', 'td', function () {
+        $(this).children().hide();
+    })
+    //UPDATE DATAe
+    function updateTable() {
+        $('#myTable').children().remove();
 
-    // };
-    // displayPrevious();
+        loadTable();
+    }
 
-
-    // function saveResto(restoObject) {
-
-    // }
-
-
-
-
-
-    // Storage.prototype.setObject = function (key, value) {
-    //     this.setItem(key, JSON.stringify(value));
-    // }
-
-    // Storage.prototype.getObject = function (key) {
-    //     return JSON.parse(this.getItem(key));
-    // }
-
+    loadTable();
 
 });
