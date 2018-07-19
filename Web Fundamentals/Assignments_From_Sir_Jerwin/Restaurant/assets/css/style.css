@@ -78,10 +78,10 @@ body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.m
   font-weight: bold;
   font-size: 20px;
 }
-body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.edit form#updateentry ul li:last-child {
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:last-child {
   display: none;
 }
-body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.edit form#updateentry ul li {
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 5px;

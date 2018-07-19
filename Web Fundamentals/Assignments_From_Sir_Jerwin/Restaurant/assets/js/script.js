@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
     var restolist = [];
-    var restoname, cuisine, loc, owner, avgrating;
+    // var restoname, cuisine, loc, owner, avgrating;
     var resto = {
         restoname: restoname,
         cuisine: cuisine,
@@ -55,6 +55,31 @@ $(document).ready(function () {
         }
     ];
 
+    var customername, star, description;
+    var review = {
+        customername: customername,
+        star: star,
+        description: description
+    };
+
+    var reviewlist = [
+        {
+            customer: "anonymous 1",
+            star: 4,
+            description: "the quick brown fox jumps over the lazy dog."
+        },
+        {
+            customer: "anonymous 2",
+            star: 3,
+            description: "the quick brown fox jumps over the lazy dog."
+        },
+        {
+            customer: "anonymous 3",
+            star: 1,
+            description: "the quick brown fox jumps over the lazy dog."
+        }
+
+    ];
     //REGISTRATION AREA
     function registerResto() {
         restoname = $('#restoname').val();
@@ -87,14 +112,20 @@ $(document).ready(function () {
         $('.options').hide();
     }
 
+    function loadReview() {
+        for (var i = 0; i < reviewlist.length; i++) {
+            var option_buttons = '<div class="options"><span id="' + i + '" class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span><span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span><span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span></div>';
+            var reviewsappender = '<tr id="' + i + '"><td>' + reviewlist[i].customer + '</td><td>' + reviewlist[i].star + '</td><td>' + reviewlist[i].description + option_buttons + '</td></tr>';
+
+            $('#myReviewTable').append(reviewsappender);
+        }
+
+        $('.options').hide();
+    }
+
+
     function removeNullValue(array) {
         var index = array.indexOf(null);
-        if (index > -1) {
-            array.splice(index, 1);
-        }
-    }
-    function removeUndefinedValue(array) {
-        var index = array.indexOf(undefined);
         if (index > -1) {
             array.splice(index, 1);
         }
@@ -124,18 +155,15 @@ $(document).ready(function () {
     })
 
     //EDIT AREA
-
-    $(document).on('click', '.edit', function () {
+    $('#myTable').on('click', 'span.edit', function () {
         restoid = $(this).attr('id');
-
         $('#erestoname').val(restolist[restoid].restoname);
         $('#ecuisine').val(restolist[restoid].cuisine);
         $('#eloc').val(restolist[restoid].loc);
         $('#eowner').val(restolist[restoid].owner);
         $('#eowner').val(restolist[restoid].owner);
         $('#eavgrating').val(restolist[restoid].avgrating);
-        // console.log(restolist[restoid].avgrating)
-
+        //     // console.log(restolist[restoid].avgrating)
     })
 
     $(document).on('click', '#updater', function () {
@@ -154,13 +182,15 @@ $(document).ready(function () {
             avgrating: avgrating
         }
 
-        if (restolist[restoid] < 1) {
+        if (restolist[restoid] <= 0) {
             confirmDelete(restolist, restoid);
             restolist.unshift(resto);
         }
         else {
             restolist[restoid] = resto;
         }
+
+
         // confirmDelete(restolist, restoid);
 
         // console.log(restolist)
@@ -169,7 +199,8 @@ $(document).ready(function () {
 
     //RATE AREA
     $(document).on('click', '.rate', function () {
-
+        $('.review-div').show();
+        loadReview();
     })
 
     //OPTION HOVER
@@ -192,6 +223,7 @@ $(document).ready(function () {
         loadTable();
     }
 
+    $('.review-div').hide();
     loadTable();
 
 });

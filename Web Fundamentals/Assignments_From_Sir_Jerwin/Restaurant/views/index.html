@@ -61,14 +61,13 @@
                                             <label for="avgrating">Average Rating: </label>
                                             <input type="text" name="avgrating" id="avgrating">
                                         </li>
-
                                     </ul>
 
 
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" id="register" data-dismiss="modal">Register</button>
+                                <button type="button" class="btn btn-success" id="register" data-dismiss="modal">Register</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
@@ -105,7 +104,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body edit">
+                            <div class="modal-body editModalBody">
                                 <form action="#" method="POST" id="updateentry">
                                     <ul>
                                         <li>
@@ -159,9 +158,24 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            <!-- FOOTER -->
-            <div id="footer"></div>
+
+
+            <!-- REVIEWS -->
+            <div class="container review-div">
+                <table class="table table-hover table-striped-success" id="reviewtable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Star</th>
+                            <th scope="col">Descriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myReviewTable">
+                    </tbody>
+                </table>
+            </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
