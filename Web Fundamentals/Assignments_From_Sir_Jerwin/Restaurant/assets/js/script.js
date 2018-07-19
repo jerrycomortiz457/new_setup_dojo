@@ -5,7 +5,12 @@ $(document).ready(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-
+    $("#myReviews").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#myReviewTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
     var restolist = [];
     // var restoname, cuisine, loc, owner, avgrating;
     var resto = {
@@ -13,7 +18,8 @@ $(document).ready(function () {
         cuisine: cuisine,
         loc: loc,
         owner: owner,
-        avgrating: avgrating
+        avgrating: avgrating,
+        reviews: reviews
     }
 
     var restoid = $(this).attr('id');
@@ -23,7 +29,22 @@ $(document).ready(function () {
             cuisine: "Asian Cuisines",
             loc: "San Fernando, 2500 La Union",
             owner: "Jose Rizal",
-            avgrating: "8/10"
+            avgrating: "8/10",
+            reviews: [{
+                customer: "hello",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "world 2",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "anonymous 3",
+                star: 1,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
         },
         {
             restoname: "Sebay",
@@ -55,31 +76,32 @@ $(document).ready(function () {
         }
     ];
 
-    var customername, star, description;
-    var review = {
-        customername: customername,
-        star: star,
-        description: description
-    };
 
-    var reviewlist = [
-        {
-            customer: "anonymous 1",
-            star: 4,
-            description: "the quick brown fox jumps over the lazy dog."
-        },
-        {
-            customer: "anonymous 2",
-            star: 3,
-            description: "the quick brown fox jumps over the lazy dog."
-        },
-        {
-            customer: "anonymous 3",
-            star: 1,
-            description: "the quick brown fox jumps over the lazy dog."
-        }
+    // var review = {
+    //     customername: customername,
+    //     star: star,
+    //     description: description
+    // };
 
-    ];
+    // var reviewlist = [
+    //     {
+    //         customer: "hello",
+    //         star: 4,
+    //         description: "the quick brown fox jumps over the lazy dog."
+    //     },
+    //     {
+    //         customer: "world 2",
+    //         star: 3,
+    //         description: "the quick brown fox jumps over the lazy dog."
+    //     },
+    //     {
+    //         customer: "anonymous 3",
+    //         star: 1,
+    //         description: "the quick brown fox jumps over the lazy dog."
+    //     }
+
+    // ];
+    // console.log(reviewlist)  
     //REGISTRATION AREA
     function registerResto() {
         restoname = $('#restoname').val();
@@ -91,7 +113,8 @@ $(document).ready(function () {
             cuisine: cuisine,
             loc: loc,
             owner: owner,
-            avgrating: avgrating
+            avgrating: avgrating,
+            reviews: reviews
         }
 
         restolist.push(resto);
@@ -113,15 +136,18 @@ $(document).ready(function () {
     }
 
     function loadReview() {
-        for (var i = 0; i < reviewlist.length; i++) {
+
+        for (var i = 0; i < restolist[restoid].reviews.length; i++) {
             var option_buttons = '<div class="options"><span id="' + i + '" class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span><span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span><span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span></div>';
-            var reviewsappender = '<tr id="' + i + '"><td>' + reviewlist[i].customer + '</td><td>' + reviewlist[i].star + '</td><td>' + reviewlist[i].description + option_buttons + '</td></tr>';
+            var reviewsappender = '<tr id="' + i + '"><td>' + restolist[restoid].reviews[i].customer + '</td><td>' + restolist[restoid].reviews[i].star + '</td><td>' + restolist[restoid].reviews[i].description + option_buttons + '</td></tr>';
 
             $('#myReviewTable').append(reviewsappender);
         }
 
         $('.options').hide();
+        console.log()
     }
+
 
 
     function removeNullValue(array) {
@@ -179,7 +205,8 @@ $(document).ready(function () {
             cuisine: cuisine,
             loc: loc,
             owner: owner,
-            avgrating: avgrating
+            avgrating: avgrating,
+            reviews: reviews
         }
 
         if (restolist[restoid] <= 0) {

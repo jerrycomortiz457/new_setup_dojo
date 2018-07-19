@@ -164,17 +164,58 @@
 
             <!-- REVIEWS -->
             <div class="container review-div">
+                <button type="button" class="btn btn-success newresto" data-toggle="modal" data-target="#newReviewModal">
+                    New Review
+                </button>
+                <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
                 <table class="table table-hover table-striped-success" id="reviewtable">
                     <thead>
                         <tr>
                             <th scope="col">Customer</th>
-                            <th scope="col">Star</th>
+                            <th scope="col">Stars</th>
                             <th scope="col">Descriptions</th>
                         </tr>
                     </thead>
                     <tbody id="myReviewTable">
                     </tbody>
                 </table>
+            </div>
+            <div class="modal fade" id="newReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Write a review for ""</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST" id="reviews">
+                                <ul>
+                                    <li>
+                                        <label for="restoname">Your Name:</label>
+                                        <input type="text" name="restoname" id="restoname">
+                                    </li>
+                                    <li>
+                                        <label for="cuisine">Your Review: </label>
+                                        <input type="text" name="cuisine" id="cuisine">
+                                    </li>
+
+                                    <li>
+                                        <label for="avgrating">Average Rating: </label>
+                                        <input type="text" name="avgrating" id="avgrating">
+                                    </li>
+                                </ul>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" id="add" data-dismiss="modal">Add</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
