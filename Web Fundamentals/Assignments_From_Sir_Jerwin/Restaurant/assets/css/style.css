@@ -19,14 +19,16 @@ body div#wrapper div#nav {
 }
 body div#wrapper div#nav button.newresto {
   position: relative;
-  left: 60%;
+  left: 59.9%;
   display: inline;
+  border-radius: 10px;
 }
 body div#wrapper div#nav input.search {
   position: relative;
-  left: 60%;
+  left: 59.9%;
   display: inline;
   width: 250px;
+  border-radius: 10px;
 }
 body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
   font-weight: bold;
@@ -39,6 +41,28 @@ body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-conten
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 5px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper div#main div.container table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+body div#wrapper div#main div.container table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+body div#wrapper div#main div.container table.table {
+  table-layout: fixed;
+  width: 100%;
+}
+body div#wrapper div#main div.container table.table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+body div#wrapper div#main div.container table.table thead tr th:last-child {
+  border-top-right-radius: 10px;
 }
 body div#wrapper div#main div.container table.table thead tr th {
   background-color: limegreen;
@@ -85,4 +109,174 @@ body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.e
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-bottom: 5px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper div.review-div button#back {
+  border-radius: 10px;
+}
+body div#wrapper div.review-div button.newreview {
+  position: relative;
+  left: 54.9%;
+  display: inline;
+  border-radius: 10px;
+}
+body div#wrapper div.review-div input#myReviews {
+  position: relative;
+  left: 54.9%;
+  display: inline;
+  width: 250px;
+  border-radius: 10px;
+}
+body div#wrapper div.review-div table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+body div#wrapper div.review-div table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+body div#wrapper div.review-div table.table {
+  margin-top: 20px;
+  table-layout: fixed;
+  width: 100%;
+}
+body div#wrapper div.review-div table.table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+body div#wrapper div.review-div table.table thead tr th:last-child {
+  border-top-right-radius: 10px;
+  width: 690px;
+}
+body div#wrapper div.review-div table.table thead tr th {
+  background-color: limegreen;
+  color: white;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr {
+  background: black;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:nth-child(even) {
+  background: #b5edb5;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:nth-child(odd) {
+  background: #ddf7dd;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:hover {
+  background-color: #b3e2f4;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr td:first-child {
+  font-weight: bold;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options {
+  height: 0px;
+  width: 66px;
+  position: relative;
+  right: -90%;
+  top: -19px;
+  text-align: center;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span {
+  height: 14px;
+  width: 22px;
+  margin: 0 0px;
+  text-align: center;
+  cursor: pointer;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-header h5.review-modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li textarea {
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating span {
+  cursor: pointer;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating > span {
+  /*font-size: 100px;*/
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover ~ span {
+  color: transparent;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover:before,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #32CD32;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .colorchange {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #32CD32;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-header h5.editreview-modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li textarea {
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  color: #32CD32;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating span {
+  cursor: pointer;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating > span {
+  /*font-size: 100px;*/
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover ~ span {
+  color: transparent;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover:before,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #32CD32;
 }

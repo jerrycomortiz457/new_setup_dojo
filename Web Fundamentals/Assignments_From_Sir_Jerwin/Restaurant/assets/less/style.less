@@ -4,6 +4,8 @@
 	// outline: 1px dashed lawngreen;
 }
 
+
+
 ul{
 	list-style-type: none;
 }
@@ -26,16 +28,18 @@ body{
 		margin-bottom: 20px;
 		button.newresto { 
 			position: relative;
-			left: 60%;
+			left: 59.9%;
 			display: inline; 
+			border-radius: 10px;
 			// float: right;
 		}
 		
 		input.search{
 			position: relative;
-			left: 60%;
+			left: 59.9%;
 			display: inline; 		
 			width: 250px;
+			border-radius: 10px;
 			// float: right;
 		}
 
@@ -54,7 +58,7 @@ body{
 						}
 
 						button.close { 
-
+							
 							span { 
 
 							}
@@ -79,8 +83,8 @@ body{
 									
 									}
 
-									input#restoname { 
-										
+									input { 
+										border-radius: 5px;
 									}
 								}
 							}
@@ -92,7 +96,7 @@ body{
 					div.modal-footer { 
 
 						button.btn { 
-
+							border-radius: 10px;
 						}
 					}
 				}
@@ -103,16 +107,30 @@ body{
 	div#main { 
 
 		div.container { 
+			table tr:last-child td:first-child {
+				border-bottom-left-radius: 10px;
+			}
+			
+			table tr:last-child td:last-child {
+				border-bottom-right-radius: 10px;
+			}
 
-			table.table { 
-
+			table.table { 					
+				table-layout: fixed;
+				width: 100%; 
 				thead { 
-
+					
 					tr { 
-						
+						th:first-child{
+							border-top-left-radius: 10px;
+						}
+						th:last-child{
+							border-top-right-radius: 10px;
+						}
 						th { 
 							background-color: limegreen;
 							color:white;
+							
 						}
 					}
 				}
@@ -134,6 +152,8 @@ body{
 						td:first-child{
 							font-weight: bold;
 						}
+													
+							
 						// &:nth-child(even){
 						// 	background:rgb(181, 237, 181);							
 						// }
@@ -203,8 +223,8 @@ body{
 
 									}
 
-									input#restoname { 
-
+									input { 
+										border-radius: 5px;
 									}
 								}
 							}
@@ -216,7 +236,7 @@ body{
 					div.modal-footer { 
 
 						button.btn { 
-
+							border-radius: 10px;
 						}
 					}
 				}
@@ -224,8 +244,291 @@ body{
 		}
 	}
 
-	div#reviewstab { 
+	div.review-div { 
+		
+		button#back{
+			border-radius: 10px;
+		}
 
+		button.newreview { 
+			position: relative;
+			left: 54.9%;
+			display: inline; 
+			border-radius: 10px;
+		}
+	
+		input#myReviews{ 
+			position: relative;
+			left: 54.9%;
+			display: inline; 		
+			width: 250px;
+			border-radius: 10px;
+		}
+		table tr:last-child td:first-child {
+			border-bottom-left-radius: 10px;
+		}
+		
+		table tr:last-child td:last-child {
+			border-bottom-right-radius: 10px;
+		}
+	
+		table.table { 
+			margin-top: 20px;
+			table-layout: fixed;
+			width: 100%; 
+	
+			thead { 
+	
+				tr { 
+
+					th:first-child{
+						border-top-left-radius: 10px;
+					}
+					th:last-child{
+						border-top-right-radius: 10px;
+						width: 690px;
+
+					}
+	
+					th { 
+						background-color: limegreen;
+						color:white;
+					}
+				}
+			}
+	
+			tbody#myReviewTable { 
+				tr{
+					&:nth-child(even){
+						background:rgb(181, 237, 181);	
+					}
+					&:nth-child(odd){
+						background:rgb(221, 247, 221);		
+					}
+					background: black;
+					&:hover{						
+						background-color: rgb(179, 226, 244);						
+					}		
+							
+					td:first-child{
+						font-weight: bold;
+					}
+					// &:nth-child(even){
+					// 	background:rgb(181, 237, 181);							
+					// }
+					// &:nth-child(odd){
+					// 	background:rgb(221, 247, 221);							
+					// }
+
+					td{
+
+					}
+					div.options{
+						
+						height: 0px;
+						width: 66px;
+						position: relative;
+						right: -90%;
+						top: -19px;
+						text-align: center;
+						span{
+							height: 14px;
+							width: 22px;
+							// background-color: red;
+							margin: 0 0px;
+							text-align: center;
+							cursor: pointer;
+						}
+					}
+				}
+	
+			}
+		}
+	}
+	
+	div.modal { 
+	
+		div.modal-dialog { 
+	
+			div.modal-content { 
+	
+				div.modal-header { 
+	
+					h5.review-modal-title { 
+						font-weight: bold;
+						font-size: 20px;
+					}
+	
+					button.close { 
+	
+						span { 
+	
+						}
+					}
+				}
+	
+				div.modal-body { 
+	
+					form#reviews { 
+	
+						ul { 
+	
+							li { 
+								display: grid;
+								grid-template-columns: 1fr 2fr;									
+								margin-bottom: 5px;
+	
+								label { 
+	
+								}
+	
+								input { 
+									border-radius: 5px;
+								}
+								textarea{
+									height: 100px;
+									border-radius: 5px;
+									resize: none;
+								}
+								
+								div.rating{
+									unicode-bidi: bidi-override;
+									direction: rtl;
+									text-align: left;
+									// color:#32CD32;
+   									 font-size: 25px;
+									span{
+										cursor: pointer;
+									}
+								}
+								div.rating > span {
+									/*font-size: 100px;*/
+									display: inline-block;
+									position: relative;
+									width: 1.1em;
+								  }
+								.rating > span:hover,
+								.rating > span:hover ~ span {
+								color: transparent;
+								}
+
+								.rating > span:hover:before,
+								.rating > span:hover ~ span:before
+								 {
+								content: "\2605";
+								position: absolute;
+								left: 0; 
+								color: #32CD32;
+								}							
+								
+								.colorchange{									
+									content: "\2605";
+									position: absolute;
+									left: 0; 
+									color: #32CD32;
+								}
+							
+							}
+						}
+					}
+				}
+	
+				div.modal-footer { 
+	
+					button.btn { 
+						border-radius: 10px;
+					}
+				}
+			}
+		}
+	}
+	div.modal { 
+
+		div.modal-dialog { 
+	
+			div.modal-content { 
+	
+				div.modal-header { 
+	
+					h5.editreview-modal-title { 
+						font-weight: bold;
+						font-size: 20px;
+					}
+	
+					button.close { 
+	
+						span { 
+	
+						}
+					}
+				}
+	
+				div.modal-body { 
+	
+					form#editreviews { 
+	
+						ul { 
+	
+							li { 
+								display: grid;
+								grid-template-columns: 1fr 2fr;									
+								margin-bottom: 5px;
+	
+								label { 
+	
+								}
+	
+								input { 
+									border-radius: 5px;
+								}
+								textarea{
+									height: 100px;
+									border-radius: 5px;
+									resize: none;
+								}
+
+								div.rating{
+									unicode-bidi: bidi-override;
+									direction: rtl;
+									text-align: left;
+									color:#32CD32;
+   									 font-size: 25px;
+									span{
+										
+										cursor: pointer;
+									}
+								}
+								div.rating > span {
+									/*font-size: 100px;*/
+									display: inline-block;
+									position: relative;
+									width: 1.1em;
+								  }
+								.rating > span:hover,
+								.rating > span:hover ~ span {
+								color: transparent;
+								}
+
+								.rating > span:hover:before,
+								.rating > span:hover ~ span:before {
+								content: "\2605";
+								position: absolute;
+								left: 0; 
+								color: #32CD32;
+								}
+							}
+						}
+					}
+				}
+	
+				div.modal-footer { 
+	
+					button.btn { 
+	
+					}
+				}
+			}
+		}
 	}
   }	
 }
