@@ -190,7 +190,7 @@ $(document).ready(function () {
     //ADD NEW REVIEW - REGISTER
     function addNewReview() {
         customer = $('#customer').val();
-        star = $('#star').val();
+        star = starcount;
         description = $('#description').val();
         review = {
             customer: customer,
@@ -199,10 +199,20 @@ $(document).ready(function () {
         }
         // console.log(restolist[restoid])
         restolist[restoid].reviews.push(review);
+        $('.star').css('fill', 'white');
+        $('.star').css('color', 'white');
         updateReviewTable();
         // console.log(customer, star, description)
     }
 
+    //STAR APPENDER
+    function starAppend(ratedstars) {
+        for (var i = 0; i < ratedstars; i++) {
+            starappend = '&#9733;'
+            console.log(starappend)
+        }
+        return starappend;
+    }
 
     //LOAD DATA AREA - RESTO TABLE
     function loadTable() {
@@ -269,6 +279,8 @@ $(document).ready(function () {
         updateReviewTable();
     }
 
+
+
     //DELETE BUTTON RESTO
     $(document).on('click', '.delete', function () {
         restoid = $(this).attr('id');
@@ -319,15 +331,17 @@ $(document).ready(function () {
         $('#estar').val(restolist[currentrestoid].reviews[tag].star);
         $('#updatereview').attr('tag', tag);
         $('#updatereview').attr('tag2', currentrestoid);
-
+        $('.star').css('fill', 'white');
+        $('.star').css('color', 'white');
     })
+
 
     //UPDATE BUTTON - REVIEW
     $(document).on('click', '#updatereview', function () {
         currentresto = $(this).attr('tag2')
         tag = $(this).attr('tag')
         customer = $('#ecustomer').val();
-        star = $('#estar').val();
+        star = starcount;
         description = $('#edescription').val();
         // console.log(avgrating)
         review = {
@@ -386,14 +400,75 @@ $(document).ready(function () {
     })
 
     //STARS - RATING
-    $('.rating').on('mouseover', 'span', function () {
+    $('.rating').on('click', 'span', function () {
         starcount = $(this).attr('id')
-        // for (var i = 0; i < 6; i++) {
-        //     $(this).css('color', 'red')
-        // }
+
+
+        if ($(this).attr('id') == 1) {
+            $(this).css('color', '#32CD32')
+            $(this).css('fill', '#32CD32')
+            $(this).siblings().css('fill', 'white')
+            $(this).siblings().css('color', 'white')
+        }
+        if ($(this).attr('id') == 2) {
+            $(this).css('color', '#32CD32')
+            $(this).css('fill', '#32CD32')
+            $(this).next().css('fill', '#32CD32')
+            $(this).next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).prev().css('color', 'white')
+            $(this).prev().css('color', 'white')
+            $(this).prev().prev().css('color', 'white')
+            $(this).prev().prev().css('color', 'white')
+            $(this).prev().prev().prev().css('color', 'white')
+            $(this).prev().prev().prev().css('color', 'white')
+        }
+        if ($(this).attr('id') == 3) {
+            $(this).css('color', '#32CD32')
+            $(this).css('fill', '#32CD32')
+            $(this).next().css('fill', '#32CD32')
+            $(this).next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).prev().css('color', 'white')
+            $(this).prev().css('color', 'white')
+            $(this).prev().prev().css('color', 'white')
+            $(this).prev().prev().css('color', 'white')
+
+        }
+
+        if ($(this).attr('id') == 4) {
+            $(this).css('color', '#32CD32')
+            $(this).css('fill', '#32CD32')
+            $(this).next().css('fill', '#32CD32')
+            $(this).next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).next().next().css('color', '#32CD32')
+            $(this).next().next().next().css('color', '#32CD32')
+            $(this).next().next().next().css('color', 're#32CD32d')
+            $(this).prev().css('color', 'white')
+            $(this).prev().css('color', 'white')
+        }
+
+        if ($(this).attr('id') == 5) {
+            $(this).css('color', '#32CD32')
+            $(this).css('fill', '#32CD32')
+            $(this).siblings().css('fill', '#32CD32')
+            $(this).siblings().css('color', '#32CD32')
+        }
+
+
+
+
+
+
+
         console.log(starcount)
 
     })
+
+
 
     //OPTION HOVER
     $(document).on('mouseover', 'td', function () {

@@ -210,6 +210,19 @@ body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body for
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating span {
   cursor: pointer;
 }
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  color: white;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating span {
+  fill: white;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #32CD32;
+}
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating > span {
   /*font-size: 100px;*/
   display: inline-block;
@@ -222,12 +235,6 @@ body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body for
 }
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover:before,
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
-  left: 0;
-  color: #32CD32;
-}
-body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .colorchange {
   content: "\2605";
   position: absolute;
   left: 0;
@@ -257,11 +264,15 @@ body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body for
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
-  color: #32CD32;
+  color: white;
   font-size: 25px;
 }
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating span {
+  fill: white;
   cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #32CD32;
+  text-shadow: 1px 1px 1px grey;
 }
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating > span {
   /*font-size: 100px;*/

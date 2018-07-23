@@ -398,7 +398,21 @@ body{
 									// color:#32CD32;
    									 font-size: 25px;
 									span{
+										cursor: pointer;									
+									}
+								}
+								div.rating{
+									unicode-bidi: bidi-override;
+									direction: rtl;
+									text-align: left;
+									color:white;
+									// fill: white;
+   									 font-size: 25px;
+									span{
+										fill: white;
 										cursor: pointer;
+										-webkit-text-stroke-width: 1px;
+  										-webkit-text-stroke-color: #32CD32;
 									}
 								}
 								div.rating > span {
@@ -413,20 +427,11 @@ body{
 								}
 
 								.rating > span:hover:before,
-								.rating > span:hover ~ span:before
-								 {
+								.rating > span:hover ~ span:before {
 								content: "\2605";
 								position: absolute;
 								left: 0; 
-								color: #32CD32;
-								}							
-								
-								.colorchange{									
-									content: "\2605";
-									position: absolute;
-									left: 0; 
-									color: #32CD32;
-								}
+								color: #32CD32;}
 							
 							}
 						}
@@ -491,11 +496,14 @@ body{
 									unicode-bidi: bidi-override;
 									direction: rtl;
 									text-align: left;
-									color:#32CD32;
+									color:white;
    									 font-size: 25px;
 									span{
-										
+										fill: white;
 										cursor: pointer;
+										-webkit-text-stroke-width:1px;
+										  -webkit-text-stroke-color: #32CD32;
+										  text-shadow: 1px 1px 1px grey;
 									}
 								}
 								div.rating > span {
