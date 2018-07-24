@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     //VARIABLES
     var restolist = [];
-    var restoname, cuisine, loc, owner, avgrating, customer, star, description, avgratingappend = null;
+    var restoname, cuisine, loc, owner, avgrating, customer, star, description, avgratingappend = '0/0';
     var review = [];
     var resto = {
         restoname: restoname,
@@ -26,119 +26,229 @@ $(document).ready(function () {
         reviews: []
     }
 
-    // var restolist = [
-    //     {
-    //         restoname: "Thunderbird",
-    //         cuisine: "Asian Cuisines",
-    //         loc: "San Fernando, 2500 La Union",
-    //         owner: "Jose Rizal",
-    //         avgrating: avgrating,
-    //         reviews: [{
-    //             customer: "1",
-    //             star: 5,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "2",
-    //             star: 4,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "3",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         }]
-    //     },
-    //     {
-    //         restoname: "Sebay",
-    //         cuisine: "Asian Cuisines",
-    //         loc: "San Juan, 2500 La Union",
-    //         owner: "Raisa Yabes",
-    //         avgrating: avgrating,
-    //         reviews: [{
-    //             customer: "4",
-    //             star: 1,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "5",
-    //             star: 2,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "6",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         }]
-    //     },
-    //     {
-    //         restoname: "Thunderbird",
-    //         cuisine: "Asian Cuisines",
-    //         loc: "San Fernando, 2500 La Union",
-    //         owner: "Jose Rizal",
-    //         avgrating: avgrating,
-    //         reviews: [{
-    //             customer: "1",
-    //             star: 5,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "2",
-    //             star: 4,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "3",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         }]
-    //     },
-    //     {
-    //         restoname: "The Canteen",
-    //         cuisine: "Asian Cuisines",
-    //         loc: "San Fernando, 2500 La Union",
-    //         owner: "The Canteener",
-    //         avgrating: avgrating,
-    //         reviews: [{
-    //             customer: "10",
-    //             star: 4,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "11",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "12",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         }]
+    var restolist = [
+        {
+            restoname: "Noma",
+            cuisine: "European Cuisines",
+            loc: "Copenhagen, Denmark",
+            owner: "Redzepi",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Celler de Can Roca",
+            cuisine: "European and African Cuisines",
+            loc: "Girona, Spain",
+            owner: "Joan,  Josep, Jordi",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "4",
+                star: 1,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "5",
+                star: 2,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "6",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Osteria Francescana",
+            cuisine: "Italian Cuisines",
+            loc: "San Fernando, 2500 La Union",
+            owner: "Modena, Italy",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Eleven Madison Park",
+            cuisine: "American Cuisines",
+            loc: "New York, USA",
+            owner: "Daniel Humm",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "10",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "11",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "12",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
 
-    //     },
-    //     {
-    //         restoname: "Thunderbird",
-    //         cuisine: "Asian Cuisines",
-    //         loc: "San Fernando, 2500 La Union",
-    //         owner: "Jose Rizal",
-    //         avgrating: avgrating,
-    //         reviews: [{
-    //             customer: "1",
-    //             star: 5,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "2",
-    //             star: 4,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         },
-    //         {
-    //             customer: "3",
-    //             star: 3,
-    //             description: "the quick brown fox jumps over the lazy dog."
-    //         }]
-    //     },
-    // ];
+        },
+        {
+            restoname: "Dinner",
+            cuisine: "British Cuisines",
+            loc: "London, England",
+            owner: "Heston Blumenthal",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Mugaritz",
+            cuisine: "Spanish Cuisines",
+            loc: "Errenteria, Spain",
+            owner: "Andoni Luis Aduriz l",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "D.O.M",
+            cuisine: "Brazilian Cuisines",
+            loc: "Saõ Paulo, Brazil",
+            owner: "Alex Atala",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Arzak",
+            cuisine: "Spanish Cuisines",
+            loc: "San Sebastian, Spain",
+            owner: "Juan Mari Arzak",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "Alinea",
+            cuisine: "Italian Cuisines",
+            loc: "Chicago, Illinois",
+            owner: "Grant Achatz",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+        {
+            restoname: "The Ledbury",
+            cuisine: "British Cuisines",
+            loc: "London, England",
+            owner: "Brett Graham",
+            avgrating: avgrating,
+            reviews: [{
+                customer: "1",
+                star: 5,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "2",
+                star: 4,
+                description: "the quick brown fox jumps over the lazy dog."
+            },
+            {
+                customer: "3",
+                star: 3,
+                description: "the quick brown fox jumps over the lazy dog."
+            }]
+        },
+    ];
 
     // console.log(restolist[1].reviews[0].customer)
     var restoid = $(this).attr('id');
@@ -239,17 +349,23 @@ $(document).ready(function () {
         ratingcounter = 0;
         for (var j = 0; j < restocurrent[index].reviews.length; j++) {
             // console.log(restocurrent[index].reviews[j].star)
-            if (restocurrent[index].reviews[j].length == 0) {
-                avgratingappend = 0 + '/' + restocurrent[index].reviews.length;
-                return avgratingappend = null;
+            if (restocurrent[index].reviews.length != 0) {
+                avgratingappend = ratingcounter + '/' + restocurrent[index].reviews.length;
             }
             if (restocurrent[index].reviews[j].star >= 3) {
                 ratingcounter++;
                 avgratingappend = ratingcounter + '/' + restocurrent[index].reviews.length;
-                return avgratingappend;
             }
         }
-        return '0/0'
+
+        if (restocurrent[index].reviews.length == 0) {
+            return '0/0';
+        }
+        else {
+            return avgratingappend;
+        }
+
+
     }
     //LOAD REVIEW
     function loadReview() {
