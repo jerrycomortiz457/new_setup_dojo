@@ -57,17 +57,17 @@ $(document).ready(function () {
             avgrating: avgrating,
             reviews: [{
                 customer: "4",
-                star: 1,
+                star: 5,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
                 customer: "5",
-                star: 2,
+                star: 5,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
                 customer: "6",
-                star: 3,
+                star: 4,
                 description: "the quick brown fox jumps over the lazy dog."
             }]
         },
@@ -106,12 +106,12 @@ $(document).ready(function () {
             },
             {
                 customer: "11",
-                star: 3,
+                star: 2,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
                 customer: "12",
-                star: 3,
+                star: 2,
                 description: "the quick brown fox jumps over the lazy dog."
             }]
 
@@ -168,7 +168,7 @@ $(document).ready(function () {
             avgrating: avgrating,
             reviews: [{
                 customer: "1",
-                star: 5,
+                star: 2,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
@@ -212,7 +212,7 @@ $(document).ready(function () {
             avgrating: avgrating,
             reviews: [{
                 customer: "1",
-                star: 5,
+                star: 2,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
@@ -239,7 +239,7 @@ $(document).ready(function () {
             },
             {
                 customer: "2",
-                star: 4,
+                star: 2,
                 description: "the quick brown fox jumps over the lazy dog."
             },
             {
@@ -313,6 +313,7 @@ $(document).ready(function () {
         // console.log(customer, star, description)
     }
 
+
     //STAR APPENDER
     function starAppend(starshade) {
         if (starshade == 1) {
@@ -357,15 +358,12 @@ $(document).ready(function () {
                 avgratingappend = ratingcounter + '/' + restocurrent[index].reviews.length;
             }
         }
-
         if (restocurrent[index].reviews.length == 0) {
             return '0/0';
         }
         else {
             return avgratingappend;
         }
-
-
     }
     //LOAD REVIEW
     function loadReview() {
@@ -428,11 +426,6 @@ $(document).ready(function () {
         array1[element1] = null;
         removeNullValue(array1);
         updateReviewTable();
-    }
-
-    //AVERAGE RATING
-    function averageRating() {
-
     }
 
     //DELETE BUTTON RESTO
@@ -671,9 +664,7 @@ $(document).ready(function () {
             $(this).siblings().css('fill', '#32CD32')
             $(this).siblings().css('color', '#32CD32')
         }
-
         // console.log(starcount)
-
     })
 
     //OPTION HOVER

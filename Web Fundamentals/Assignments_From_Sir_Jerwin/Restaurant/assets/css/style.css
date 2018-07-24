@@ -13,7 +13,8 @@ ul {
   font-size: 1.4em;
 }
 body div#wrapper div#header {
-  margin-bottom: 20px;
+  margin-top: 36px;
+  margin-bottom: 64px;
   text-align: center;
 }
 body div#wrapper div#header span {
