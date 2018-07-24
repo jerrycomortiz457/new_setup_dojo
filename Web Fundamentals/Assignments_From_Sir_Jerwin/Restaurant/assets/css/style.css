@@ -2,8 +2,15 @@
   margin: 0;
   padding: 0;
 }
+td {
+  overflow: auto;
+}
 ul {
   list-style-type: none;
+}
+#ratestars {
+  color: black;
+  font-size: 1.4em;
 }
 body div#wrapper div#header {
   margin-bottom: 20px;
@@ -259,6 +266,7 @@ body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body for
   height: 100px;
   border-radius: 5px;
   resize: none;
+  overflow: scroll;
 }
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating {
   unicode-bidi: bidi-override;
