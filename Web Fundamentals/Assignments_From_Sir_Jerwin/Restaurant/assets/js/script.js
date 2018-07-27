@@ -395,8 +395,6 @@ $(document).ready(function () {
             $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
         }
         return avgratingappend;
-
-
         // console.log(restoid)
         // console.log(restolist[restoid].reviews[].customer)
         // console.log(restolist)
@@ -500,9 +498,7 @@ $(document).ready(function () {
     $('.review-div').on('click', '.newreview', function () {
         currentrestoid = $(this).attr('id');
         $('.review-modal-title').text('Write a review for "' + restolist[currentrestoid].restoname + '"');
-        $('.star').css('fill', 'white');
-        $('.star').css('color', 'white');
-
+        $('.star').css('fill', 'white').css('color', 'white');
     })
     //EDIT A REVIEW
     $(document).on('click', '.editreview', function () {
@@ -516,61 +512,40 @@ $(document).ready(function () {
 
         $('#updatereview').attr('tag', tag);
         $('#updatereview').attr('tag2', currentrestoid);
-        $('.star').css('fill', 'white');
-        $('.star').css('color', 'white');
+        $('.star').css('fill', 'white').css('color', 'white');
+
         if (starrated == 1) {
-            $('.star1').css('color', '#D03425')
-            $('.star1').css('fill', '#D03425')
-            $('.star1').siblings().css('fill', 'white')
-            $('.star1').siblings().css('color', 'white')
+            $('.star1').css('color', '#D03425').css('fill', '#D03425')
+            $('.star1').siblings().css('fill', 'white').css('color', 'white')
         }
 
         if (starrated == 2) {
-            $('.star2').css('color', '#D03425')
-            $('.star2').css('fill', '#D03425')
-            $('.star2').next().css('fill', '#D03425')
-            $('.star2').next().css('color', '#D03425')
-            $('.star2').next().next().css('color', '#D03425')
+            $('.star2').css('color', '#D03425').css('fill', '#D03425')
+            $('.star2').next().css('fill', '#D03425').css('color', '#D03425')
             $('.star2').next().next().css('color', '#D03425')
             $('.star2').prev().css('color', 'white')
-            $('.star2').prev().css('color', 'white')
             $('.star2').prev().prev().css('color', 'white')
-            $('.star2').prev().prev().css('color', 'white')
-            $('.star2').prev().prev().prev().css('color', 'white')
             $('.star2').prev().prev().prev().css('color', 'white')
         }
         if (starrated == 3) {
-            $('.star3').css('color', '#D03425')
-            $('.star3').css('fill', '#D03425')
-            $('.star3').next().css('fill', '#D03425')
-            $('.star3').next().css('color', '#D03425')
-            $('.star3').next().next().css('color', '#D03425')
+            $('.star3').css('color', '#D03425').css('fill', '#D03425')
+            $('.star3').next().css('fill', '#D03425').css('color', '#D03425')
             $('.star3').next().next().css('color', '#D03425')
             $('.star3').prev().css('color', 'white')
-            $('.star3').prev().css('color', 'white')
             $('.star3').prev().prev().css('color', 'white')
-            $('.star3').prev().prev().css('color', 'white')
-
         }
 
         if (starrated == 4) {
-            $('.star4').css('color', '#D03425')
-            $('.star4').css('fill', '#D03425')
-            $('.star4').next().css('fill', '#D03425')
-            $('.star4').next().css('color', '#D03425')
-            $('.star4').next().next().css('color', '#D03425')
+            $('.star4').css('color', '#D03425').css('fill', '#D03425')
+            $('.star4').next().css('fill', '#D03425').css('color', '#D03425')
             $('.star4').next().next().css('color', '#D03425')
             $('.star4').next().next().next().css('color', '#D03425')
-            $('.star4').next().next().next().css('color', '#D03425')
-            $('.star4').prev().css('color', 'white')
             $('.star4').prev().css('color', 'white')
         }
 
         if (starrated == 5) {
-            $('.star5').css('color', '#D03425')
-            $('.star5').css('fill', '#D03425')
-            $('.star5').siblings().css('fill', '#D03425')
-            $('.star5').siblings().css('color', '#D03425')
+            $('.star5').css('color', '#D03425').css('fill', '#D03425')
+            $('.star5').siblings().css('fill', '#D03425').css('color', '#D03425')
         }
     })
 
@@ -639,56 +614,34 @@ $(document).ready(function () {
         starcount = $(this).attr('id')
 
         if ($(this).attr('id') == 1) {
-            $(this).css('color', '#D03425')
-            $(this).css('fill', '#D03425')
-            $(this).siblings().css('fill', 'white')
-            $(this).siblings().css('color', 'white')
+            $(this).css('color', '#D03425').css('fill', '#D03425')
+            $(this).siblings().css('fill', 'white').css('color', 'white')
         }
         if ($(this).attr('id') == 2) {
-            $(this).css('color', '#D03425')
-            $(this).css('fill', '#D03425')
-            $(this).next().css('fill', '#D03425')
-            $(this).next().css('color', '#D03425')
-            $(this).next().next().css('color', '#D03425')
+            $(this).css('color', '#D03425').css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425').css('color', '#D03425')
             $(this).next().next().css('color', '#D03425')
             $(this).prev().css('color', 'white')
-            $(this).prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
-            $(this).prev().prev().css('color', 'white')
-            $(this).prev().prev().prev().css('color', 'white')
             $(this).prev().prev().prev().css('color', 'white')
         }
         if ($(this).attr('id') == 3) {
-            $(this).css('color', '#D03425')
-            $(this).css('fill', '#D03425')
-            $(this).next().css('fill', '#D03425')
-            $(this).next().css('color', '#D03425')
-            $(this).next().next().css('color', '#D03425')
+            $(this).css('color', '#D03425').css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425').css('color', '#D03425')
             $(this).next().next().css('color', '#D03425')
             $(this).prev().css('color', 'white')
-            $(this).prev().css('color', 'white')
-            $(this).prev().prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
         }
-
         if ($(this).attr('id') == 4) {
-            $(this).css('color', '#D03425')
-            $(this).css('fill', '#D03425')
-            $(this).next().css('fill', '#D03425')
-            $(this).next().css('color', '#D03425')
-            $(this).next().next().css('color', '#D03425')
+            $(this).css('color', '#D03425').css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425').css('color', '#D03425')
             $(this).next().next().css('color', '#D03425')
             $(this).next().next().next().css('color', '#D03425')
-            $(this).next().next().next().css('color', '#D03425')
-            $(this).prev().css('color', 'white')
             $(this).prev().css('color', 'white')
         }
-
         if ($(this).attr('id') == 5) {
-            $(this).css('color', '#D03425')
-            $(this).css('fill', '#D03425')
-            $(this).siblings().css('fill', '#D03425')
-            $(this).siblings().css('color', '#D03425')
+            $(this).css('color', '#D03425').css('fill', '#D03425')
+            $(this).siblings().css('fill', '#D03425').css('color', '#D03425')
         }
         // console.log(starcount)
     })
