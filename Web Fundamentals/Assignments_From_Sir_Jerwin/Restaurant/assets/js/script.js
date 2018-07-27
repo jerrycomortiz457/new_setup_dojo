@@ -26,7 +26,7 @@ $(document).ready(function () {
         reviews: []
     }
 
-    var restolist = [
+    var restolist1 = [
         {
             restoname: "Noma",
             cuisine: "European Cuisines",
@@ -74,8 +74,8 @@ $(document).ready(function () {
         {
             restoname: "Osteria Francescana",
             cuisine: "Italian Cuisines",
-            loc: "San Fernando, 2500 La Union",
-            owner: "Modena, Italy",
+            loc: "Modena, Italy",
+            owner: "Massimo Bottura",
             avgrating: avgrating,
             reviews: [{
                 customer: "1",
@@ -262,6 +262,7 @@ $(document).ready(function () {
         $('#main').hide();
         $('.review-div').show();
         $('.newreview').attr('id', restoid)
+        $('#restonamereview').text(restolist[restoid].restoname + ' Reviews')
         loadReview();
         // console.log(restolist[restoid].reviews[0].customer)
     })
@@ -339,12 +340,18 @@ $(document).ready(function () {
         for (var i = 0; i < restolist.length; i++) {
             avgrating = loadAvgRating(restolist, i);
             restolist[i].avgrating = avgrating;
-            var option_buttons = '<div class="options"><span id="' + i + '" class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span><span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span><span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span></div>';
-            var appender = '<tr id="' + i + '"><td>' + restolist[i].restoname + '</td><td>' + restolist[i].cuisine + '</td><td>' + restolist[i].loc + '</td><td>' + restolist[i].owner + '</td><td class="avgratingtd">' + avgrating + option_buttons + '</td></tr>';
-            $('#myTable').append(appender);
+            var option_buttons = '<div class="options"> \
+            <span id="' + i + '" class="glyphicon glyphicon-eye-open rate" aria-hidden="true"></span> \
+            <span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span> \
+            <span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span> \
+            </div>';
+            var retoTrTd = '<tr id="' + i + '"><td>' + restolist[i].restoname + '</td><td>' + restolist[i].cuisine + '</td><td>' + restolist[i].loc + '</td><td>' + restolist[i].owner + '</td><td class="avgratingtd">' + avgrating + option_buttons + '</td></tr>';
+            $('#myTable').append(retoTrTd);
         }
-        $('.options').hide();
+        //hidden
+        // $('.options').hide();
     }
+
 
     function loadAvgRating(restocurrent, index) {
         ratingcounter = 0;
@@ -367,19 +374,20 @@ $(document).ready(function () {
     }
     //LOAD REVIEW
     function loadReview() {
-        count = 1;
+        let count = 1;
         for (var i = 0; i < restolist[restoid].reviews.length; i++) {
             rated = starAppend(restolist[restoid].reviews[i].star);
             reviewsrating = restolist[restoid].reviews[i].star;
             if (reviewsrating >= 3) {
                 avgratingappend = count++ + '/' + restolist[restoid].reviews.length;
             }
-            var option_buttons_review = '<div class="options"><span id="' + restoid + '" class="glyphicon glyphicon-pencil editreview" aria-hidden="true" data-toggle="modal" data-target="#editReviewModal" tag="' + i + '"></span><span id="' + restoid + '" class="glyphicon glyphicon glyphicon-trash deletereview " aria-hidden="true" data-toggle="modal" data-target="#deleteReviewModal" tag="' + i + '"></span></div>';
-            var reviewsappender = '<tr id="' + i + '"><td>' + restolist[restoid].reviews[i].customer + '</td><td id="ratestars">' + rated + '</td><td>' + restolist[restoid].reviews[i].description + option_buttons_review + '</td></tr>';
+            let option_buttons_review = '<div class="options"> \
+            <span id="' + restoid + '" class="glyphicon glyphicon-pencil editreview" aria-hidden="true" data-toggle="modal" data-target="#editReviewModal" tag="' + i + '"></span> \
+            <span id="' + restoid + '" class="glyphicon glyphicon glyphicon-trash deletereview " aria-hidden="true" data-toggle="modal" data-target="#deleteReviewModal" tag="' + i + '"></span> \
+            </div>';
+            let reviewsappender = '<tr id="' + i + '"><td>' + restolist[restoid].reviews[i].customer + '</td><td id="ratestars">' + rated + '</td><td>' + restolist[restoid].reviews[i].description + option_buttons_review + '</td></tr>';
             $('#myReviewTable').append(reviewsappender);
         }
-        $('.options').hide();
-        // console.log(avgnow);
         return avgratingappend;
 
         // console.log(restoid)
@@ -387,10 +395,6 @@ $(document).ready(function () {
         // console.log(restolist)
     }
 
-    //RETURN AVG
-    // function returnAvg() {
-
-    // }
     //REMOVE NULLW
     function removeNullValue(array) {
         var index = array.indexOf(null);
@@ -406,6 +410,16 @@ $(document).ready(function () {
         $('#cuisine').val('')
         $('#loc').val('')
         $('#owner').val('')
+    })
+
+    $(document).on('click', '.cancel', function () {
+        $('#restoname').val('')
+        $('#cuisine').val('')
+        $('#loc').val('')
+        $('#owner').val('')
+        $('#customer').val('')
+        $('#star').val('')
+        $('#description').val('')
     })
     // ADD REVIEW BUTTON - ADD AND RESET
     $(document).on('click', '#addreview', function () {
@@ -435,6 +449,10 @@ $(document).ready(function () {
     })
     $(document).on('click', '.deleter', function () {
         confirmDelete(restolist, restoid);
+        if (restolist.length == 0) {
+            console.log(restolist.length)
+        }
+
     })
 
     //DELETE BUTTON REVIEW
@@ -469,7 +487,6 @@ $(document).ready(function () {
         $('.review-modal-title').text('Write a review for "' + restolist[currentrestoid].restoname + '"');
         $('.star').css('fill', 'white');
         $('.star').css('color', 'white');
-
 
     })
     //EDIT A REVIEW
@@ -540,8 +557,6 @@ $(document).ready(function () {
             $('.star5').siblings().css('fill', '#32CD32')
             $('.star5').siblings().css('color', '#32CD32')
         }
-
-
     })
 
 
@@ -552,7 +567,6 @@ $(document).ready(function () {
         customer = $('#ecustomer').val();
         star = starcount;
         description = $('#edescription').val();
-
         // console.log(avgrating)
         review = {
             customer: customer,
@@ -567,10 +581,7 @@ $(document).ready(function () {
         else {
             restolist[currentresto].reviews[tag] = review;
         }
-
-
         // confirmDelete(restolist, restoid);
-
         // console.log(restolist)       
         updateReviewTable();
     })
@@ -642,7 +653,6 @@ $(document).ready(function () {
             $(this).prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
-
         }
 
         if ($(this).attr('id') == 4) {
@@ -668,17 +678,49 @@ $(document).ready(function () {
     })
 
     //OPTION HOVER
-    $(document).on('mouseover', 'td', function () {
-        $(this).children().show();
+
+    $('#restotable').on('mouseover', 'tr', function () {
+        $(this).children().children().animate({ right: '-5%' }, 'fast');
+        $(this).mouseover(function () {
+            $(this).children().children().stop();
+        })
     })
-    $(document).on('mouseover', 'td', function () {
-        $(this).siblings().children().show('drop', 1000);
+    $('#restotable').on('mouseout', 'tr', function () {
+        $(this).children().children().animate({ right: '-45%' }, 'fast');
     })
-    $(document).on('mouseout', 'td', function () {
-        $(this).siblings().children().hide();
+
+    $('#reviewtable').on('mouseover', 'tr', function () {
+        $(this).children().children().animate({ right: '0%' }, 'fast');
+        $(this).mouseover(function () {
+            $(this).children().children().stop();
+        })
     })
-    $(document).on('mouseout', 'td', function () {
-        $(this).children().hide();
+    $('#reviewtable').on('mouseout', 'tr', function () {
+        $(this).children().children().animate({ right: '-14%' }, 'fast');
+    })
+
+
+
+    $('#register').attr('disabled', true);
+    $('input').keyup(function () {
+        if ($('#restoname').val().length != 0 && $('#cuisine').val().length != 0 && $('#loc').val().length != 0 && $('#owner').val().length != 0)
+            $('#register').attr('disabled', false);
+        else
+            $('#register').attr('disabled', true);
+    })
+    $('#addreview').attr('disabled', true);
+    $('input').keyup(function () {
+        if ($('#customer').val().length != 0)
+            $('#addreview').attr('disabled', false);
+        else
+            $('#addreview').attr('disabled', true);
+    })
+    $('#updater').attr('disabled', true);
+    $('input').keyup(function () {
+        if ($('#erestoname').val().length != 0 && $('#ecuisine').val().length != 0 && $('#eloc').val().length != 0 && $('#eowner').val().length != 0)
+            $('#updater').attr('disabled', false);
+        else
+            $('#updater').attr('disabled', true);
     })
     //UPDATE DATA
     function updateTable() {

@@ -3,9 +3,15 @@
 	padding: 0;
 	// outline: 1px dashed lawngreen;
 }
+@font-face {
+	font-family: Azkia;
+	src: url(../fonts/Azkia.otf);
+}	
 
-td{
-	overflow: auto;
+
+tr td{
+	overflow: hidden;
+	text-align: justify;
 }
 
 ul{
@@ -18,9 +24,11 @@ ul{
 }
 
 
+
 body{
 		
-	// background-color: goldenrod;	
+	background: linear-gradient(to right,#32CC16, #E4E5C1);	
+	height: 900px;
 	div#wrapper {
 		// background: url('../images/cuisine.PNG');
 		// height: 900px;
@@ -48,12 +56,13 @@ body{
 		
 	div#header { 
 		margin-top: 36px;
-		margin-bottom: 64px;
+		margin-bottom: 0px;
 		text-align: center;
 		span { 
-			text-shadow: 1px 1px 1px gold;
+		    text-shadow: 1px 6px 0px ghostwhite;
 			font-weight: bold;
-			font-size: 25px;
+			font-size: 154px;
+			font-family: 'Azkia';	
 		}
 	}
 
@@ -61,15 +70,27 @@ body{
 		margin-bottom: 20px;
 		button.newresto { 
 			position: relative;
-			left: 59.9%;
+			left: 58.82%;
 			display: inline; 
+			background-color: #32CD32;
+			font-weight: bold;			
 			border-radius: 10px;
 			// float: right;
+			&:hover{
+				box-shadow: 0px 0px 0px 1px black;
+				background-color: white;
+				color: #32CD32;
+				font-weight: bold;
+			}
+			span{
+			    font-size: 12px;
+			}
 		}
+
 		
 		input.search{
 			position: relative;
-			left: 59.9%;
+			left: 58.82%;
 			display: inline; 		
 			width: 250px;
 			border-radius: 10px;
@@ -138,6 +159,15 @@ body{
 	}
 
 	div#main { 	
+		img{
+			height: 568px;
+    position: absolute;
+    opacity: 0.5;
+    left: 89px;
+    top: 7px;
+    z-index: -1;
+		
+		}
 		div.container { 		
 			table tr:last-child td:first-child {
 				border-bottom-left-radius: 10px;
@@ -151,6 +181,8 @@ body{
 				// border: px solid green;								
 				table-layout: fixed;
 				width: 100%; 
+				box-shadow: 0px 0px 10px 2px black;
+				border-radius: 10px;	
 				thead { 
 					
 					tr { 
@@ -169,6 +201,10 @@ body{
 				}
 			
 				tbody#myTable { 
+
+					.noresto{
+						text-align: center;
+					}
 		
 					tr{
 						&:nth-child(even){
@@ -198,26 +234,50 @@ body{
 
 						}
 						div.options{
-							
-							height: 0px;
-							width: 66px;
+							display: block;
+							background-color: #32CD32;
+							height: 19px;
+							width: 78px;
 							position: relative;
-							right: -60%;
-							top: -19px;
+							right: -45%;
+							/* top: -19px; */
 							text-align: center;
+							border-top-left-radius: 8px;
+							border-bottom-left-radius: 8px;
+							float: right;							
+							box-shadow: 0px 0px 0px 8px #32CD32;
+							z-index: 99;		
+							
+							// span:first-child{
+								border-top-left-radius: 8px;
+								border-bottom-left-radius: 8px;
+							// }
 							span{
-								height: 14px;
+								top:2px;
+								// height: 27px;
 								width: 22px;
-								// background-color: red;
+								z-index: 99;
 								margin: 0 0px;
 								text-align: center;
+								// top: -5px;
+								// left: 26px;
 								cursor: pointer;
+								// padding-top: 6px;
+								// color:green;
+							}
+							span:hover{
+								color: white;
 							}
 						}
 					}
-				}
+				}				
+						
 			}
+			
+		
 		}
+	
+		
 
 		div#editModal { 
 
@@ -266,8 +326,7 @@ body{
 						}
 					}
 
-					div.modal-footer { 
-
+					div.modal-footer {
 						button.btn { 
 							border-radius: 10px;
 						}
@@ -278,21 +337,48 @@ body{
 	}
 
 	div.review-div { 
+		div.reston{
+			span{
+				font-size: 50px;
+				text-shadow: 0px 0px 13px white;
+			}
+		}
 		
 		button#back{
 			border-radius: 10px;
+			background-color: #32CD32;
+			font-weight: bold;	
+			&:hover{
+				box-shadow: 0px 0px 0px 1px black;
+				background-color: white;
+				color: #32CD32;
+				font-weight: bold;
+			}
 		}
 
 		button.newreview { 
 			position: relative;
-			left: 54.9%;
+			left: 51%;
 			display: inline; 
 			border-radius: 10px;
+			background-color: #32CD32;
+			font-weight: bold;	
+
+			&:hover{
+				box-shadow: 0px 0px 0px 1px black;
+				background-color: white;
+				color: #32CD32;
+				font-weight: bold;
+			}
+			span{
+			    font-size: 12px;
+			}
 		}
+		
 	
 		input#myReviews{ 
 			position: relative;
-			left: 54.9%;
+			left: 51%;
 			display: inline; 		
 			width: 250px;
 			border-radius: 10px;
@@ -309,6 +395,8 @@ body{
 			margin-top: 20px;
 			table-layout: fixed;
 			width: 100%; 
+			box-shadow: 0px 0px 10px 2px black;
+			border-radius: 10px;
 	
 			thead { 
 	
@@ -331,6 +419,10 @@ body{
 			}
 	
 			tbody#myReviewTable { 
+				.noreview{
+					display: none;
+					text-align: center;
+				}
 				tr{
 					&:nth-child(even){
 						background:rgb(181, 237, 181);	
@@ -357,20 +449,39 @@ body{
 
 					}
 					div.options{
-						
-						height: 0px;
-						width: 66px;
+						display: block;
+						background-color: #32CD32;
+						height: 19px;
+						width: 46px;
 						position: relative;
-						right: -90%;
-						top: -19px;
+						right: -14%;
+						top: 3px;
 						text-align: center;
+						border-top-left-radius: 8px;
+						border-bottom-left-radius: 8px;
+						float: right;							
+						box-shadow: 0px 0px 0px 10px #32CD32;
+						z-index: 99;		
+						
+						// span:first-child{
+							border-top-left-radius: 8px;
+							border-bottom-left-radius: 8px;
+						// }
 						span{
-							height: 14px;
+							top:2px;
+							// height: 27px;
 							width: 22px;
-							// background-color: red;
+							z-index: 99;
 							margin: 0 0px;
 							text-align: center;
+							// top: -5px;
+							// left: 26px;
 							cursor: pointer;
+							// padding-top: 6px;
+							// color:green;
+						}
+						span:hover{
+							color: white;
 						}
 					}
 				}

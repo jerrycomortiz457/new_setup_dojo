@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
 }
-td {
-  overflow: auto;
+@font-face {
+  font-family: Azkia;
+  src: url(../fonts/Azkia.otf);
+}
+tr td {
+  overflow: hidden;
+  text-align: justify;
 }
 ul {
   list-style-type: none;
@@ -12,28 +17,44 @@ ul {
   color: black;
   font-size: 1.4em;
 }
+body {
+  background: linear-gradient(to right, #32cc16, #e4e5c1);
+  height: 900px;
+}
 body div#wrapper div#header {
   margin-top: 36px;
-  margin-bottom: 64px;
+  margin-bottom: 0px;
   text-align: center;
 }
 body div#wrapper div#header span {
-  text-shadow: 1px 1px 1px gold;
+  text-shadow: 1px 6px 0px ghostwhite;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 154px;
+  font-family: 'Azkia';
 }
 body div#wrapper div#nav {
   margin-bottom: 20px;
 }
 body div#wrapper div#nav button.newresto {
   position: relative;
-  left: 59.9%;
+  left: 58.82%;
   display: inline;
+  background-color: #32CD32;
+  font-weight: bold;
   border-radius: 10px;
+}
+body div#wrapper div#nav button.newresto:hover {
+  box-shadow: 0px 0px 0px 1px black;
+  background-color: white;
+  color: #32CD32;
+  font-weight: bold;
+}
+body div#wrapper div#nav button.newresto span {
+  font-size: 12px;
 }
 body div#wrapper div#nav input.search {
   position: relative;
-  left: 59.9%;
+  left: 58.82%;
   display: inline;
   width: 250px;
   border-radius: 10px;
@@ -56,6 +77,14 @@ body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-conten
 body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-footer button.btn {
   border-radius: 10px;
 }
+body div#wrapper div#main img {
+  height: 568px;
+  position: absolute;
+  opacity: 0.5;
+  left: 89px;
+  top: 7px;
+  z-index: -1;
+}
 body div#wrapper div#main div.container table tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
@@ -65,6 +94,8 @@ body div#wrapper div#main div.container table tr:last-child td:last-child {
 body div#wrapper div#main div.container table.table {
   table-layout: fixed;
   width: 100%;
+  box-shadow: 0px 0px 10px 2px black;
+  border-radius: 10px;
 }
 body div#wrapper div#main div.container table.table thead tr th:first-child {
   border-top-left-radius: 10px;
@@ -75,6 +106,9 @@ body div#wrapper div#main div.container table.table thead tr th:last-child {
 body div#wrapper div#main div.container table.table thead tr th {
   background-color: limegreen;
   color: white;
+}
+body div#wrapper div#main div.container table.table tbody#myTable .noresto {
+  text-align: center;
 }
 body div#wrapper div#main div.container table.table tbody#myTable tr {
   background: black;
@@ -92,19 +126,30 @@ body div#wrapper div#main div.container table.table tbody#myTable tr td:first-ch
   font-weight: bold;
 }
 body div#wrapper div#main div.container table.table tbody#myTable tr div.options {
-  height: 0px;
-  width: 66px;
+  display: block;
+  background-color: #32CD32;
+  height: 19px;
+  width: 78px;
   position: relative;
-  right: -60%;
-  top: -19px;
+  right: -45%;
+  /* top: -19px; */
   text-align: center;
+  float: right;
+  box-shadow: 0px 0px 0px 8px #32CD32;
+  z-index: 99;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 body div#wrapper div#main div.container table.table tbody#myTable tr div.options span {
-  height: 14px;
+  top: 2px;
   width: 22px;
+  z-index: 99;
   margin: 0 0px;
   text-align: center;
   cursor: pointer;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options span:hover {
+  color: white;
 }
 body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
   font-weight: bold;
@@ -124,18 +169,41 @@ body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.e
 body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-footer button.btn {
   border-radius: 10px;
 }
+body div#wrapper div.review-div div.reston span {
+  font-size: 50px;
+  text-shadow: 0px 0px 13px white;
+}
 body div#wrapper div.review-div button#back {
   border-radius: 10px;
+  background-color: #32CD32;
+  font-weight: bold;
+}
+body div#wrapper div.review-div button#back:hover {
+  box-shadow: 0px 0px 0px 1px black;
+  background-color: white;
+  color: #32CD32;
+  font-weight: bold;
 }
 body div#wrapper div.review-div button.newreview {
   position: relative;
-  left: 54.9%;
+  left: 51%;
   display: inline;
   border-radius: 10px;
+  background-color: #32CD32;
+  font-weight: bold;
+}
+body div#wrapper div.review-div button.newreview:hover {
+  box-shadow: 0px 0px 0px 1px black;
+  background-color: white;
+  color: #32CD32;
+  font-weight: bold;
+}
+body div#wrapper div.review-div button.newreview span {
+  font-size: 12px;
 }
 body div#wrapper div.review-div input#myReviews {
   position: relative;
-  left: 54.9%;
+  left: 51%;
   display: inline;
   width: 250px;
   border-radius: 10px;
@@ -150,6 +218,8 @@ body div#wrapper div.review-div table.table {
   margin-top: 20px;
   table-layout: fixed;
   width: 100%;
+  box-shadow: 0px 0px 10px 2px black;
+  border-radius: 10px;
 }
 body div#wrapper div.review-div table.table thead tr th:first-child {
   border-top-left-radius: 10px;
@@ -161,6 +231,10 @@ body div#wrapper div.review-div table.table thead tr th:last-child {
 body div#wrapper div.review-div table.table thead tr th {
   background-color: limegreen;
   color: white;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable .noreview {
+  display: none;
+  text-align: center;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr {
   background: black;
@@ -178,19 +252,30 @@ body div#wrapper div.review-div table.table tbody#myReviewTable tr td:first-chil
   font-weight: bold;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options {
-  height: 0px;
-  width: 66px;
+  display: block;
+  background-color: #32CD32;
+  height: 19px;
+  width: 46px;
   position: relative;
-  right: -90%;
-  top: -19px;
+  right: -14%;
+  top: 3px;
   text-align: center;
+  float: right;
+  box-shadow: 0px 0px 0px 10px #32CD32;
+  z-index: 99;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span {
-  height: 14px;
+  top: 2px;
   width: 22px;
+  z-index: 99;
   margin: 0 0px;
   text-align: center;
   cursor: pointer;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span:hover {
+  color: white;
 }
 body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-header h5.review-modal-title {
   font-weight: bold;
