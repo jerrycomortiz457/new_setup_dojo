@@ -410,6 +410,7 @@ $(document).ready(function () {
         $('#cuisine').val('')
         $('#loc').val('')
         $('#owner').val('')
+        $('#register').attr('disabled', true);
     })
 
     $(document).on('click', '.cancel', function () {
@@ -427,6 +428,7 @@ $(document).ready(function () {
         $('#customer').val('')
         $('#star').val('')
         $('#description').val('')
+        $('#addreview').attr('disabled', true);
     })
 
     //DELETE FUNCTION NULLER FOR RESTO
@@ -434,12 +436,18 @@ $(document).ready(function () {
         array[element] = null;
         removeNullValue(array);
         updateTable();
+        if (array.length == 0) {
+            $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
+        }
     }
     //REVIEW DELETE CONFIRMATION
     function confirmDeleteReview(array1, element1) {
         array1[element1] = null;
         removeNullValue(array1);
         updateReviewTable();
+        if (array1.length == 0) {
+            $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
+        }
     }
 
     //DELETE BUTTON RESTO
@@ -616,6 +624,7 @@ $(document).ready(function () {
         // console.log(restolist[restoid].reviews)
         // console.log(restolist)
         updateTable();
+        $('#updater').attr('disabled', true);
     })
 
     //STARS - RATING
@@ -678,7 +687,6 @@ $(document).ready(function () {
     })
 
     //OPTION HOVER
-
     $('#restotable').on('mouseover', 'tr', function () {
         $(this).children().children().animate({ right: '-5%' }, 'fast');
         $(this).mouseover(function () {
@@ -698,8 +706,6 @@ $(document).ready(function () {
     $('#reviewtable').on('mouseout', 'tr', function () {
         $(this).children().children().animate({ right: '-14%' }, 'fast');
     })
-
-
 
     $('#register').attr('disabled', true);
     $('input').keyup(function () {

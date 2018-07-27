@@ -37,7 +37,7 @@ body div#wrapper div#nav {
 }
 body div#wrapper div#nav button.newresto {
   position: relative;
-  left: 58.82%;
+  left: 59.82%;
   display: inline;
   background-color: #32CD32;
   font-weight: bold;
@@ -54,7 +54,7 @@ body div#wrapper div#nav button.newresto span {
 }
 body div#wrapper div#nav input.search {
   position: relative;
-  left: 58.82%;
+  left: 59.82%;
   display: inline;
   width: 250px;
   border-radius: 10px;
@@ -66,10 +66,29 @@ body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-conten
 body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:last-child {
   display: none;
 }
-body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-bottom: 5px;
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:first-child input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(2) input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(3) {
+  display: inline-grid;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(3) input {
+  display: block;
+  width: 158%;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(4) {
+  display: inline-grid;
+  float: right;
+  margin-right: 19%;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(4) input {
+  display: block;
+  width: 162%;
 }
 body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li input {
   border-radius: 5px;
@@ -125,6 +144,9 @@ body div#wrapper div#main div.container table.table tbody#myTable tr:hover {
 body div#wrapper div#main div.container table.table tbody#myTable tr td:first-child {
   font-weight: bold;
 }
+body div#wrapper div#main div.container table.table tbody#myTable tr td.noitems {
+  text-align: center;
+}
 body div#wrapper div#main div.container table.table tbody#myTable tr div.options {
   display: block;
   background-color: #32CD32;
@@ -158,10 +180,29 @@ body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.m
 body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:last-child {
   display: none;
 }
-body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-bottom: 5px;
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:first-child input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(2) input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(3) {
+  display: inline-grid;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(3) input {
+  display: block;
+  width: 160%;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(4) {
+  display: inline-grid;
+  float: right;
+  margin-right: 19%;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(4) input {
+  display: block;
+  width: 162%;
 }
 body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li input {
   border-radius: 5px;
@@ -233,7 +274,6 @@ body div#wrapper div.review-div table.table thead tr th {
   color: white;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable .noreview {
-  display: none;
   text-align: center;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr {
@@ -250,6 +290,9 @@ body div#wrapper div.review-div table.table tbody#myReviewTable tr:hover {
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr td:first-child {
   font-weight: bold;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr td.noitems {
+  text-align: center;
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options {
   display: block;
@@ -268,7 +311,7 @@ body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options {
 }
 body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span {
   top: 2px;
-  width: 22px;
+  width: 21px;
   z-index: 99;
   margin: 0 0px;
   text-align: center;

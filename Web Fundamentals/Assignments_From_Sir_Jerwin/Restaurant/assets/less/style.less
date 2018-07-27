@@ -23,8 +23,6 @@ ul{
 	font-size: 1.4em;
 }
 
-
-
 body{
 		
 	background: linear-gradient(to right,#32CC16, #E4E5C1);	
@@ -70,7 +68,7 @@ body{
 		margin-bottom: 20px;
 		button.newresto { 
 			position: relative;
-			left: 58.82%;
+			left: 59.82%;
 			display: inline; 
 			background-color: #32CD32;
 			font-weight: bold;			
@@ -90,7 +88,7 @@ body{
 		
 		input.search{
 			position: relative;
-			left: 58.82%;
+			left: 59.82%;
 			display: inline; 		
 			width: 250px;
 			border-radius: 10px;
@@ -124,15 +122,48 @@ body{
 						form#registration { 
 
 							ul { 
-
+								
 								li:last-child{
 									display: none;
 								}
-								
+								li:first-child{
+									input{
+										width: 100%;
+										margin-bottom: 10px;
+									}
+								}
+
+								li:nth-child(2){
+									input{
+										width: 100%;
+										margin-bottom: 10px;
+									}
+								}								
+
+								li:nth-child(3){
+									display: inline-grid;
+									input{
+										display: block;
+										width: 158%;
+									}
+									
+								}								
+								li:nth-child(4){
+									display: inline-grid;
+									float:right;
+									margin-right: 19%;
+									input{
+										display: block;
+										width: 162%;
+									}
+								}	
+																							
 								li { 
-									display: grid;
-									grid-template-columns: 1fr 2fr;									
-									margin-bottom: 5px;
+									// display: grid;
+									// grid-template-columns: 1fr 2fr;									
+									// margin-bottom: 5px;
+
+									
 									label { 
 									
 									}
@@ -141,6 +172,8 @@ body{
 										border-radius: 5px;
 									}
 								}
+
+								
 							}
 
 						
@@ -220,6 +253,9 @@ body{
 						}		
 						td:first-child{
 							font-weight: bold;
+						}
+						td.noitems{
+							text-align: center;
 						}
 													
 							
@@ -308,10 +344,42 @@ body{
 								li:last-child{
 									display: none;
 								}
+
+								li:first-child{
+									input{
+										width: 100%;
+										margin-bottom: 10px;
+									}
+								}
+
+								li:nth-child(2){
+									input{
+										width: 100%;
+										margin-bottom: 10px;
+									}
+								}								
+
+								li:nth-child(3){
+									display: inline-grid;
+									input{
+										display: block;
+										width: 160%;
+									}
+									
+								}								
+								li:nth-child(4){
+									display: inline-grid;
+									float:right;
+									margin-right: 19%;
+									input{
+										display: block;
+										width: 162%;
+									}
+								}	
 								li { 
-									display: grid;
-									grid-template-columns: 1fr 2fr;									
-									margin-bottom: 5px;
+									// display: grid;
+									// grid-template-columns: 1fr 2fr;									
+									// margin-bottom: 5px;
 									label { 
 
 									}
@@ -420,9 +488,10 @@ body{
 	
 			tbody#myReviewTable { 
 				.noreview{
-					display: none;
+					// display: none;
 					text-align: center;
 				}
+				
 				tr{
 					&:nth-child(even){
 						background:rgb(181, 237, 181);	
@@ -438,12 +507,10 @@ body{
 					td:first-child{
 						font-weight: bold;
 					}
-					// &:nth-child(even){
-					// 	background:rgb(181, 237, 181);							
-					// }
-					// &:nth-child(odd){
-					// 	background:rgb(221, 247, 221);							
-					// }
+				
+					td.noitems{
+						text-align: center;
+					}
 
 					td{
 
@@ -470,7 +537,7 @@ body{
 						span{
 							top:2px;
 							// height: 27px;
-							width: 22px;
+							width: 21px;
 							z-index: 99;
 							margin: 0 0px;
 							text-align: center;
