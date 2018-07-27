@@ -26,7 +26,7 @@ $(document).ready(function () {
         reviews: []
     }
 
-    var restolist1 = [
+    var restolist = [
         {
             restoname: "Noma",
             cuisine: "European Cuisines",
@@ -348,6 +348,9 @@ $(document).ready(function () {
             var retoTrTd = '<tr id="' + i + '"><td>' + restolist[i].restoname + '</td><td>' + restolist[i].cuisine + '</td><td>' + restolist[i].loc + '</td><td>' + restolist[i].owner + '</td><td class="avgratingtd">' + avgrating + option_buttons + '</td></tr>';
             $('#myTable').append(retoTrTd);
         }
+        if (restolist.length == 0) {
+            $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
+        }
         //hidden
         // $('.options').hide();
     }
@@ -388,7 +391,11 @@ $(document).ready(function () {
             let reviewsappender = '<tr id="' + i + '"><td>' + restolist[restoid].reviews[i].customer + '</td><td id="ratestars">' + rated + '</td><td>' + restolist[restoid].reviews[i].description + option_buttons_review + '</td></tr>';
             $('#myReviewTable').append(reviewsappender);
         }
+        if (restolist[restoid].reviews.length == 0) {
+            $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
+        }
         return avgratingappend;
+
 
         // console.log(restoid)
         // console.log(restolist[restoid].reviews[].customer)
@@ -436,18 +443,18 @@ $(document).ready(function () {
         array[element] = null;
         removeNullValue(array);
         updateTable();
-        if (array.length == 0) {
-            $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
-        }
+        // if (array.length == 0) {
+        //     $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
+        // }
     }
     //REVIEW DELETE CONFIRMATION
     function confirmDeleteReview(array1, element1) {
         array1[element1] = null;
         removeNullValue(array1);
         updateReviewTable();
-        if (array1.length == 0) {
-            $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
-        }
+        // if (array1.length == 0) {
+        //     $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
+        // }
     }
 
     //DELETE BUTTON RESTO
@@ -512,19 +519,19 @@ $(document).ready(function () {
         $('.star').css('fill', 'white');
         $('.star').css('color', 'white');
         if (starrated == 1) {
-            $('.star1').css('color', '#32CD32')
-            $('.star1').css('fill', '#32CD32')
+            $('.star1').css('color', '#D03425')
+            $('.star1').css('fill', '#D03425')
             $('.star1').siblings().css('fill', 'white')
             $('.star1').siblings().css('color', 'white')
         }
 
         if (starrated == 2) {
-            $('.star2').css('color', '#32CD32')
-            $('.star2').css('fill', '#32CD32')
-            $('.star2').next().css('fill', '#32CD32')
-            $('.star2').next().css('color', '#32CD32')
-            $('.star2').next().next().css('color', '#32CD32')
-            $('.star2').next().next().css('color', '#32CD32')
+            $('.star2').css('color', '#D03425')
+            $('.star2').css('fill', '#D03425')
+            $('.star2').next().css('fill', '#D03425')
+            $('.star2').next().css('color', '#D03425')
+            $('.star2').next().next().css('color', '#D03425')
+            $('.star2').next().next().css('color', '#D03425')
             $('.star2').prev().css('color', 'white')
             $('.star2').prev().css('color', 'white')
             $('.star2').prev().prev().css('color', 'white')
@@ -533,12 +540,12 @@ $(document).ready(function () {
             $('.star2').prev().prev().prev().css('color', 'white')
         }
         if (starrated == 3) {
-            $('.star3').css('color', '#32CD32')
-            $('.star3').css('fill', '#32CD32')
-            $('.star3').next().css('fill', '#32CD32')
-            $('.star3').next().css('color', '#32CD32')
-            $('.star3').next().next().css('color', '#32CD32')
-            $('.star3').next().next().css('color', '#32CD32')
+            $('.star3').css('color', '#D03425')
+            $('.star3').css('fill', '#D03425')
+            $('.star3').next().css('fill', '#D03425')
+            $('.star3').next().css('color', '#D03425')
+            $('.star3').next().next().css('color', '#D03425')
+            $('.star3').next().next().css('color', '#D03425')
             $('.star3').prev().css('color', 'white')
             $('.star3').prev().css('color', 'white')
             $('.star3').prev().prev().css('color', 'white')
@@ -547,23 +554,23 @@ $(document).ready(function () {
         }
 
         if (starrated == 4) {
-            $('.star4').css('color', '#32CD32')
-            $('.star4').css('fill', '#32CD32')
-            $('.star4').next().css('fill', '#32CD32')
-            $('.star4').next().css('color', '#32CD32')
-            $('.star4').next().next().css('color', '#32CD32')
-            $('.star4').next().next().css('color', '#32CD32')
-            $('.star4').next().next().next().css('color', '#32CD32')
-            $('.star4').next().next().next().css('color', 're#32CD32d')
+            $('.star4').css('color', '#D03425')
+            $('.star4').css('fill', '#D03425')
+            $('.star4').next().css('fill', '#D03425')
+            $('.star4').next().css('color', '#D03425')
+            $('.star4').next().next().css('color', '#D03425')
+            $('.star4').next().next().css('color', '#D03425')
+            $('.star4').next().next().next().css('color', '#D03425')
+            $('.star4').next().next().next().css('color', '#D03425')
             $('.star4').prev().css('color', 'white')
             $('.star4').prev().css('color', 'white')
         }
 
         if (starrated == 5) {
-            $('.star5').css('color', '#32CD32')
-            $('.star5').css('fill', '#32CD32')
-            $('.star5').siblings().css('fill', '#32CD32')
-            $('.star5').siblings().css('color', '#32CD32')
+            $('.star5').css('color', '#D03425')
+            $('.star5').css('fill', '#D03425')
+            $('.star5').siblings().css('fill', '#D03425')
+            $('.star5').siblings().css('color', '#D03425')
         }
     })
 
@@ -632,18 +639,18 @@ $(document).ready(function () {
         starcount = $(this).attr('id')
 
         if ($(this).attr('id') == 1) {
-            $(this).css('color', '#32CD32')
-            $(this).css('fill', '#32CD32')
+            $(this).css('color', '#D03425')
+            $(this).css('fill', '#D03425')
             $(this).siblings().css('fill', 'white')
             $(this).siblings().css('color', 'white')
         }
         if ($(this).attr('id') == 2) {
-            $(this).css('color', '#32CD32')
-            $(this).css('fill', '#32CD32')
-            $(this).next().css('fill', '#32CD32')
-            $(this).next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
+            $(this).css('color', '#D03425')
+            $(this).css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425')
+            $(this).next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
             $(this).prev().css('color', 'white')
             $(this).prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
@@ -652,12 +659,12 @@ $(document).ready(function () {
             $(this).prev().prev().prev().css('color', 'white')
         }
         if ($(this).attr('id') == 3) {
-            $(this).css('color', '#32CD32')
-            $(this).css('fill', '#32CD32')
-            $(this).next().css('fill', '#32CD32')
-            $(this).next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
+            $(this).css('color', '#D03425')
+            $(this).css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425')
+            $(this).next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
             $(this).prev().css('color', 'white')
             $(this).prev().css('color', 'white')
             $(this).prev().prev().css('color', 'white')
@@ -665,23 +672,23 @@ $(document).ready(function () {
         }
 
         if ($(this).attr('id') == 4) {
-            $(this).css('color', '#32CD32')
-            $(this).css('fill', '#32CD32')
-            $(this).next().css('fill', '#32CD32')
-            $(this).next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
-            $(this).next().next().css('color', '#32CD32')
-            $(this).next().next().next().css('color', '#32CD32')
-            $(this).next().next().next().css('color', 're#32CD32d')
+            $(this).css('color', '#D03425')
+            $(this).css('fill', '#D03425')
+            $(this).next().css('fill', '#D03425')
+            $(this).next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
+            $(this).next().next().css('color', '#D03425')
+            $(this).next().next().next().css('color', '#D03425')
+            $(this).next().next().next().css('color', '#D03425')
             $(this).prev().css('color', 'white')
             $(this).prev().css('color', 'white')
         }
 
         if ($(this).attr('id') == 5) {
-            $(this).css('color', '#32CD32')
-            $(this).css('fill', '#32CD32')
-            $(this).siblings().css('fill', '#32CD32')
-            $(this).siblings().css('color', '#32CD32')
+            $(this).css('color', '#D03425')
+            $(this).css('fill', '#D03425')
+            $(this).siblings().css('fill', '#D03425')
+            $(this).siblings().css('color', '#D03425')
         }
         // console.log(starcount)
     })
@@ -690,21 +697,22 @@ $(document).ready(function () {
     $('#restotable').on('mouseover', 'tr', function () {
         $(this).children().children().animate({ right: '-5%' }, 'fast');
         $(this).mouseover(function () {
-            $(this).children().children().stop();
+            $(this).children().children().stop(true, false);
         })
     })
     $('#restotable').on('mouseout', 'tr', function () {
-        $(this).children().children().animate({ right: '-45%' }, 'fast');
+        $(this).children().children().animate({ right: '-550%' }, 'fast');
+        // $(this).children().children().css('right', '-600%');
     })
 
     $('#reviewtable').on('mouseover', 'tr', function () {
         $(this).children().children().animate({ right: '0%' }, 'fast');
         $(this).mouseover(function () {
-            $(this).children().children().stop();
+            $(this).children().children().stop(true, false);
         })
     })
     $('#reviewtable').on('mouseout', 'tr', function () {
-        $(this).children().children().animate({ right: '-14%' }, 'fast');
+        $(this).children().children().animate({ right: '-550%' }, 'fast');
     })
 
     $('#register').attr('disabled', true);

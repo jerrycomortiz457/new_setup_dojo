@@ -18,7 +18,7 @@
 
     <body>
         <div id="wrapper">
-            <!-- <img src="../assets/images/cuisine.PNG" alt="background"> -->
+            <img id="restaurantsimg" src="../assets/images/restos.png" alt="restaurants">
             <div id="header">
                 <div class="worldcuisine">
                     <span>Restos & Cuisines</span>
@@ -26,12 +26,13 @@
                 <!-- <span>RESTAURANTS IN THE WORLD</span> -->
             </div>
             <div id="nav">
-
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success newresto" data-toggle="modal" data-target="#registrationModal">
-                    <span class="glyphicon glyphicon-plus"></span> New Restaurant
-                </button>
-                <input class="form-control search" id="myInput" type="text" placeholder="Search..">
+                <div class="container">
+                    <input class="form-control search" id="myInput" type="text" placeholder="Search..">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger newresto" data-toggle="modal" data-target="#registrationModal">
+                        <span class="glyphicon glyphicon-plus"></span> New Restaurant
+                    </button>
+                </div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -70,7 +71,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success" id="register" data-dismiss="modal" disabled>Register</button>
+                                <button type="button" class="btn btn-danger" id="register" data-dismiss="modal">Register</button>
                                 <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
@@ -78,9 +79,10 @@
                 </div>
 
             </div>
+            <img src="../assets/images/globe.png" alt="globe">
 
             <div id="main">
-                <img src="../assets/images/globe.png" alt="globe">
+
                 <div class="container">
                     <table class="table table-hover table-striped-success" id="restotable">
                         <thead>
@@ -93,9 +95,9 @@
                             </tr>
                         </thead>
                         <tbody id="myTable">
-                            <tr class="noresto">
+                            <!-- <tr class="noresto">
                                 <td class="noresto" colspan="5">- This field has no items -</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -137,7 +139,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success" id="updater" data-dismiss="modal">Update</button>
+                                <button type="button" class="btn btn-danger" id="updater" data-dismiss="modal">Update</button>
                                 <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
@@ -155,7 +157,7 @@
                                 <p></p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success deleter" data-dismiss="modal">Confirm</button>
+                                <button type="button" class="btn btn-danger deleter" data-dismiss="modal">Confirm</button>
                                 <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
@@ -165,17 +167,18 @@
 
             <!-- REVIEWS -->
             <div class="container review-div">
+
                 <div class="reston">
                     <span id="restonamereview"></span>
                 </div>
-                <button id="back" class="btn btn-success ">
+                <button id="back" class="btn btn-danger ">
                     <span class="glyphicon glyphicon-chevron-left">
                     </span> Back to Restaurants</button>
-
-                <button type="button" class="btn btn-success newreview" data-toggle="modal" data-target="#newReviewModal">
+                <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
+                <button type="button" class="btn btn-danger newreview" data-toggle="modal" data-target="#newReviewModal">
                     <span class="glyphicon glyphicon-plus"></span> New Review
                 </button>
-                <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
+
                 <table class="table table-hover table-striped-success" id="reviewtable">
                     <thead>
                         <tr>
@@ -185,9 +188,9 @@
                         </tr>
                     </thead>
                     <tbody id="myReviewTable">
-                        <tr class="noreview">
+                        <!-- <tr class="noreview">
                             <td class="noreview" colspan="3">- This field has no items -</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
 
@@ -230,7 +233,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" id="addreview" data-dismiss="modal" disabled>Add</button>
+                            <button type="button" class="btn btn-danger" id="addreview" data-dismiss="modal">Add</button>
                             <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
@@ -248,7 +251,7 @@
                             <p></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success reviewdeleter" data-dismiss="modal">Confirm</button>
+                            <button type="button" class="btn btn-danger reviewdeleter" data-dismiss="modal">Confirm</button>
                             <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
@@ -292,7 +295,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" id="updatereview" data-dismiss="modal" tag="" tag2="">Update</button>
+                            <button type="button" class="btn btn-danger" id="updatereview" data-dismiss="modal" tag="" tag2="">Update</button>
                             <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
