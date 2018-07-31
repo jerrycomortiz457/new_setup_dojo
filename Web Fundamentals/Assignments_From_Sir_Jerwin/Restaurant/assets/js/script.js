@@ -1,17 +1,19 @@
 $(document).ready(function () {
+
     $("#myInput").on("keyup", function () {
         var value = $(this).val().toLowerCase();
         $("#myTable tr").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+
     });
+
     $("#myReviews").on("keyup", function () {
         var value = $(this).val().toLowerCase();
         $("#myReviewTable tr").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
-
 
     //VARIABLES
     var restolist = [];
@@ -314,7 +316,6 @@ $(document).ready(function () {
         // console.log(customer, star, description)
     }
 
-
     //STAR APPENDER
     function starAppend(starshade) {
         if (starshade == 1) {
@@ -345,16 +346,19 @@ $(document).ready(function () {
             <span id="' + i + '" class="glyphicon glyphicon-pencil edit" aria-hidden="true" data-toggle="modal" data-target="#editModal"></span> \
             <span id="' + i + '" class="glyphicon glyphicon glyphicon-trash delete " aria-hidden="true" data-toggle="modal" data-target="#deleteModal"></span> \
             </div>';
-            var retoTrTd = '<tr id="' + i + '"><td>' + restolist[i].restoname + '</td><td>' + restolist[i].cuisine + '</td><td>' + restolist[i].loc + '</td><td>' + restolist[i].owner + '</td><td class="avgratingtd">' + avgrating + option_buttons + '</td></tr>';
+            var retoTrTd = '<tr id="' + i + '"><td><input type="checkbox" name="selectresto" class="selectresto"></td> \
+            <td>' + restolist[i].restoname + '</td> <td>' + restolist[i].cuisine + '</td> \
+            <td>' + restolist[i].loc + '</td> <td>' + restolist[i].owner + '</td> \
+            <td class="avgratingtd">' + avgrating + option_buttons + '</td></tr > ';
             $('#myTable').append(retoTrTd);
         }
         if (restolist.length == 0) {
-            $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
+            $('#myTable').append('<tr><td colspan="6" class="noitems">- This field has no items -</td></tr>');
         }
+        selectAllCheckbox();
         //hidden
-        // $('.options').hide();
+        // $('.options').hide();        
     }
-
 
     function loadAvgRating(restocurrent, index) {
         ratingcounter = 0;
@@ -388,25 +392,58 @@ $(document).ready(function () {
             <span id="' + restoid + '" class="glyphicon glyphicon-pencil editreview" aria-hidden="true" data-toggle="modal" data-target="#editReviewModal" tag="' + i + '"></span> \
             <span id="' + restoid + '" class="glyphicon glyphicon glyphicon-trash deletereview " aria-hidden="true" data-toggle="modal" data-target="#deleteReviewModal" tag="' + i + '"></span> \
             </div>';
-            let reviewsappender = '<tr id="' + i + '"><td>' + restolist[restoid].reviews[i].customer + '</td><td id="ratestars">' + rated + '</td><td>' + restolist[restoid].reviews[i].description + option_buttons_review + '</td></tr>';
+            let reviewsappender = '<tr id="' + i + '"><td><input type="checkbox" name="selectreview" class="selectreview"></td> <td>' + restolist[restoid].reviews[i].customer + '</td> <td id="ratestars">' + rated + '</td> \
+            <td>' + restolist[restoid].reviews[i].description + option_buttons_review + '</td></tr > ';
             $('#myReviewTable').append(reviewsappender);
         }
         if (restolist[restoid].reviews.length == 0) {
-            $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
+            $('#myReviewTable').append('<tr><td colspan="4" class="noitems">- This field has no items -</td></tr>');
         }
+        selectAllCheckbox();
         return avgratingappend;
         // console.log(restoid)
         // console.log(restolist[restoid].reviews[].customer)
         // console.log(restolist)
     }
 
-    //REMOVE NULLW
+    //REMOVE NULL
     function removeNullValue(array) {
         var index = array.indexOf(null);
         if (index > -1) {
             array.splice(index, 1);
         }
     }
+
+    //TABLES SORTER
+    function updateSort() {
+        $("#restotable").trigger("update");
+        $("#reviewtable").trigger("update");
+    }
+
+    //SELECTIONS - CHECKBOX
+    function selectAllCheckbox() {
+        $("#selectallresto").click(function () {
+            $('input:checkbox').prop('checked', this.checked);
+            // $("#selectallresto").tablesorter()
+        });
+        $("#selectallreviews").click(function () {
+            $('input:checkbox').not(this).prop('checked', this.checked);
+        });
+    }
+
+    //DELETE SELECTIONS
+    function changeToNull(array, element) {
+        if ($(this).prop('checked', true)) {
+            array[element] = null;
+        }
+    }
+
+    $(document).on('click', '')
+
+    $('#main').on('click', '#deleteselection', function () {
+        restoid = $(this).attr('id');
+        deleteSelected(restolist, restoid);
+    })
 
     //REGISTER BUTTON - RESET
     $(document).on('click', '#register', function () {
@@ -419,13 +456,13 @@ $(document).ready(function () {
     })
 
     $(document).on('click', '.cancel', function () {
-        $('#restoname').val('')
-        $('#cuisine').val('')
-        $('#loc').val('')
-        $('#owner').val('')
-        $('#customer').val('')
-        $('#star').val('')
-        $('#description').val('')
+        $('.registerinput').val('')
+        // $('#cuisine').val('')
+        // $('#loc').val('')
+        // $('#owner').val('')
+        // $('#customer').val('')
+        // $('#star').val('')
+        // $('#description').val('')
     })
     // ADD REVIEW BUTTON - ADD AND RESET
     $(document).on('click', '#addreview', function () {
@@ -441,18 +478,12 @@ $(document).ready(function () {
         array[element] = null;
         removeNullValue(array);
         updateTable();
-        // if (array.length == 0) {
-        //     $('#myTable').append('<tr><td colspan="5" class="noitems">- This field has no items -</td></tr>');
-        // }
     }
     //REVIEW DELETE CONFIRMATION
     function confirmDeleteReview(array1, element1) {
         array1[element1] = null;
         removeNullValue(array1);
         updateReviewTable();
-        // if (array1.length == 0) {
-        //     $('#myReviewTable').append('<tr><td colspan="3" class="noitems">- This field has no items -</td></tr>');
-        // }
     }
 
     //DELETE BUTTON RESTO
@@ -462,10 +493,9 @@ $(document).ready(function () {
     })
     $(document).on('click', '.deleter', function () {
         confirmDelete(restolist, restoid);
-        if (restolist.length == 0) {
-            console.log(restolist.length)
-        }
-
+        // if (restolist.length == 0) {
+        //     console.log(restolist.length)
+        // }
     })
 
     //DELETE BUTTON REVIEW
@@ -477,7 +507,6 @@ $(document).ready(function () {
     })
     $(document).on('click', '.reviewdeleter', function () {
         // console.log('DELETE')
-
         confirmDeleteReview(restolist[currentresto].reviews, tag)
     })
 
@@ -491,7 +520,7 @@ $(document).ready(function () {
         $('#eavgrating').val(restolist[restoid].avgrating);
         // console.log(restolist[restoid].reviews)
         reviewcopy = restolist[restoid].reviews
-        //     // console.log(restolist[restoid].avgrating)
+        // console.log(restolist[restoid].avgrating)
     })
 
     //NEW REVIEW
@@ -607,6 +636,7 @@ $(document).ready(function () {
         // console.log(restolist)
         updateTable();
         $('#updater').attr('disabled', true);
+
     })
 
     //STARS - RATING
@@ -646,27 +676,27 @@ $(document).ready(function () {
         // console.log(starcount)
     })
 
-    //OPTION HOVER
-    $('#restotable').on('mouseover', 'tr', function () {
-        $(this).children().children().animate({ right: '-5%' }, 'fast');
-        $(this).mouseover(function () {
-            $(this).children().children().stop(true, false);
-        })
-    })
-    $('#restotable').on('mouseout', 'tr', function () {
-        $(this).children().children().animate({ right: '-550%' }, 'fast');
-        // $(this).children().children().css('right', '-600%');
-    })
+    // //OPTION HOVER
+    // $('#restotable').on('mouseover', 'tr', function () {
+    //     $(this).find('.options').animate({ right: '-5%' }, 'fast');
+    //     $(this).mouseover(function () {
+    //         $(this).children().children('.options').stop(true, false);
+    //     })
+    // })
+    // $('#restotable').on('mouseout', 'tr', function () {
+    //     $(this).children().children('.options').animate({ right: '-550%' }, 'fast');
+    //     // $(this).children().children().css('right', '-600%');
+    // })
 
-    $('#reviewtable').on('mouseover', 'tr', function () {
-        $(this).children().children().animate({ right: '0%' }, 'fast');
-        $(this).mouseover(function () {
-            $(this).children().children().stop(true, false);
-        })
-    })
-    $('#reviewtable').on('mouseout', 'tr', function () {
-        $(this).children().children().animate({ right: '-550%' }, 'fast');
-    })
+    // $('#reviewtable').on('mouseover', 'tr', function () {
+    //     $(this).find('.options').animate({ right: '0%' }, 'fast');
+    //     $(this).mouseover(function () {
+    //         $(this).children().children('.options').stop(true, false);
+    //     })
+    // })
+    // $('#reviewtable').on('mouseout', 'tr', function () {
+    //     $(this).children().children('.options').animate({ right: '-550%' }, 'fast');
+    // })
 
     $('#register').attr('disabled', true);
     $('input').keyup(function () {
@@ -693,12 +723,30 @@ $(document).ready(function () {
     function updateTable() {
         $('#myTable').children().remove();
         loadTable();
+        updateSort();
     }
     function updateReviewTable() {
         $('#myReviewTable').children().remove();
         loadReview();
+        updateSort();
     }
+    $(document).on('click', '.sorter', function () {
+        $("#restotable").tablesorter({
+            headers: {
+                0: {
+                    sorter: false
+                }
+            }
+        });
+        $("#reviewtable").tablesorter({
+            headers: {
+                0: {
+                    sorter: false
+                }
+            }
+        });
+    })
+
     $('.review-div').hide();
     loadTable();
-
 });

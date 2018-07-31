@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <body>
@@ -85,14 +87,48 @@
             <div id="main">
 
                 <div class="container">
-                    <table class="table table-hover table-striped-success" id="restotable">
+                    <input type="button" id="deleteselection" value="deleteselection">
+                    <table class="table table-hover table-striped-success tablesorter" id="restotable">
                         <thead>
                             <tr>
-                                <th scope="col">Restaurant</th>
-                                <th scope="col">Cuisine</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Owner's Name</th>
-                                <th scope="col">Average Rating</th>
+                                <th scope="col" data-sorter="false">
+                                    <input type="checkbox" name="selectallresto" id="selectallresto">
+                                </th>
+                                <th scope="col">Restaurant
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Cuisine
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Location
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Owner's Name
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Average Rating
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="myTable">
@@ -168,7 +204,6 @@
 
             <!-- REVIEWS -->
             <div class="container review-div">
-
                 <div class="reston">
                     <span id="restonamereview"></span>
                 </div>
@@ -179,13 +214,33 @@
                 <button type="button" class="btn btn-danger newreview" data-toggle="modal" data-target="#newReviewModal">
                     <span class="glyphicon glyphicon-plus"></span> New Review
                 </button>
-
                 <table class="table table-hover table-striped-success" id="reviewtable">
                     <thead>
                         <tr>
-                            <th scope="col">Customer</th>
-                            <th scope="col">Stars</th>
-                            <th scope="col">Descriptions</th>
+                            <th scope="col">
+                                <input type="checkbox" name="selectallreviews" id="selectallreviews">
+                            </th>
+                            <th scope="col">Customer
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
+                            <th scope="col">Stars
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
+                            <th scope="col">Descriptions
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="myReviewTable">
@@ -194,7 +249,6 @@
                         </tr> -->
                     </tbody>
                 </table>
-
             </div>
 
 
@@ -213,11 +267,11 @@
                                 <ul>
                                     <li>
                                         <label for="customer">Your Name:</label>
-                                        <input type="text" name="customer" id="customer">
+                                        <input class="registerinput" type="text" name="customer" id="customer">
                                     </li>
                                     <li>
                                         <label for="description">Your Review: </label>
-                                        <textarea type="text" name="description" id="description"></textarea>
+                                        <textarea class="registerinput" type="text" name="description" id="description"></textarea>
                                     </li>
 
                                     <li>
@@ -290,7 +344,6 @@
                                             <span id="2" class="star2">&#9733;</span>
                                             <span id="1" class="star1">&#9733;</span>
                                         </div>
-                                        <!-- <input type="text" name="estar" id="estar"> -->
                                     </li>
                                 </ul>
                             </form>
@@ -303,9 +356,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script> -->
+        <script type="text/javascript" src="../assets/js/__jquery.tablesorter/jquery.tablesorter.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
 
