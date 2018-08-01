@@ -15,7 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <body>
@@ -154,19 +153,19 @@
                                     <ul>
                                         <li>
                                             <label for="erestoname">Restaurant's Name:</label>
-                                            <input type="text" name="erestoname" id="erestoname" value="">
+                                            <input type="text" name="erestoname" id="erestoname" placeholder="Restaurant's Name">
                                         </li>
                                         <li>
                                             <label for="ecuisine">Cuisine: </label>
-                                            <input type="text" name="ecuisine" id="ecuisine">
+                                            <input type="text" name="ecuisine" id="ecuisine" placeholder="Cuisine">
                                         </li>
                                         <li>
                                             <label for="eloc">Location: </label>
-                                            <input type="text" name="eloc" id="eloc">
+                                            <input type="text" name="eloc" id="eloc" placeholder="Location">
                                         </li>
                                         <li>
                                             <label for="eowner">Owner's Name: </label>
-                                            <input type="text" name="eowner" id="eowner">
+                                            <input type="text" name="eowner" id="eowner" placeholder="Owner">
                                         </li>
                                         <li>
                                             <label for="eavgrating">Average Rating: </label>
@@ -203,13 +202,14 @@
             </div>
 
             <!-- REVIEWS -->
-            <div class="container review-div">
+            <div class="container review-div" id="reviewarea">
                 <div class="reston">
                     <span id="restonamereview"></span>
                 </div>
                 <button id="back" class="btn btn-danger ">
                     <span class="glyphicon glyphicon-chevron-left">
                     </span> Back to Restaurants</button>
+                <input type="button" id="multipleselectreview" value="deleteselectionreview">
                 <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
                 <button type="button" class="btn btn-danger newreview" data-toggle="modal" data-target="#newReviewModal">
                     <span class="glyphicon glyphicon-plus"></span> New Review
@@ -227,7 +227,7 @@
                                         class=""></path>
                                 </svg>
                             </th>
-                            <th scope="col">Stars
+                            <th scope="col">Rating
                                 <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
                                     class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
                                     <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
@@ -267,11 +267,11 @@
                                 <ul>
                                     <li>
                                         <label for="customer">Your Name:</label>
-                                        <input class="registerinput" type="text" name="customer" id="customer">
+                                        <input class="reviewinput" type="text" name="customer" id="customer" placeholder="Enter Name..">
                                     </li>
                                     <li>
                                         <label for="description">Your Review: </label>
-                                        <textarea class="registerinput" type="text" name="description" id="description"></textarea>
+                                        <textarea class="reviewinput" type="text" name="description" id="description" placeholder="Enter Descriptions.."></textarea>
                                     </li>
 
                                     <li>
@@ -328,11 +328,11 @@
                                 <ul>
                                     <li>
                                         <label for="ecustomer">Your Name:</label>
-                                        <input type="text" name="ecustomer" id="ecustomer">
+                                        <input type="text" name="ecustomer" id="ecustomer" placeholder="Your Name..">
                                     </li>
                                     <li>
                                         <label for="edescription">Your Review: </label>
-                                        <textarea type="text" name="edescription" id="edescription"></textarea>
+                                        <textarea type="text" name="edescription" id="edescription" placeholder="Descriptions.."></textarea>
                                     </li>
 
                                     <li>
