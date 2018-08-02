@@ -371,7 +371,11 @@ $(document).ready(function () {
         }
         if (restolist.length == 0) {
             $('#myTable').append('<tr><td colspan="6" class="noitems">- This field has no items -</td></tr>');
-
+            $('#deleteselection').attr('disabled', true);
+        }
+        else {
+            $('#deleteselection').attr('disabled', false);
+            collectDelete = [];
         }
 
         loadCheckbox();
@@ -417,6 +421,11 @@ $(document).ready(function () {
         }
         if (restolist[restoid].reviews.length == 0) {
             $('#myReviewTable').append('<tr><td colspan="4" class="noitems">- This field has no items -</td></tr>');
+            $('#deleteselectionreviews').attr('disabled', true);
+        }
+        else {
+            $('#deleteselectionreviews').attr('disabled', false);
+            collectDelete = [];
         }
         // selectAllCheckbox();
         selectAllResto();
