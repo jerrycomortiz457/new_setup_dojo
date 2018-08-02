@@ -97,7 +97,10 @@ body{
 		margin-bottom: 20px;
 
 		div.container{
-			button.newresto { 
+			button.newresto{
+				float: right;
+			}
+			button.newresto, button.delete-selection { 
 				position: relative;
 				// left: 58.82%;
 				display: inline; 
@@ -105,7 +108,7 @@ body{
 				font-weight: bold;			
 				border-radius: 10px;
 				border-color: #452B3E;
-				float: right;
+				// float: right;
 				margin-right: 10px;
 				&:hover{
 					box-shadow: 0px 0px 0px 1px black;
@@ -489,18 +492,18 @@ body{
 				}
 			}
 			
-			button#back{
-				border-radius: 10px;
-				background-color: #D03425;
-				font-weight: bold;	
-				border-color: #452B3E;
-				&:hover{
-					box-shadow: 0px 0px 0px 1px black;
-					background-color: #F4F3E3;
-					color: #D03425;
-					font-weight: bold;
-				}
-			}
+			// button#back{
+			// 	border-radius: 10px;
+			// 	background-color: #D03425;
+			// 	font-weight: bold;	
+			// 	border-color: #452B3E;
+			// 	&:hover{
+			// 		box-shadow: 0px 0px 0px 1px black;
+			// 		background-color: #F4F3E3;
+			// 		color: #D03425;
+			// 		font-weight: bold;
+			// 	}
+			// }
 			input.search{
 				position: relative;
 				// left: 58.82%;
@@ -515,8 +518,11 @@ body{
 				// float: right;
 			}
 	
+			button.newreview, button#back{
+				float: right;
+			}
 	
-			button.newreview { 
+			button.newreview, button#back, button#deleteselectionreviews { 
 				position: relative;
 				// left: 51%;
 				display: inline; 
@@ -524,7 +530,7 @@ body{
 				background-color: #D03425;
 				font-weight: bold;	
 				border-color: #452B3E;
-				float: right;
+				// float: right;
 				margin-right: 10px;
 	
 				&:hover{

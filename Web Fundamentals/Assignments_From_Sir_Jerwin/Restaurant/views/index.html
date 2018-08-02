@@ -12,7 +12,7 @@
     <script src="../assets/js/script.js"></script>
     <!-- <script type="application/json" src="../assets/js/registered.json"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../assets/js/jquery-3.3.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -33,6 +33,9 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger newresto" data-toggle="modal" data-target="#registrationModal">
                         <span class="glyphicon glyphicon-plus"></span> New Restaurant
+                    </button>
+                    <button type="button" class="btn btn-danger delete-selection" id="deleteselection" value="deleteselection">
+                        <span class="glyphicon glyphicon-trash"></span> Delete Selected
                     </button>
                 </div>
 
@@ -86,12 +89,12 @@
             <div id="main">
 
                 <div class="container">
-                    <input type="button" id="deleteselection" value="deleteselection">
+
                     <table class="table table-hover table-striped-success tablesorter" id="restotable">
                         <thead>
                             <tr>
                                 <th scope="col" data-sorter="false">
-                                    <input type="checkbox" name="selectallresto" id="selectallresto">
+                                    <input type="checkbox" name="selectallresto" id="selectallresto" value="all">
                                 </th>
                                 <th scope="col">Restaurant
                                     <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
@@ -206,19 +209,22 @@
                 <div class="reston">
                     <span id="restonamereview"></span>
                 </div>
-                <button id="back" class="btn btn-danger ">
-                    <span class="glyphicon glyphicon-chevron-left">
-                    </span> Back to Restaurants</button>
-                <input type="button" id="multipleselectreview" value="deleteselectionreview">
                 <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
                 <button type="button" class="btn btn-danger newreview" data-toggle="modal" data-target="#newReviewModal">
                     <span class="glyphicon glyphicon-plus"></span> New Review
+                </button>
+                <button id="back" class="btn btn-danger ">
+                    <span class="glyphicon glyphicon-chevron-left">
+                    </span> Back to Restaurants</button>
+
+                <button type="button" class="btn btn-danger delete-selection-reviews" id="deleteselectionreviews" value="deleteselectionreviews">
+                    <span class="glyphicon glyphicon-trash"></span> Delete Selected
                 </button>
                 <table class="table table-hover table-striped-success" id="reviewtable">
                     <thead>
                         <tr>
                             <th scope="col">
-                                <input type="checkbox" name="selectallreviews" id="selectallreviews">
+                                <input type="checkbox" name="selectallreview" id="selectallreview" value="all">
                             </th>
                             <th scope="col">Customer
                                 <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"

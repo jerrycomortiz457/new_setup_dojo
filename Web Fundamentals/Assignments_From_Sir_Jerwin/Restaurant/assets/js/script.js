@@ -234,7 +234,6 @@ var restolist = [
     },
 ];
 var collectDelete = [];
-
 $(document).ready(function () {
     //VARIABLES   
     var restoid = $(this).attr('id');
@@ -257,7 +256,17 @@ $(document).ready(function () {
         .on('click', '#updatereview', updateReview)
         .on('click', '#updater', updateEdit)
         .on('click', '.sorter', sortTable)
-        .on('click', '#deleteselection', multipleDeleteResto)
+        .on('click', '#deleteselection', function () {
+            multipleDeleteResto(restolist, collectDelete)
+        })
+        .on('click', '#deleteselectionreviews', function () {
+            multipleDeleteResto(restolist[restoid].reviews, collectDelete)
+            updateReviewTable();
+            $('#selectallreview').prop('checked', false);
+
+        })
+        .on('click', '#selectallresto', selectAllResto)
+        .on('click', '#selectallreview', selectAllResto)
     // .on('click', '#multipleselectreview', multipleDeleteReview)
 
     $('.review-div').hide();
@@ -362,11 +371,12 @@ $(document).ready(function () {
         }
         if (restolist.length == 0) {
             $('#myTable').append('<tr><td colspan="6" class="noitems">- This field has no items -</td></tr>');
+
         }
-        // selectAllCheckbox();
+
         loadCheckbox();
-        //hidden
-        // $('.options').hide();        
+        $('#selectallresto').prop('checked', false)
+
     }
 
     function loadAvgRating(restocurrent, index) {
@@ -409,6 +419,9 @@ $(document).ready(function () {
             $('#myReviewTable').append('<tr><td colspan="4" class="noitems">- This field has no items -</td></tr>');
         }
         // selectAllCheckbox();
+        selectAllResto();
+        loadCheckbox();
+        $('#selectallresto').prop('checked', false)
         return avgratingappend;
         // console.log(restoid)
         // console.log(restolist[restoid].reviews[].customer)
@@ -423,20 +436,9 @@ $(document).ready(function () {
         $("#reviewtable").trigger("update");
     }
 
-    //SELECTIONS - CHECKBOX
-    // function selectAllCheckbox() {
-    //     $("#selectallresto").click(function () {
-    //         $('input:checkbox').prop('checked', this.checked);
-    //         // $("#selectallresto").tablesorter()
-    //     });
-    //     $("#selectallreviews").click(function () {
-    //         $('input:checkbox').prop('checked', this.checked);
-    //     });
-    // }
-
     //REMOVE NULL
-    function removeNullValue(array) {
-        var index = array.indexOf(null);
+    function removeNullValue(array, key) {
+        var index = array.indexOf(key);
         if (index > -1) {
             array.splice(index, 1);
         }
@@ -445,13 +447,13 @@ $(document).ready(function () {
     //DELETE FUNCTION NULLER FOR RESTO
     function confirmDelete(array, element) {
         array[element] = null;
-        removeNullValue(array);
+        removeNullValue(array, null);
         updateTable();
     }
     //REVIEW DELETE CONFIRMATION
     function confirmDeleteReview(array1, element1) {
         array1[element1] = null;
-        removeNullValue(array1);
+        removeNullValue(array1, null);
         updateReviewTable();
         updateTable();
     }
@@ -478,6 +480,7 @@ $(document).ready(function () {
         $('#restonamereview').text(restolist[restoid].restoname + ' Reviews')
         loadReview();
         collectDelete = [];
+        $('#selectallreview').prop('checked', false);
 
         // console.log(restolist[restoid].reviews[0].customer)
     }
@@ -700,82 +703,112 @@ $(document).ready(function () {
     }
 
     function sortTable() {
-        $("#restotable").tablesorter({
-            headers: {
-                0: {
-                    sorter: false
+
+        if (restolist.length > 0) {
+            $("#restotable").tablesorter({
+                headers: {
+                    0: {
+                        sorter: false
+                    }
                 }
-            }
-        });
-        $("#reviewtable").tablesorter({
-            headers: {
-                0: {
-                    sorter: false
+            });
+            $("#reviewtable").tablesorter({
+                headers: {
+                    0: {
+                        sorter: false
+                    }
                 }
-            }
-        });
+            });
+        }
+        else {
+            return false;
+        }
+        // console.log('test' + restolist[restoid].reviews.length)
+
     }
 
     // console.log($('tr').find('.selectresto').prop('checked', true))
-    function multipleDeleteResto() {
-        var nullCheckTimes = (restolist.length * 2);
-        for (var x = 0; x < collectDelete.length; x++) {
-            restolist[collectDelete[x]] = null;
+    function multipleDeleteResto(reference, elements) {
+        var nullCheckTimes = (reference.length * 2);
+        for (var x = 0; x < elements.length; x++) {
+            reference[elements[x]] = null;
         }
         for (var i = 0; i < nullCheckTimes; i++) {
-            removeNullValue(restolist);
+            removeNullValue(reference, null);
         }
         updateTable();
-        collectDelete = [];
-        console.log(collectDelete)
+        $('#selectallresto').prop('checked', false)
+        elements = [];
+        // console.log(collectDelete)
+
     }
 
+    function selectAllResto() {
+        $('input:checkbox').not(this).prop('checked', this.checked);
+        if (this.checked) {
+            collectDelete = [];
+        }
+        else {
+            collectDelete = [];
+        }
+    }
 
     function loadCheckbox() {
         $('#main :checkbox').change(function () {
+            // collectDelete = [];
             var checkboxValue = $(this).val();
             if (this.checked) {
-                console.log('checked ' + checkboxValue);
+                // console.log('checked ' + checkboxValue);
                 collectDelete.push(checkboxValue)
-                console.log(collectDelete)
+                if (checkboxValue == 'all') {
+                    removeNullValue(collectDelete, 'all')
+                    for (var index = 0; index < restolist.length; index++) {
+                        if (index != collectDelete[index]) {
+                            collectDelete.push(index.toString());
+                        }
+                    }
+                    // console.log('selected all')
+                }
+                // console.log(collectDelete)          
             } else {
-                console.log('unchecked ' + checkboxValue);
+                // console.log('unchecked ' + checkboxValue);
                 var index = collectDelete.indexOf(checkboxValue)
                 collectDelete[index] = null;
-                removeNullValue(collectDelete);
+                removeNullValue(collectDelete, null);
+                if (checkboxValue == 'all') {
+                    collectDelete = [];
+                }
+                $('#selectallresto').prop('checked', false)
+            }
+        })
+
+        $('#reviewarea :checkbox').change(function () {
+            // collectDelete = [];
+            var checkboxValue = $(this).val();
+            if (this.checked) {
+                // console.log('checked ' + checkboxValue);
+                collectDelete.push(checkboxValue)
+                if (checkboxValue == 'all') {
+                    removeNullValue(collectDelete, 'all')
+                    for (var index = 0; index < restolist[restoid].reviews.length; index++) {
+                        if (index != collectDelete[index]) {
+                            collectDelete.push(index.toString());
+                        }
+                    }
+                }
+                // console.log(collectDelete)
+            } else {
+                // console.log('unchecked ' + checkboxValue);
+                var index = collectDelete.indexOf(checkboxValue)
+                collectDelete[index] = null;
+                removeNullValue(collectDelete, null);
+                if (checkboxValue == 'all') {
+                    collectDelete = [];
+                }
+                $('#selectallreview').prop('checked', false);
+                // console.log(collectDelete)
             }
         })
     }
-
-
-    // //OPTION HOVER
-    // $('#restotable').on('mouseover', 'tr', function () {
-    //     $(this).find('.options').animate({ right: '-5%' }, 'fast');
-    //     $(this).mouseover(function () {
-    //         $(this).children().children('.options').stop(true, false);
-    //     })
-    // })
-    // $('#restotable').on('mouseout', 'tr', function () {
-    //     $(this).children().children('.options').animate({ right: '-550%' }, 'fast');
-    //     // $(this).children().children().css('right', '-600%');
-    // })
-
-    // $('#reviewtable').on ('mouseover', 'tr', function () {
-    //     $(this).find('.options').animate({ right: '0%' }, 'fast');
-    //     $(this).mouseover(function () {
-    //         $(this).children().children('.options').s    top(true, false);
-    //     })
-    // })
-    // $('#reviewtable').on('mouseout', 'tr', function () {
-    //     $(this).children().children('.options').animate({ right: '-550%' }, 'fast');
-    // })
-
-    // $('#main').on('click', '#deleteselection', function () {
-    //     restoid = $(this).attr('id');
-    //     // changeToNull(restolist, restoid);
-    //     updateTable();
-    // })
-
-
 });
 
