@@ -256,7 +256,6 @@ $(document).ready(function () {
         .on('click', '#updatereview', updateReview)
         .on('click', '#updater', updateEdit)
         .on('click', '.sorter', sortTable)
-        .on('click', '.reviewsorter', sortReview)
         .on('click', '#deleteselection', function () {
             multipleDeleteResto(restolist, collectDelete)
         })
@@ -375,12 +374,13 @@ $(document).ready(function () {
             $('#deleteselection').attr('disabled', true);
         }
         else {
-            $('#deleteselection').attr('disabled', false)
+            $('#deleteselection').attr('disabled', false);
             collectDelete = [];
         }
 
         loadCheckbox();
         $('#selectallresto').prop('checked', false)
+
     }
 
     function loadAvgRating(restocurrent, index) {
@@ -420,14 +420,14 @@ $(document).ready(function () {
             $('#myReviewTable').append(reviewsappender);
         }
         if (restolist[restoid].reviews.length == 0) {
-            $('#myReviewTable').append('<tr><td colspan="4" class="noitems">- This field has no items -</td></tr>')
-            $('#deleteselectionreviews').attr('disabled', true)
+            $('#myReviewTable').append('<tr><td colspan="4" class="noitems">- This field has no items -</td></tr>');
+            $('#deleteselectionreviews').attr('disabled', true);
         }
         else {
-            $('#deleteselectionreviews').attr('disabled', false)
+            $('#deleteselectionreviews').attr('disabled', false);
             collectDelete = [];
         }
-        // selectAllCheckbox();        
+        // selectAllCheckbox();
         selectAllResto();
         loadCheckbox();
         $('#selectallresto').prop('checked', false)
@@ -712,8 +712,16 @@ $(document).ready(function () {
     }
 
     function sortTable() {
-        if (restolist.length != 0) {
+
+        if (restolist.length > 0) {
             $("#restotable").tablesorter({
+                headers: {
+                    0: {
+                        sorter: false
+                    }
+                }
+            });
+            $("#reviewtable").tablesorter({
                 headers: {
                     0: {
                         sorter: false
@@ -724,20 +732,8 @@ $(document).ready(function () {
         else {
             return false;
         }
-        //     // console.log('test' + restolist[restoid].reviews.length)
-    }
-    function sortReview() {
+        // console.log('test' + restolist[restoid].reviews.length)
 
-        $("#reviewtable").tablesorter({
-            headers: {
-                0: {
-                    sorter: false
-                }
-            }
-        });
-
-
-        //     // console.log('test' + restolist[restoid].reviews.length)
     }
 
     // console.log($('tr').find('.selectresto').prop('checked', true))

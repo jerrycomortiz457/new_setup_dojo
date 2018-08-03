@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Azkia;
+  src: url(../fonts/Azkia.otf);
+}
+tr td {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: justify;
+  color: #452B3E;
+}
+td td:first-child {
+  column-span: 1;
+}
+ul {
+  list-style-type: none;
+}
+#ratestars {
+  color: #452B3E;
+  font-size: 1.4em;
+}
+input,
+textarea {
+  color: #452B3E;
+}
+.modal-content {
+  background: linear-gradient(#b94b00, #fcd56b);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+th {
+  font-size: 16px;
+}
+th svg {
+  width: 11px;
+  vertical-align: text-top;
+  margin-left: 2px;
+  cursor: pointer;
+}
+th svg:hover {
+  color: #D03425;
+}
+body {
+  height: 900px;
+}
+body div#wrapper img.restaurantsimg {
+  display: block;
+  opacity: .27;
+  height: 99%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+body div#wrapper img.duplicate {
+  display: block;
+  opacity: .27;
+  height: 99%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+body div#wrapper div#header {
+  margin-top: 36px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+body div#wrapper div#header span {
+  text-shadow: 1px 6px 0px #F4F6DC;
+  font-weight: bold;
+  font-size: 154px;
+  font-family: 'Azkia';
+  color: #452B3E;
+}
+body div#wrapper div#nav {
+  margin-bottom: 20px;
+}
+body div#wrapper div#nav div.container button.newresto {
+  float: right;
+}
+body div#wrapper div#nav div.container button.newresto,
+body div#wrapper div#nav div.container button.delete-selection {
+  position: relative;
+  display: inline;
+  background-color: #D03425;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: #452B3E;
+  margin-right: 10px;
+}
+body div#wrapper div#nav div.container button.newresto:hover,
+body div#wrapper div#nav div.container button.delete-selection:hover {
+  box-shadow: 0px 0px 0px 1px black;
+  background-color: #F4F3E3;
+  color: #D03425;
+  font-weight: bold;
+}
+body div#wrapper div#nav div.container button.newresto span,
+body div#wrapper div#nav div.container button.delete-selection span {
+  font-size: 12px;
+}
+body div#wrapper div#nav div.container input.search {
+  position: relative;
+  display: inline;
+  width: 250px;
+  border-radius: 10px;
+  background: #476724;
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content {
+  background: linear-gradient(#b94b00, #fcd56b);
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:last-child {
+  display: none;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:first-child input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(2) input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(3) {
+  display: inline-grid;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(3) input {
+  display: block;
+  width: 158%;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(4) {
+  display: inline-grid;
+  float: right;
+  margin-right: 19%;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li:nth-child(4) input {
+  display: block;
+  width: 162%;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-body form#registration ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-footer button#register {
+  background-color: #D03425;
+  border-color: #452B3E;
+}
+body div#wrapper div#nav div#registrationModal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper img {
+  display: none;
+  height: 76%;
+  position: absolute;
+  opacity: 0.3;
+  left: 5%;
+  top: 23px;
+  z-index: -1;
+}
+body div#wrapper div#main div.container table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+body div#wrapper div#main div.container table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+body div#wrapper div#main div.container table.table {
+  table-layout: fixed;
+  width: 100%;
+  box-shadow: 0px 0px 3px 0px  black;
+  border-radius: 10px;
+  color: #452B3E;
+}
+body div#wrapper div#main div.container table.table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  width: 20px;
+}
+body div#wrapper div#main div.container table.table thead tr th:last-child {
+  border-top-right-radius: 10px;
+}
+body div#wrapper div#main div.container table.table thead tr th {
+  background: linear-gradient(#b94b00, #fcd56b);
+  color: white;
+}
+body div#wrapper div#main div.container table.table tbody#myTable .noresto {
+  text-align: center;
+}
+body div#wrapper div#main div.container table.table tbody#myTable td:last-child {
+  padding-left: 50px;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr {
+  position: relative;
+  background: black;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:nth-child(even) {
+  background: #FBE48D;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:nth-child(odd) {
+  background: #F8C45E;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:hover {
+  background-color: #F8EFBE;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr td:nth-child(2) {
+  font-weight: bold;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr td.noitems {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr:hover td:last-child div.options {
+  right: 0;
+  top: 0;
+  transition: 0.45s;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options {
+  position: relative;
+  display: block;
+  background-color: rgba(71, 103, 36, 0.5);
+  height: 22px;
+  width: 78px;
+  right: -600%;
+  top: 0;
+  text-align: center;
+  float: right;
+  box-shadow: 0px 0px 0px 8px rgba(71, 103, 36, 0.5);
+  z-index: 99;
+  transition: 3s;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options span {
+  top: 2.5px;
+  width: 20px;
+  z-index: 99;
+  margin: 0 0px;
+  text-align: center;
+  cursor: pointer;
+  color: #d03425;
+}
+body div#wrapper div#main div.container table.table tbody#myTable tr div.options span:hover {
+  color: white;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-header h5.modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:last-child {
+  display: none;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:first-child input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(2) input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(3) {
+  display: inline-grid;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(3) input {
+  display: block;
+  width: 160%;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(4) {
+  display: inline-grid;
+  float: right;
+  margin-right: 19%;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li:nth-child(4) input {
+  display: block;
+  width: 162%;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.editModalBody form#updateentry ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div#main div#editModal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper div.review-div div.reston span {
+  font-size: 70px;
+  text-shadow: 0px 0px 13px white;
+  font-weight: bold;
+  font-family: 'Azkia';
+  color: #476724;
+}
+body div#wrapper div.review-div input.search {
+  position: relative;
+  display: inline;
+  width: 250px;
+  border-radius: 10px;
+  background: #476724;
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+body div#wrapper div.review-div button.newreview,
+body div#wrapper div.review-div button#back {
+  float: right;
+}
+body div#wrapper div.review-div button.newreview,
+body div#wrapper div.review-div button#back,
+body div#wrapper div.review-div button#deleteselectionreviews {
+  position: relative;
+  display: inline;
+  border-radius: 10px;
+  background-color: #D03425;
+  font-weight: bold;
+  border-color: #452B3E;
+  margin-right: 10px;
+}
+body div#wrapper div.review-div button.newreview:hover,
+body div#wrapper div.review-div button#back:hover,
+body div#wrapper div.review-div button#deleteselectionreviews:hover {
+  box-shadow: 0px 0px 0px 1px black;
+  background-color: #F4F3E3;
+  color: #D03425;
+  font-weight: bold;
+}
+body div#wrapper div.review-div button.newreview span,
+body div#wrapper div.review-div button#back span,
+body div#wrapper div.review-div button#deleteselectionreviews span {
+  font-size: 12px;
+}
+body div#wrapper div.review-div input#myReviews {
+  position: relative;
+  display: inline;
+  width: 250px;
+  border-radius: 10px;
+}
+body div#wrapper div.review-div table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+body div#wrapper div.review-div table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+body div#wrapper div.review-div table.table {
+  margin-top: 20px;
+  table-layout: fixed;
+  width: 100%;
+  box-shadow: 0px 0px 3px 0px  black;
+  border-radius: 10px;
+}
+body div#wrapper div.review-div table.table thead tr th:first-child {
+  border-top-left-radius: 10px;
+  width: 20px;
+}
+body div#wrapper div.review-div table.table thead tr th:last-child {
+  border-top-right-radius: 10px;
+  width: 50%;
+}
+body div#wrapper div.review-div table.table thead tr th {
+  background: linear-gradient(#b94b00, #fcd56b);
+  color: white;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable .noreview {
+  text-align: center;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr {
+  background: black;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:nth-child(even) {
+  background: #FBE48D;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:nth-child(odd) {
+  background: #F8C45E;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:hover {
+  background-color: #F8EFBE;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr td:nth-child(2) {
+  font-weight: bold;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr td:nth-child(3) {
+  font-weight: bold;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr td.noitems {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr:hover td:last-child div.options {
+  right: 0;
+  top: 0;
+  transition: 0.45s;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options {
+  position: relative;
+  display: block;
+  background-color: rgba(71, 103, 36, 0.5);
+  height: 27px;
+  width: 46px;
+  right: -600%;
+  top: 0;
+  text-align: center;
+  float: right;
+  box-shadow: 0px 0px 0px 8px rgba(71, 103, 36, 0.5);
+  z-index: 99;
+  transition: 3s;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span {
+  top: 6px;
+  width: 21px;
+  z-index: 99;
+  margin: 0 0px;
+  text-align: center;
+  cursor: pointer;
+  color: #d03425;
+}
+body div#wrapper div.review-div table.table tbody#myReviewTable tr div.options span:hover {
+  color: white;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-header h5.review-modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li textarea {
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating span {
+  cursor: pointer;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  color: white;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating span {
+  fill: white;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d03425;
+  text-shadow: 1px 1px 1px grey;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li div.rating > span {
+  /*font-size: 100px;*/
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover ~ span {
+  color: transparent;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover:before,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#reviews ul li .rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #d03425;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-footer button.btn {
+  border-radius: 10px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-header h5.editreview-modal-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li input {
+  border-radius: 5px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li textarea {
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+  overflow: scroll;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  color: white;
+  font-size: 25px;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating span {
+  fill: white;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d03425;
+  text-shadow: 1px 1px 1px grey;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li div.rating > span {
+  /*font-size: 100px;*/
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover ~ span {
+  color: transparent;
+}
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover:before,
+body div#wrapper div.modal div.modal-dialog div.modal-content div.modal-body form#editreviews ul li .rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: #d03425;
+}
