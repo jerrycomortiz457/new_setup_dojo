@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resto and Cuisines</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js'></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- <script type="application/json" src="../assets/js/registered.json"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../assets/js/jquery-3.3.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <body>
+        <div id="wrapper">
+            <img class="restaurantsimg" src="../assets/images/restos.png" alt="restaurants">
+
+            <div id="header">
+                <div class="worldcuisine">
+                    <span>Restos & Cuisines</span>
+                </div>
+                <!-- <span>RESTAURANTS IN THE WORLD</span> -->
+            </div>
+            <div id="nav">
+                <div class="container">
+                    <input class="form-control search" id="myInput" type="text" placeholder="Search..">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger newresto" data-toggle="modal" data-target="#registrationModal">
+                        <span class="glyphicon glyphicon-plus"></span> New Restaurant
+                    </button>
+                    <button type="button" class="btn btn-danger delete-selection" id="deleteselection" value="deleteselection">
+                        <span class="glyphicon glyphicon-trash"></span> Delete Selected
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Register a Restaurant</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form action="#" method="POST" id="registration">
+                                    <ul>
+                                        <li>
+                                            <label for="restoname">Restaurant's Name:</label>
+                                            <input class="registerinput" type="text" name="restoname" id="restoname" placeholder="Restaurant's Name">
+                                        </li>
+                                        <li>
+                                            <label for="cuisine">Cuisine: </label>
+                                            <input class="registerinput" type="text" name="cuisine" id="cuisine" placeholder="Cuisine">
+                                        </li>
+                                        <li>
+                                            <label for="loc">Location: </label>
+                                            <input class="registerinput" type="text" name="loc" id="loc" placeholder="Location">
+                                        </li>
+                                        <li>
+                                            <label for="owner_name">Owner's Name: </label>
+                                            <input class="registerinput" type="text" name="owner" id="owner" placeholder="Owner's Name">
+                                        </li>
+                                        <li>
+                                            <label for="avgrating">Average Rating: </label>
+                                            <input class="registerinput" type="text" name="avgrating" id="avgrating">
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" id="register" data-dismiss="modal">Register</button>
+                                <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="../assets/images/globe.png" alt="globe">
+
+            <div id="main">
+
+                <div class="container">
+
+                    <table class="table table-hover table-striped-success tablesorter" id="restotable">
+                        <thead>
+                            <tr>
+                                <th scope="col" data-sorter="false">
+                                    <input type="checkbox" name="selectallresto" id="selectallresto" value="all">
+                                </th>
+                                <th scope="col">Restaurant
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Cuisine
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Location
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Owner's Name
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                                <th scope="col">Average Rating
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                        class="svg-inline--fa fa-sort fa-w-10 fa-2x sorter">
+                                        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                            class=""></path>
+                                    </svg>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            <!-- <tr class="noresto">
+                                <td class="noresto" colspan="5">- This field has no items -</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Edit Modal -->
+                <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h5 class="modal-title" id="exampleModalLongTitle">Edit Details</h5>
+                            </div>
+                            <div class="modal-body editModalBody">
+                                <form action="#" method="POST" id="updateentry">
+                                    <ul>
+                                        <li>
+                                            <label for="erestoname">Restaurant's Name:</label>
+                                            <input type="text" name="erestoname" id="erestoname" placeholder="Restaurant's Name">
+                                        </li>
+                                        <li>
+                                            <label for="ecuisine">Cuisine: </label>
+                                            <input type="text" name="ecuisine" id="ecuisine" placeholder="Cuisine">
+                                        </li>
+                                        <li>
+                                            <label for="eloc">Location: </label>
+                                            <input type="text" name="eloc" id="eloc" placeholder="Location">
+                                        </li>
+                                        <li>
+                                            <label for="eowner">Owner's Name: </label>
+                                            <input type="text" name="eowner" id="eowner" placeholder="Owner">
+                                        </li>
+                                        <li>
+                                            <label for="eavgrating">Average Rating: </label>
+                                            <input type="text" name="eavgrating" id="eavgrating">
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" id="updater" data-dismiss="modal">Update</button>
+                                <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Delete Modal -->
+                <div class="modal fade" id="deleteModal" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Confirm Delete Restaurant</h4>
+                            </div>
+                            <div class="modal-body delete-mb">
+                                <p></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger deleter" data-dismiss="modal">Confirm</button>
+                                <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="container review-div" id="reviewarea">
+                <div class="reston">
+                    <span id="restonamereview"></span>
+                </div>
+                <input class="form-control search" id="myReviews" type="text" placeholder="Search..">
+                <button type="button" class="btn btn-danger newreview" data-toggle="modal" data-target="#newReviewModal">
+                    <span class="glyphicon glyphicon-plus"></span> New Review
+                </button>
+                <button id="back" class="btn btn-danger ">
+                    <span class="glyphicon glyphicon-chevron-left">
+                    </span> Back to Restaurants</button>
+
+                <button type="button" class="btn btn-danger delete-selection-reviews" id="deleteselectionreviews" value="deleteselectionreviews">
+                    <span class="glyphicon glyphicon-trash"></span> Delete Selected
+                </button>
+                <table class="table table-hover table-striped-success" id="reviewtable">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <input type="checkbox" name="selectallreview" id="selectallreview" value="all">
+                            </th>
+                            <th scope="col">Customer
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x reviewsorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
+                            <th scope="col">Rating
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x reviewsorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
+                            <th scope="col">Descriptions
+                                <svg aria-hidden="true" data-prefix="fas" data-icon="sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                    class="svg-inline--fa fa-sort fa-w-10 fa-2x reviewsorter">
+                                    <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+                                        class=""></path>
+                                </svg>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="myReviewTable">
+                        <!-- <tr class="noreview">
+                            <td class="noreview" colspan="3">- This field has no items -</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- NEW REVIEW -->
+            <div class="modal fade" id="newReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="review-modal-title" id="exampleModalLongTitle"></h5>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST" id="reviews">
+                                <ul>
+                                    <li>
+                                        <label for="customer">Your Name:</label>
+                                        <input class="reviewinput" type="text" name="customer" id="customer" placeholder="Enter Name..">
+                                    </li>
+                                    <li>
+                                        <label for="description">Your Review: </label>
+                                        <textarea class="reviewinput" type="text" name="description" id="description" placeholder="Enter Descriptions.."></textarea>
+                                    </li>
+
+                                    <li>
+                                        <label for="star">Rating: </label>
+                                        <div class="rating">
+                                            <span id="5" class="star">&#9733;</span>
+                                            <span id="4" class="star">&#9733;</span>
+                                            <span id="3" class="star">&#9733;</span>
+                                            <span id="2" class="star">&#9733;</span>
+                                            <span id="1" class="star">&#9733;</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" id="addreview" data-dismiss="modal">Add</button>
+                            <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Review Modal -->
+            <div class="modal fade" id="deleteReviewModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Confirm Delete Review</h4>
+                        </div>
+                        <div class="modal-body delete-rt">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger reviewdeleter" data-dismiss="modal">Confirm</button>
+                            <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDIT REVIEW MODAL -->
+            <div class="modal fade" id="editReviewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="editreview-modal-title" id="exampleModalLongTitle">empty</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST" id="editreviews">
+                                <ul>
+                                    <li>
+                                        <label for="ecustomer">Your Name:</label>
+                                        <input type="text" name="ecustomer" id="ecustomer" placeholder="Your Name..">
+                                    </li>
+                                    <li>
+                                        <label for="edescription">Your Review: </label>
+                                        <textarea type="text" name="edescription" id="edescription" placeholder="Descriptions.."></textarea>
+                                    </li>
+
+                                    <li>
+                                        <label for="estar">Rating: </label>
+                                        <div class="rating erating">
+                                            <span id="5" class="star5">&#9733;</span>
+                                            <span id="4" class="star4">&#9733;</span>
+                                            <span id="3" class="star3">&#9733;</span>
+                                            <span id="2" class="star2">&#9733;</span>
+                                            <span id="1" class="star1">&#9733;</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" id="updatereview" data-dismiss="modal" tag="" tag2="">Update</button>
+                            <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../assets/js/__jquery.tablesorter/jquery.tablesorter.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
